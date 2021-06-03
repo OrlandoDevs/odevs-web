@@ -1,9 +1,6 @@
 ---
 title: How much software developers get paid in Orlando, FL - 2018 Edition
-description: Bring to the table win-win survival strategies to ensure proactive
-  domination. At the end of the day, going forward, a new normal that has
-  evolved from generation X is on the runway heading towards a streamlined cloud
-  solution.
+description: Orlando Devs is a 501(c)(3) nonprofit creating education and networking opportunities for software developers in Orlando, FL.
 date: 2019-11-19T15:13:13.021Z
 author: Cassandra Wilcox
 tags: second-tag

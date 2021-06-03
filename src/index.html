@@ -3,26 +3,26 @@ layout: default
 title: Neat Starter
 path: home
 ---
-<div class="relative inline-flex flex-1 flex-col justify-center lg:justify-end items-center">
+<div class="relative mt-6 inline-flex flex-1 flex-col justify-center lg:justify-end items-center">
   <h1>
     Welcome to
-    <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+    <strong class="bg-clip-text text-transparent bg-gradient-to-br from-tPalette2 to-tPalette4">
       Orlando Devs
     </strong>
   </h1>
 
   <p>
-    <abbr title="netlify cms, eleventy, alpine js & tailwind css">This is a community built of developers in Orlando and the central Florida Area</abbr>
+    <abbr title="Quicklinks" class="flex md:py-4">This is a community built of developers in Orlando and the central Florida Area</abbr>
   </p>
 
   {% include "./_includes/partials/content.html" %}
-  <div class="mx-4 my-2 flex-1">
+ <div class="mx-10 md:my-2 flex-1">
   <section class="ml-15">
     {% set postslist = collections.post %}
 
     {% for post in postslist | reverse %}
-        <article class="my-8">
-            <h2 class="font-bold text-3xl text-gray-900 mb-2">
+        <article class="transition duration-500 ease-in-out md:my-8 my-auto border rounded-lg shadow-sm transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
+            <h2 class="border rounded-t-md p-2 font-bold text-3xl bg-gradient-to-r from-tPalette3 hover:from-tPalette2 to-tPalette2 hover:to-tPallete2 text-gray-400 mb-2">
                 <a href="{{ post.url | url }}">
                     {% if post.data.title %}
                         {{ post.data.title }}
@@ -31,7 +31,7 @@ path: home
                     {% endif %}
                 </a>
             </h2>
-            <p class="text-base leading-6 text-gray-500 mb-3">
+            <p class="ml-2 text-base leading-6 text-gray-500 mb-3">
                 <time>
                     {{ post.date | readableDate }}
                     by
@@ -40,13 +40,13 @@ path: home
                 </time>
             </p>
             {% if post.data.description %}
-                <p class="text-lg text-gray-500 mb-3">
+                <p class="ml-2 text-lg text-gray-500 mb-3">
                     {{ post.data.description }}
                 </p>
             {% endif %}
 
-            <p>
-                <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
+            <p class="pb-3">
+                <a href="{{ post.url | url }}" class="ml-2 text-tPalette4 font-bold text-lg">
                     Read more →
                 </a>
             </p>

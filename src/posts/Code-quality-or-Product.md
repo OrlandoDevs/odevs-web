@@ -1,8 +1,8 @@
 ---
-title: This is my third post
-description: Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-date: 2020-09-03
-author: Surjith S M
+title: Code Quality or Product
+description: As developers we often are drawn into debates of which is more important, code quality or iteration speed. Here I aim to provide some advice of how to account for both.
+date: 2016-05-02
+author: Christopher McLean
 tags:
   - second-tag
 ---

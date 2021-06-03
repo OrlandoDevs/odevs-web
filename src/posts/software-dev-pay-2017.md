@@ -1,10 +1,8 @@
 ---
-title: This is my first post
-description: Capitalize on low hanging fruit to identify a ballpark value added
-  activity to beta test. Override the digital divide with additional
-  clickthroughs from DevOps.
-author: Surjith S M
-date: 2020-09-01
+title: How much software developers get paid in Orlando, FL in 2017
+description: Hundreds of Orlando computer programmers filled out this anonymous survey in 2017. Find out the going average salary for developers in Central Florida. Also learn about their healthcare coverage, PTO and even job satisfaction.
+author: Sergio Cruz
+date: 2017-07-10
 tags:
   - left
   - center
