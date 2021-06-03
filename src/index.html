@@ -3,7 +3,7 @@ layout: default
 title: Neat Starter
 path: home
 ---
-<div class="relative inline-flex flex-1 lg:w-4/5 lg:h-screen flex-col justify-center lg:justify-end items-center">
+<div class="relative inline-flex flex-1 flex-col justify-center lg:justify-end items-center">
   <h1>
     Welcome to
     <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
@@ -16,4 +16,43 @@ path: home
   </p>
 
   {% include "./_includes/partials/content.html" %}
+  <div class="mx-4 my-2 flex-1">
+  <section class="ml-15">
+    {% set postslist = collections.post %}
+
+    {% for post in postslist | reverse %}
+        <article class="my-8">
+            <h2 class="font-bold text-3xl text-gray-900 mb-2">
+                <a href="{{ post.url | url }}">
+                    {% if post.data.title %}
+                        {{ post.data.title }}
+                    {% else %}
+                        Untitled
+                    {% endif %}
+                </a>
+            </h2>
+            <p class="text-base leading-6 text-gray-500 mb-3">
+                <time>
+                    {{ post.date | readableDate }}
+                    by
+                    <a>{{ post.data.author }}</a>
+
+                </time>
+            </p>
+            {% if post.data.description %}
+                <p class="text-lg text-gray-500 mb-3">
+                    {{ post.data.description }}
+                </p>
+            {% endif %}
+
+            <p>
+                <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
+                    Read more →
+                </a>
+            </p>
+
+        </article>
+    {% endfor %}
+</section>
+</div>
 </div>
