@@ -3,7 +3,7 @@ items:
   - text: Home
     url: "/"
   - text: About
-    url: "/About"
+    url: "/about"
   - text: Meetup
     url: "/meetup"
   - text: Blog
