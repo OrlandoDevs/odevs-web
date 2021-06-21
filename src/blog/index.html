@@ -8,7 +8,7 @@ layout: blog
 
     {% for post in postslist | reverse %}
         <article class="transition duration-500 ease-in-out my-8 border rounded-md border-tPalette5 shadow-sm transform hover:-translate-y-1 hover:scale-105 hover:shadow-xl">
-            <h2 class="mx-5 py-4 font-bold text-3xl bg-clip-text text-transparent bg-gradient-to-br from-tPalette2 to-tPalette4">
+            <h2 class="justify-end text-right mx-5 py-4 font-bold text-3xl bg-clip-text text-transparent bg-gradient-to-br from-tPalette2 to-tPalette4">
                 <a href="{{ post.url | url }}">
                     {% if post.data.title %}
                         {{ post.data.title }}
