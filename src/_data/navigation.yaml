@@ -1,10 +1,12 @@
 ---
 items:
   - text: Home
-    url: "#"
+    url: "/"
   - text: About
-    url: "#"
+    url: "/about"
   - text: Meetup
-    url: "#"
+    url: "/meetup"
   - text: Blog
     url: "/blog"
+  - text: Join Our Slack
+    url: "/slack"

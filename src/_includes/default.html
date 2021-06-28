@@ -16,14 +16,11 @@
       <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
     {% endif %}
   </head>
-  <body>
+  <body class="flex flex-col min-h-screen bg-tPalette5">
     {% include "./partials/navbar.html" %}
-
     {{ content | safe }}
-
     {% include "./partials/footer.html" %}
-
-    <script src="/static/js/alpine.js"></script>
+     <script src="/static/js/alpine.js"></script>
 
     {% if path == "home" %}
       <!-- Netlify Identity Widget -->

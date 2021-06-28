@@ -1,19 +1,58 @@
 ---
 layout: default
-title: Neat Starter
+title: Orlando Devs
 path: home
 ---
-<div class="relative inline-flex flex-1 lg:w-4/5 lg:h-screen flex-col justify-center lg:justify-end items-center">
+<div class="relative mt-6 inline-flex flex-1 flex-col justify-center lg:justify-end items-center">
   <h1>
     Welcome to
-    <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+    <strong class="bg-clip-text text-transparent bg-gradient-to-br from-tPalette2 to-tPalette4">
       Orlando Devs
     </strong>
   </h1>
 
   <p>
-    <abbr title="netlify cms, eleventy, alpine js & tailwind css">This is a community built of developers in Orlando and the central Florida Area</abbr>
+    <abbr title="Quicklinks" class="flex md:py-4">This is a community built of developers in Orlando and the central Florida Area</abbr>
   </p>
 
   {% include "./_includes/partials/content.html" %}
+ <div class="mx-12 my-2">
+  <section class="mx-15">
+    {% set postslist = collections.post %}
+
+    {% for post in postslist | reverse %}
+        <article class="transition duration-500 ease-in-out my-8 border rounded-md border-tPalette5 shadow-sm transform hover:-translate-y-1 hover:scale-105 hover:shadow-xl">
+            <h2 class="mx-5 py-4 font-bold text-3xl bg-clip-text text-transparent bg-gradient-to-br from-tPalette2 to-tPalette4">
+                <a href="{{ post.url | url }}">
+                    {% if post.data.title %}
+                        {{ post.data.title }}
+                    {% else %}
+                        Untitled
+                    {% endif %}
+                </a>
+            </h2>
+            <p class="mx-5 text-base leading-6 text-gray-500 mb-3">
+                <time>
+                    {{ post.date | readableDate }}
+                    by
+                    <a>{{ post.data.author }}</a>
+
+                </time>
+            </p>
+            {% if post.data.description %}
+                <p class="mx-5 text-lg text-gray-500 mb-3">
+                    {{ post.data.description }}
+                </p>
+            {% endif %}
+
+            <p>
+                <a href="{{ post.url | url }}" class="mx-5 text-tPalette4 font-bold text-lg hover:text-blueGray-600">
+                    Read more →
+                </a>
+            </p>
+
+        </article>
+    {% endfor %}
+</section>
+</div>
 </div>

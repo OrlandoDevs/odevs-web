@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 </style> 
 
-<div class="relative inline-flex m-1 max-w-1/4 lg:min-h-screen border-r-2">
-    <nav class="w-64 shadow-sm flex-1 items-center justify-center lg:justify-between flex-wrap p-4 lg:px-0" x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
+<div class="relative bg-gradient-to-b from-tPalette3 to-tPalette2 w-full">
+    <nav class="items-center justify-center lg:justify-start flex-wrap lg:px-0" x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
         <!--Logo etc-->
-        <div class="flex items-center justify-center">
-            <a href="/" class="text-lg ml-4 transition duration-500 ease-in-out transform translate-x-2hover:-translate-y-1 hover:scale-110 mt-16">
-            <strong class="bg-clip-text text-transparent bg-gradient-to-br from-indigo-500 to-purple-300 hover:from-purple-300 hover:to-indigo-500">
-                Orlando Devs
-                    </strong>
+        <div class="inline-flex items-center justify-start my-6 ml-8 w-2/5">
+                            <img src="https://orlandodevs.com/assets/footer-odev.png" class="w-12 h-12"/>
+            <a href="/" class="text-lg transition duration-500 ease-in-out transform translate-x-2 hover:-translate-y-1 hover:scale-110 ">
+            <strong class=" bg-clip-text text-transparent bg-gradient-to-t from-white to-gray-300">
+                Orlando</strong> <strong class="text-tPalette4">Devs</strong>
                 </a>
         </div>
 
@@ -22,13 +22,13 @@
         </button>
 
         <!--Menu-->
-        <div class=" w-full flex-grow flex-col pt-12 lg:flex lg:items-center lg:w-auto text-center" :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" @click.away="isOpen = false" x-show.transition="true">
+        <div class="lg:inline-flex md:justify-end justify-items-end lg:items-end lg:w-auto w-3/5 my-6" :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" @click.away="isOpen = false" x-show.transition="true">
             {% if navigation.items %}
 
-                <ul class="pt-6 lg:pt-0 list-reset justify-center gap-y-2">
+                <ul class="flex md:flex-row flex-shrink flex-col px-6 list-reset">
                     {% for item in navigation.items %}
-                        <li class="nav__item mt-3">
-                            <a @click="isOpen = false" class="transition duration-500 ease-in-out text-lg inline-block text-gray-600 no-underline transform hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 py-8 px-4" href="{{ item.url }}">
+                        <li class="nav__item mx-3">
+                            <a @click="isOpen = false" class="transition duration-500 ease-in-out text-lg inline-flex text-gray-300 no-underline transform hover:-translate-y-1 hover:scale-110 hover:text-tPalette4 px-8 pt-4" href="{{ item.url }}">
                             {{ item.text }}
                             </a>
                         </li>

@@ -1,12 +1,11 @@
-<div class="relative flex-1 max-w-2xl grid grid-cols-2 md:grid-col-4 gap-4 my-8 px-4 lg:mx-0">
+<div class="relative md:flex md:flex-1 lg:flex-cols-4 md:grid-col-4 px-4 py-4 lg:mx-0 h-screen md:overflow-auto">
 
     {% if quicklinks.links %}
 
         {% for item in quicklinks.links %}
-            <a href="{{item.url}}" target="_blank" class="p-5 border rounded-md border-gray-200 hover:border-purple-400 shadow-xl">
-                <h3>{{item.title}}
-                    →</h3>
-                <p>{{item.desc}}</p>
+            <a href="{{item.url}}" target="_blank" class="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-md hover:scale-105 text-center md:p-6 md:border-2 rounded-md border-gray-200 hover:border-tPalette5 hover:text-tPalette4 mx-6 md:shadow-sm">
+                <h2>{{item.title}}
+                    </h2>
             </a>
         {% endfor %}
 

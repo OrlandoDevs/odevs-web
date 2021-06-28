@@ -2,12 +2,13 @@
 layout: blog
 ---
 
-<section class="ml-15">
+ <div class="mx-12 my-2">
+  <section class="mx-15">
     {% set postslist = collections.post %}
 
     {% for post in postslist | reverse %}
-        <article class="my-8">
-            <h2 class="font-bold text-3xl text-gray-900 mb-2">
+        <article class="transition duration-500 ease-in-out my-8 border rounded-md border-tPalette5 shadow-sm transform hover:-translate-y-1 hover:scale-105 hover:shadow-xl">
+            <h2 class="justify-end text-right mx-5 py-4 font-bold text-3xl bg-clip-text text-transparent bg-gradient-to-br from-tPalette2 to-tPalette4">
                 <a href="{{ post.url | url }}">
                     {% if post.data.title %}
                         {{ post.data.title }}
@@ -16,7 +17,7 @@ layout: blog
                     {% endif %}
                 </a>
             </h2>
-            <p class="text-base leading-6 text-gray-500 mb-3">
+            <p class="mx-5 text-base leading-6 text-gray-500 mb-3">
                 <time>
                     {{ post.date | readableDate }}
                     by
@@ -25,13 +26,13 @@ layout: blog
                 </time>
             </p>
             {% if post.data.description %}
-                <p class="text-lg text-gray-500 mb-3">
+                <p class="mx-5 text-lg text-gray-500 mb-3">
                     {{ post.data.description }}
                 </p>
             {% endif %}
 
             <p>
-                <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
+                <a href="{{ post.url | url }}" class="mx-5 text-tPalette4 font-bold text-lg hover:text-blueGray-600">
                     Read more →
                 </a>
             </p>
@@ -39,3 +40,4 @@ layout: blog
         </article>
     {% endfor %}
 </section>
+</div>
