@@ -15,7 +15,7 @@ h3 {
   @apply text-2xl font-bold mb-3;
 }
 .body-link{
-  @apply underline text-tPalette4 hover:text-tPalette-2;
+  @apply underline text-tPalette4;
 }
 code{
   @apply bg-gray-300
