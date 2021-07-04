@@ -7,14 +7,27 @@
 h1 {
   @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
 }
+h2{
+  @apply text-3xl tracking-normal font-bold;
+}
 
 h3 {
   @apply text-2xl font-bold mb-3;
 }
 
+a{
+  @apply underline text-tPalette2;
+}
+code{
+  @apply bg-gray-300
+}
 /* Syntax Highlighting*/
 
 body :not(pre) > code[class*="language-"],
 body pre[class*="language-"] {
   @apply bg-gray-800;
+}
+
+.footer-link{
+  @apply no-underline text-black hover:text-white;
 }
