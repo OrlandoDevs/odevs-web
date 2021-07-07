@@ -17,7 +17,7 @@ The Orlando Devs Slack group was formed in January of 2015. Soon after its conce
 
 In this graph we broke down average salaries by years of experience. By looking at this graph we learn just what we expected: the longer you are in the industry, the more money you make.
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/salary-by-experience.png" class="img-large img-center" alt="Salaries by programming language in Orlando" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/salary-by-experience.png" class="img-large img-center" alt="Salaries by programming language in Orlando" />
 
 _Results filtered to full time employees only._
 
@@ -31,7 +31,7 @@ A question that often comes up is: “Does having a college degree make a differ
 
 _A word of warning here:_ this graph isn’t completely fair as it does not have an experience break down by degree. As seen above, experience is a much stronger defining factor as far as income is concerned. Also, this graph is biased against those who graduated from Coding Bootcamps. This happened because our sample size is tiny (only three responses). On top of that, the Bootcampers who filled out this survey have joined the workforce recently.
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/salary-by-degree.png" class="img-large img-center" alt="Salaries by programming language in Orlando" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/salary-by-degree.png" class="img-large img-center" alt="Salaries by programming language in Orlando" />
 
 _Results filtered to full time employees only._
 
@@ -47,7 +47,7 @@ Most individuals in our group selected multiple languages when answering this qu
 
 What I mean is this: knowing HTML & CSS alone will probably not guarantee you the ~$80K you see in this graph. Also individuals who _only_ do JavaScript daily had an average of ~$97K which is higher than what you see in this graph.
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/salary-by-language.png" class="img-large img-center" alt="Salaries by programming languages in Orlando" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/salary-by-language.png" class="img-large img-center" alt="Salaries by programming languages in Orlando" />
 
 _Results filtered to full time employees only._
 
@@ -61,7 +61,7 @@ This next graph shows the impacts of the choice of a developer’s primary stack
 
 Much like the graph above, this graph appears to indicate that Java, Ruby and C# are among the most well compensated. Objective-C / Swift developers appear to be a little bit of an outlier, and while they’re paid similarly to their C# and Ruby peers, they have less favorable PTO policies on average.
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/stack-income-pto.png" class="img-medium img-center" alt="Income and PTO ratio by programming stack" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/stack-income-pto.png" class="img-medium img-center" alt="Income and PTO ratio by programming stack" />
 
 **What this means to you:** It means you should learn Java. Just playing... well kind of. No seriously, keep negotiating for more PTO along with better salaries as you progress through your career, and keep an eye on these top languages.
 
@@ -71,7 +71,7 @@ Much like the graph above, this graph appears to indicate that Java, Ruby and C#
 
 A huge part of this survey is assessing developers’ satisfaction in a Established Company versus a Startup. This next graph includes the satisfaction rate by company type and programming languages used.
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/satisfaction-by-company-and-language.png" class="img-large img-center" alt="Satisfaction by programming languages and company types" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/satisfaction-by-company-and-language.png" class="img-large img-center" alt="Satisfaction by programming languages and company types" />
 
 It's important to point out that "Multiple" stands for people developing on multiple stacks, while "Other" are people working with less popular stacks (popular doesn't mean better in this case).
 
@@ -97,7 +97,7 @@ Here we'll explore the average pay rate and overall satisfaction at both establi
 
 Similarly to a graph above, this graph does not take experience into consideration, it's just an average. This means junior developers probably make less than this average shows, and very senior developers make more.
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/satisfaction-income-by-company.png" class="img-large img-center" alt="Satisfaction and Income by Startups vs Established Companies" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/satisfaction-income-by-company.png" class="img-large img-center" alt="Satisfaction and Income by Startups vs Established Companies" />
 
 **What this means to you:** Looking to increase your satisfaction or your income? A startup might be what you're looking for, however it does come with some risk. Truth is, it is generally estimated that 80-90% of startups will fail. Don't let that completely bias you against startups however, as established companies can also undergo organizational changes without failing. ([source](http://www.forbes.com/sites/theyec/2015/03/05/the-major-reasons-startups-fail-and-how-you-can-avoid-them))
 
@@ -107,56 +107,56 @@ Similarly to a graph above, this graph does not take experience into considerati
 
 **Question 1:** What type of work do you do?
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/survey-question-1.png" class="img-large img-center" alt="Type of work" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/survey-question-1.png" class="img-large img-center" alt="Type of work" />
 
 **Question 2:** Do you have a degree in this field?
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/survey-question-2.png" class="img-medium img-center" alt="Developers with college degrees in Orlando" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/survey-question-2.png" class="img-medium img-center" alt="Developers with college degrees in Orlando" />
 
 **Question 3:** What programming languages do you work with on a day to day basis?
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/survey-question-3.png" class="img-medium img-center" alt="Programming languages used in Orlando" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/survey-question-3.png" class="img-medium img-center" alt="Programming languages used in Orlando" />
 
 **Question 4:** Where do you work?
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/survey-question-4.png" class="img-large img-center" alt="Where developers work in Orlando" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/survey-question-4.png" class="img-large img-center" alt="Where developers work in Orlando" />
 
 **Question 5:** For how many years have you been a professional developer in the workplace?
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/survey-question-5.png" class="img-small img-center" alt="Professional experience in years" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/survey-question-5.png" class="img-small img-center" alt="Professional experience in years" />
 
 **Question 6:** Would you say you work at a startup or at an established company?
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/survey-question-6.png" class="img-small img-center" alt="Developers work in Startup vs Established companies in Orlando" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/survey-question-6.png" class="img-small img-center" alt="Developers work in Startup vs Established companies in Orlando" />
 
 **Question 7:** How satisfied are you at your current position?
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/survey-question-7.png" class="img-medium img-center" alt="How satisfied developers are in Orlando" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/survey-question-7.png" class="img-medium img-center" alt="How satisfied developers are in Orlando" />
 
 **Question 8:** For how long have you worked at your current company?
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/survey-question-8.png" class="img-small img-center" alt="How long developers worked for in their companies in Orlando" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/survey-question-8.png" class="img-small img-center" alt="How long developers worked for in their companies in Orlando" />
 
 
 **Question 9:** At your current pay, how much do you expect to earn in 2016?
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/survey-question-9.png" class="img-large img-center" alt="How much developers get paid in Orlando" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/survey-question-9.png" class="img-large img-center" alt="How much developers get paid in Orlando" />
 
 **Question 10:** How much health care coverage do you get at your current position?
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/survey-question-10.png" class="img-small img-center" alt="How much healthcare coverage developers get in Orlando" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/survey-question-10.png" class="img-small img-center" alt="How much healthcare coverage developers get in Orlando" />
 
 **Question 11:** How much PTO (paid time off) do you receive yearly?
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/survey-question-11.png" class="img-small img-center" alt="How much PTO developers get in Orlando" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/survey-question-11.png" class="img-small img-center" alt="How much PTO developers get in Orlando" />
 
 **Question 12:** Does your company offer equity as part of your compensation package? (stock options, etc)
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/survey-question-12.png" class="img-small img-center" alt="How much company equity developers get in Orlando" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/survey-question-12.png" class="img-small img-center" alt="How much company equity developers get in Orlando" />
 
 **Question 13:** When was the last time you got a raise at your current job?
 
-<img src="/assets/authors/sergiocruz/orlando-salaries/survey-question-13.png" class="img-small img-center" alt="Last time developers got raises in Orlando" />
+<img src="https://orlandodevs.com/assets/authors/sergiocruz/orlando-salaries/survey-question-13.png" class="img-small img-center" alt="Last time developers got raises in Orlando" />
 
 <hr />
 

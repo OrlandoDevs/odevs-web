@@ -73,7 +73,7 @@ If you use this method, I highly recommend publishing companion content, like a 
 
 I organize basically my entire life in Trello these days. This includes the talks that I prepare. I put all of my notes and slide info into a Trello board and arrange it how I want. Then I can rapid-fire create slides using the order and contents of the Trello cards as a basis. Information is just a lot easier to move around inside of Trello than a presentation building tool, in my opinion.
 
-<a href="/assets/posts/money-talk-trello.png" target="_blank"><img src="/assets/posts/money-talk-trello.png" width="100%" /></a> _(Click for full-size)_
+<a href="https://orlandodevs.com/assets/posts/money-talk-trello.png" target="_blank"><img src="https://orlandodevs.com/assets/posts/money-talk-trello.png" width="100%" /></a> _(Click for full-size)_
 
 ### How do I make sure I'm not misleading people?
 
