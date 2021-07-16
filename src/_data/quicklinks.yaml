@@ -1,14 +1,36 @@
 ---
 links:
+ 
   - title: Join our Meetup
     url: "/meetup"
-    desc: Learn from each other and grow together as a community.
+    logo: "/static/img/meetup-logo.png"
+
+  - title: Fattmerchant
+    url:  "https://fattmerchant.com/"
+    desc: Our Sponsor
+    logo: "/static/img/fattmerchant-logo.svg"
+
+    
   - title: Join Our Slack
     url: "/slack"
-    desc: Join the Conversation
+    logo: "/static/img/slack-logo-icon.png"
+
+  - title: Informulate
+    url: "https://www.informulate.com/"
+    desc: Our Sponsor
+    logo: "/static/img/informulate-logo.png"
+
+
   - title: Code of Conduct
     url: "/code-of-conduct"
-    desc: expectations for participants within the Orlando Devs community
+    logo: "/static/img/footer-odev.png"
+ 
+  - title: BlueWave
+    url: "https://bluewaverp.com/"
+    desc: Our Sponsor
+    logo: "/static/img/bluewave-logo.png" 
+
   - title: Become a Patron
     url: "https://www.patreon.com/odevs"
-    desc: Support us by helping us grow the Orlando coding community.
+    logo: "/static/img/patreon-creators-patreon.png"
+ 
