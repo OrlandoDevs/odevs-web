@@ -110,10 +110,10 @@ Writing your modules outside the framework lets you test them easier, creates mo
 ### David Brown
 David is a front-end developer in Orlando, FL with a passion for creating quality code and keeping up with the latest development standards and tools. 
 
-<img src="https://img.icons8.com/ios/452/twitter--v1.png"
+<img src="/static/img/twitter--v1.png"
 alt="twitter logo"
 class="h-3.5 w-3.5 inline-flex"/><a href ="https://twitter.com/theonetheonlydb" class = "hover:text-indigo-400"> theonetheonlydb</a>
-<img src="https://img.icons8.com/carbon-copy/2x/github.png"
+<img src="/static/img/github.png"
 alt="twitter logo"
 class="h-8 w-8 inline-flex"/><a href ="https://github.com/theonetheonlydavidbrown" class = "hover:text-indigo-400"> theonetheonlydavidbrown</a>
 <br><br><br>

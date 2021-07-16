@@ -47,6 +47,9 @@ Recently, I worked on a project that required a .NET integration from an open so
 
 ### Do It
 
-!["Do It!"](/assets/authors/rey/doit.png)
+<div class="flex justify-center items-center">
 
+!["Do It!"](/static/img/doit.png)
+
+</div>
 I can tell you that starting is one of the hardest steps in developing software even when you have paying clients.  What we do is complex, and requires us to think in ways that surpass the understanding of most of our friends, families, etc.  But, this gift that we possess gives us the power to create things that only others can imagine.  If you find yourself in one of the three scenarios just remember that the key is to "Do It," and don't be afraid to "Grip It and Rip It."

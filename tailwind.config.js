@@ -7,9 +7,10 @@ module.exports = {
       whitelist: [],
     },
   },
-  theme: {fontFamily:{
-    sans: 'Poppins',
-  },
+  theme: {
+    fontFamily:{ 
+      'Poppins': ['Poppins', 'sans-serif'],
+    },
     container: {
       center: true,
     },
@@ -25,11 +26,13 @@ module.exports = {
         tPalette2: '#0b3b59',
         tPalette3: '#092b40',
         tPalette4: '#7eadbf',
-        tPalette5: '#f2f2f2'
+        tPalette5: '#f2f2f2',
 
       },
     },
   },
-  variants: {},
-  plugins: [require("@tailwindcss/typography")],
+  variants: {
+  },
+  plugins:
+    [require("@tailwindcss/typography")],
 };

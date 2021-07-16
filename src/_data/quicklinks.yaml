@@ -2,13 +2,13 @@
 links:
   - title: Join our Meetup
     url: "/meetup"
-    desc: Open source content management for your Git workflow
+    desc: Learn from each other and grow together as a community.
   - title: Join Our Slack
-    url: "https://www.11ty.dev/"
-    desc: Eleventy is a simpler static site generator.
+    url: "/slack"
+    desc: Join the Conversation
   - title: Code of Conduct
-    url: "https://github.com/alpinejs/alpine"
-    desc: A minimal framework for composing JavaScript behavior in your markup.
+    url: "/code-of-conduct"
+    desc: expectations for participants within the Orlando Devs community
   - title: Become a Patron
     url: "https://www.patreon.com/odevs"
     desc: Support us by helping us grow the Orlando coding community.

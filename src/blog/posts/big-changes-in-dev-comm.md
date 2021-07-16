@@ -10,7 +10,7 @@ tags:
 
 Orlando Devs is undergoing some big changes and we wanted to take some time to go through them and explain what they mean for our group and what you can expect as we move into 2018 and look further into the future.
 
-We are pleased to announce that Orlando Devs is working towards becoming a 501(c)(3) nonprofit organization under the name Orlando Devs, Inc. As many of you may know, this is a lengthy process and part of that process includes establishing a Board of Directors as well as a Board of Advisors. We expect that this new organizational structure will position us for for long-term growth and increase our ability to serve the needs of Greater Orlando's developer community. An up-to-date list of board members can be found on the <a href="{{'/odevs-eleventy-starter/src/_includes'}| url}}" class = "text-purple-800 underline"> ODevs About page </a> but I've also included them here.<br><br>
+We are pleased to announce that Orlando Devs is working towards becoming a 501(c)(3) nonprofit organization under the name Orlando Devs, Inc. As many of you may know, this is a lengthy process and part of that process includes establishing a Board of Directors as well as a Board of Advisors. We expect that this new organizational structure will position us for for long-term growth and increase our ability to serve the needs of Greater Orlando's developer community. An up-to-date list of board members can be found on the <a href="/about" class = "text-purple-800 underline"> ODevs About page </a> but I've also included them here.<br><br>
 
 
 ### Orlando Devs Board of Directors
@@ -61,9 +61,9 @@ We are excited about these changes, and we hope that you are as well. Thank you 
 <br><br>
  ### Cassandra Wilcox
 Cassandra is an JavaScript developer & instructor in Orlando, FL. She runs an app development company called Code Hangar and is a founding chapter leader of Girl Develop It Orlando. She likes to play music & write songs and recently developed a hot sauce addiction.<br>
-<img src="https://img.icons8.com/ios/452/twitter--v1.png"
+<img src="/static/img/twitter--v1.png"
 alt="twitter logo"
 class="h-3.5 w-3.5 inline-flex"/><a href ="https://twitter.com/cassandrawilcox" class = "hover:text-indigo-400">cassandrawilcox</a>
-<img src="https://img.icons8.com/carbon-copy/2x/github.png"
+<img src="/static/img/github.png"
 alt="twitter logo"
 class="h-8 w-8 inline-flex"/><a href ="https://github.com/csandra0504" class = "hover:text-indigo-400">csandra0504</a>  

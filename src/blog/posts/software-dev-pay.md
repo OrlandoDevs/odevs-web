@@ -22,41 +22,41 @@ We hope you find the results of the Orlando Developers Salary useful. Enjoy! ðŸŽ
 
 Compared to 2017, we found that median developer income (salaries including bonuses and overtime) increased 16% from $73,000 to $85,000 in our local market in 2018.
 
-![median-income](https://orlandodevs.com/assets/posts/odevs-salary-survey-2018/median-income-2018.png)
-![median-income-by-language](https://orlandodevs.com/assets/posts/odevs-salary-survey-2018/median-income-by-primary-language.png)
+![median-income](/static/img/median-income-2018.png)
+![median-income-by-language](/static/img/median-income-by-primary-language.png)
 
 Both 2017 and 2018 surveys show that female developers earn less than their male counterparts. And, results from the 2018 survey actually show an increase in the wage gap compared to 2017. Female developers that responded to our survey in 2018 make about $15,000 less than male developers who responded.
 
-![median income by gender](https://orlandodevs.com/assets/posts/odevs-salary-survey-2018/median-income-female-male.png)
+![median income by gender](/static/img/median-income-female-male.png)
 
 ## Diversity
 
 1 in 10 developers who responded to the 2018 Orlando Devs Salary Survey identified as female, slightly above other developer surveys like StackOverflow's 2018 Developer Survey which saw 6.9% female, and .9% from non-binary, genderqueer, or gender non-conforming responses.
 
-![responses by gender](https://orlandodevs.com/assets/posts/odevs-salary-survey-2018/responses-by-gender.png)
+![responses by gender](/static/img/responses-by-gender.png)
 
 Here we see a significant increase in Hispanic developers over the 2017 year. We also see a slight rise in Black or African developers. This chart makes us optimistic about diversity amongst our Orlando Devs, but this is one area we would love to see continued growth in diversity.
 
 
-![demographic by race](https://orlandodevs.com/assets/posts/odevs-salary-survey-2018/responses-by-race.png)
+![demographic by race](/static/img/responses-by-race.png)
 
 ## Satisfaction
 
 Here we notice a pretty good sign that the majority of developers are happy, with senior devs generally being the happiest. That trend continues to rise for beginner and mid-level developers.
 
-![Average Satisfaction](https://orlandodevs.com/assets/posts/odevs-salary-survey-2018/satisfaction-by-experience.png)
+![Average Satisfaction](/static/img/satisfaction-by-experience.png)
 
 ## Additional Charts
 
 We don't have commentary for the following charts and graphs, but we would love your input. Please leave a comment with your thoughts and we will do our best to work shared insights into this post!
 
-![Primary Language](https://orlandodevs.com/assets/posts/odevs-salary-survey-2018/primary-language.png)
-![Net Change in Language Share](https://orlandodevs.com/assets/posts/odevs-salary-survey-2018/net-change-in-language.png)
-![Remote Work](https://orlandodevs.com/assets/posts/odevs-salary-survey-2018/remote-work.png)
-![Educational Background](https://orlandodevs.com/assets/posts/odevs-salary-survey-2018/educational-background.png)
-![Median Salary](https://orlandodevs.com/assets/posts/odevs-salary-survey-2018/median-salary-by-industry.png)
-![Median Salary/ # of Devs](https://orlandodevs.com/assets/posts/odevs-salary-survey-2018/median-salary.png)
-![Median Annual Salary(Local vs Remote)](https://orlandodevs.com/assets/posts/odevs-salary-survey-2018/median-salary-local-vs-remote.png)
+![Primary Language](/static/img/primary-language.png)
+![Net Change in Language Share](/static/img/net-change-in-language.png)
+![Remote Work](/static/img/remote-work.png)
+![Educational Background](/static/img/educational-background.png)
+![Median Salary](/static/img/median-salary-by-industry.png)
+![Median Salary/ # of Devs](/static/img/median-salary.png)
+![Median Annual Salary(Local vs Remote)](/static/img/median-salary-local-vs-remote.png)
 
 Thanks again to everyone who contributed to the 2018 Orlando Developers Salary Survey. We are quite aware that there is lots of room to improve this survey in the future, and your feedback will help us make the data and insights we collect more relevant to everyone in our community. If you have questions about any of the data in this post, please let us know in a comment. If there is anything youâ€™d like to see us change or add in the future, Let us know that as well! Thanks for supporting Orlando Devs!
 
@@ -69,11 +69,11 @@ Thanks again to everyone who contributed to the 2018 Orlando Developers Salary S
 
 <small class="italic"> Cassandra is an JavaScript developer & instructor in Orlando, FL. She runs an app development company called Code Hangar and is a founding chapter leader of Girl Develop It Orlando. She likes to play music & write songs and recently developed a hot sauce addiction. </br>
 
-<img src="https://img.icons8.com/ios/452/twitter--v1.png"
+<img src="/static/img/twitter--v1.png"
 alt="twitter logo"
 class="h-3.5 w-3.5 inline-flex"/><a href ="https://twitter.com/cassandrawilcox" class = "hover:text-indigo-400">cassandrawilcox</a>
-<img src="https://img.icons8.com/carbon-copy/2x/github.png"
-alt="twitter logo"
+<img src="/static/img/github.png"
+alt="github logo"
 class="h-8 w-8 inline-flex"/><a href ="https://github.com/csandra0504" class = "hover:text-indigo-400">csandra0504</a> 
 </small>
 </div>
