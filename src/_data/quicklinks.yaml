@@ -4,31 +4,14 @@ links:
   - title: Join our Meetup
     url: "/meetup"
     logo: "/static/img/meetup-logo.png"
-
-  - title: Fattmerchant
-    url:  "https://fattmerchant.com/"
-    desc: Our Sponsor
-    logo: "/static/img/fattmerchant-logo.svg"
-
-    
+       
   - title: Join Our Slack
     url: "/slack"
     logo: "/static/img/slack-logo-icon.png"
 
-  - title: Informulate
-    url: "https://www.informulate.com/"
-    desc: Our Sponsor
-    logo: "/static/img/informulate-logo.png"
-
-
   - title: Code of Conduct
     url: "/code-of-conduct"
     logo: "/static/img/footer-odev.png"
- 
-  - title: BlueWave
-    url: "https://bluewaverp.com/"
-    desc: Our Sponsor
-    logo: "/static/img/bluewave-logo.png" 
 
   - title: Become a Patron
     url: "https://www.patreon.com/odevs"
