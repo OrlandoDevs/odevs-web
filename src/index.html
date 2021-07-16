@@ -16,43 +16,7 @@ path: home
   </p>
 
   {% include "./_includes/partials/content.html" %}
- <div class="mx-12 my-2">
-  <section class="mx-15">
-    {% set postslist = collections.post %}
-
-    {% for post in postslist | reverse %}
-        <article class="transition duration-500 ease-in-out my-8 border rounded-md border-tPalette5 shadow-sm transform hover:-translate-y-1 hover:scale-105 hover:shadow-xl">
-            <h2 class="mx-5 py-4 font-bold text-3xl bg-clip-text text-transparent bg-gradient-to-br from-tPalette2 to-tPalette4">
-                <a href="{{ post.url | url }}">
-                    {% if post.data.title %}
-                        {{ post.data.title }}
-                    {% else %}
-                        Untitled
-                    {% endif %}
-                </a>
-            </h2>
-            <p class="mx-5 text-base leading-6 text-gray-500 mb-3">
-                <time>
-                    {{ post.date | readableDate }}
-                    by
-                    <a>{{ post.data.author }}</a>
-
-                </time>
-            </p>
-            {% if post.data.description %}
-                <p class="mx-5 text-lg text-gray-500 mb-3">
-                    {{ post.data.description }}
-                </p>
-            {% endif %}
-
-            <p>
-                <a href="{{ post.url | url }}" class="mx-5 text-tPalette4 font-bold text-lg hover:text-blueGray-600">
-                    Read more →
-                </a>
-            </p>
-
-        </article>
-    {% endfor %}
-</section>
+<div class="mx-8">
+ {% include "./announcements/index.html" %} 
 </div>
 </div>

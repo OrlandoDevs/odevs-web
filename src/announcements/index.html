@@ -1,0 +1,69 @@
+    
+    <div class="flex flex-col md:flex-row md:space-x-4">
+    
+    <!--left div for job listings-->
+    <div class="flex-shrink justify-left text-center w-1/4 max-h-full">
+       <h3>Jobs</h3>
+       <small><strong>Be sure to mention ODevs when you apply!</strong></small>
+       <section class="mx-auto  hidden-scroll overflow-auto overscroll-auto">
+         {% set jobslist = collections.job %}
+
+         {% for job in jobslist %}
+         <a href="{{ job.url | url }}" class="inline-flex">
+      <div class="flex flex-col border rounded-md p-4 my-4 shadow-sm tansform hover:translate-x-1 hover:shadow-md">
+       <img src="{{job.data.logo}}" class="w-16">
+       <strong>
+       {%if job.data.desc%}
+
+      {{job.data.desc}}
+       {%endif%}<br/>
+       {%if job.data.company%}
+       <small>{{job.data.company}}</small>
+       {%endif%}
+      </strong>
+                    Read more →
+                
+            </p>
+         </div>
+         </a>
+      </section>
+    {% endfor %}
+    </div>
+
+    <!--center div for events-->
+    <div class="flex-grow justify-start w-1/2">
+         <div class="text-center">
+        <h3>Events</h3>
+        <small><strong>Stay up to date by joining our <a href="/meetup" class="underline">MeetUp</a> and <a href="/slack" class="underline">Slack</a></strong></small>
+        </div>
+        <section class="mx-auto">
+      {% set eventlist = collections.event %}
+
+      {% for event in eventlist | reverse %}
+
+         <div class="border rounded-md p-4 my-4 shadow-sm transform hover:translate-x-1 hover:shadow-md">
+
+            {%if event.data.title%}
+             <div class="inline-flex border rounded-md p-2 w-16 mx-4" >
+               {{event.data.date | readableDate}}
+                </div>
+             <div class="inline-flex flex-col">
+                <p><strong>
+                   {{event.data.title}}
+                    </strong> - {{event.data.desc}}
+                </p>
+                  <a href="{{ event.url | url }}" class="">
+                    Read more →
+                    </a>
+          </div>
+                
+                
+
+       {%endif%}
+             </div>
+      </section>
+    {% endfor %}
+    </div>
+    
+    </div>
+
