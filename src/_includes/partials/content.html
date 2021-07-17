@@ -1,14 +1,22 @@
-<div class="relative md:flex md:flex-1 lg:flex-cols-4 md:grid-col-4 px-4 py-4 lg:mx-0 h-screen md:overflow-auto">
+<div class="relative md:flex flex-1 lg:flex-cols-4 md:grid-col-4 px-2 py-2 lg:mx-0 overflow-auto justify-center items-center text-center">
 
     {% if quicklinks.links %}
 
         {% for item in quicklinks.links %}
-            <a href="{{item.url}}" target="_blank" class="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-md hover:scale-105 text-center md:p-6 md:border-2 rounded-md border-gray-200 hover:border-tPalette5 hover:text-tPalette4 mx-6 md:shadow-sm">
-                <h2>{{item.title}}
-                    </h2>
+       
+            <a href="{{item.url}}" target="_blank" class="justify-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md hover:scale-105 text-center md:p-6 md:border-2 rounded-md border-gray-200 hover:border-tPalette5 hover:bg-tPalette2 hover:text-tPalette5 mx-6 md:shadow-sm">
+                <img src="{{item.logo}}" class="h-12 mx-auto">
+                <h4><strong>{{item.title}}
+                    </strong></h4>
+                    <small>{{item.desc}}</small>
             </a>
         {% endfor %}
 
     {% endif %}
 
+</div>
+<div class="flex flex-1">
+<a href="https://bluewaverp.com/"><img src="/static/img/bluewave-logo.png" class="sponsor-logos"></a>
+<a href="https://www.informulate.com/"><img src="/static/img/informulate-logo.png" class="sponsor-logos"></a>
+<a href="https://fattmerchant.com"><img src="/static/img/fattmerchant-logo.svg" class="sponsor-logos fattmerchant-logo"></a>
 </div>
