@@ -11,7 +11,8 @@ links:
 
   - title: Code of Conduct
     url: "/code-of-conduct"
-    logo: "/static/img/footer-odev.png"
+    logo: "/static/img/odev-logo-blue.png"
+    logo2: "/static/img/footer-odevs.png"
 
   - title: Become a Patron
     url: "https://www.patreon.com/odevs"

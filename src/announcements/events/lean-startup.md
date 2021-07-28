@@ -10,4 +10,4 @@ Curtis will be sharing and demo'ing Swarm Vision - his go-to choice for forming 
 <br/>
 <br/>
 Josh will be showcasing Diversity Equity and Inclusion by the numbers. According to Insider and Forbes, your business's lack of diversity is hurting your business and leaving upwards of a Trillion dollars out of the overall economy. He will have a lot more data and practical steps on how businesses can attack this problem from a place of empathy. Joshua “TechDev” Walker is an Honorable Army Vet turned Techie, Senior Cloud Engineer, Diversity Advocate, and Author of “Venti Fried Chicken”. 
-https://www.meetup.com/Lean-Startup-Practitioners/events/278125859/
+<button href="https://www.meetup.com/Lean-Startup-Practitioners/events/278125859/" class="flex-col transition duration-500 transform flex items-center px-8 py-2 border rounded-full mt-8 hover:shadow-lg hover:translate-x-1 font-Poppins"><img src="/static/img/meetup-logo.png" class="w-12 h-12"/>Join The Meetup Here</button>

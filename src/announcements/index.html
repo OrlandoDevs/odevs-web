@@ -1,8 +1,8 @@
     
-    <div class="flex flex-col md:flex-row md:space-x-4">
+    <div class="flex flex-col md:flex-row md:space-x-8 m-8">
     
     <!--left div for job listings-->
-    <div class="flex-shrink justify-left text-center w-1/4 max-h-full">
+    <div class="justify-left text-center md:w-1/4 md:max-h-full">
        <h3>Jobs</h3>
        <small><strong>Be sure to mention ODevs when you apply!</strong></small>
        <section class="mx-auto  hidden-scroll overflow-auto overscroll-auto">
@@ -10,7 +10,7 @@
 
          {% for job in jobslist %}
          <a href="{{ job.url | url }}" class="inline-flex">
-      <div class="flex flex-col border rounded-md p-4 my-4 shadow-sm tansform hover:translate-x-1 hover:shadow-md">
+      <div class="transition duration-500 flex flex-col border rounded-md p-4 my-4 shadow-sm transform hover:-translate-x-1 hover:shadow-xl">
        <img src="{{job.data.logo}}" class="w-16">
        <strong>
        {%if job.data.desc%}
@@ -30,8 +30,8 @@
     {% endfor %}
     </div>
 
-    <!--center div for events-->
-    <div class="flex-grow justify-start w-1/2">
+    <!--right div for events-->
+    <div class="flex-grow justify-start mx-8 md:w-3/4">
          <div class="text-center">
         <h3>Events</h3>
         <small><strong>Stay up to date by joining our <a href="/meetup" class="underline">MeetUp</a> and <a href="/slack" class="underline">Slack</a></strong></small>
@@ -41,25 +41,25 @@
 
       {% for event in eventlist | reverse %}
 
-         <div class="border rounded-md p-4 my-4 shadow-sm transform hover:translate-x-1 hover:shadow-md">
-
-            {%if event.data.title%}
-             <div class="inline-flex border rounded-md p-2 w-16 mx-4" >
+         <div class="transition duration-500 border rounded-md p-4 my-4 shadow-sm transform hover:translate-x-1 hover:shadow-xl">
+         {%if event.data.date%}
+             <div class="inline-flex border rounded-md py-2 px-8 mx-4 text-white bg-tPalette4 shadow-sm font-Poppins text-center w-24" >
                {{event.data.date | readableDate}}
                 </div>
+         {%if event.data.title%}
              <div class="inline-flex flex-col">
-                <p><strong>
+                <p>
+                <strong class="text-3xl">
                    {{event.data.title}}
-                    </strong> - {{event.data.desc}}
+                    </strong></br> {{event.data.desc}}
                 </p>
                   <a href="{{ event.url | url }}" class="">
                     Read more →
                     </a>
           </div>
                 
-                
-
-       {%endif%}
+         {%endif%}
+         {%endif%}
              </div>
       </section>
     {% endfor %}
