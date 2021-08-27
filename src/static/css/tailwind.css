@@ -35,10 +35,7 @@ body pre[class*="language-"] {
 .sponsor-logos{
   @apply h-10 mx-16 px-6 inline-flex w-48
 }
-.fattmerchant-logo{
-  background-color: #6610f2;
-  @apply rounded-sm p-2
-}
+
 
 .hide-scroll {
   -ms-overflow-style: none; /*IE and Edge*/
