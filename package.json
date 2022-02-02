@@ -11,7 +11,7 @@
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@tailwindcss/typography": "^0.3.1",
-    "alpinejs": "^2.6.0",
+    "alpinejs": "^3.3.3",
     "browser-sync": "^2.26.14",
     "cross-env": "^7.0.2",
     "cssnano": "^5.0.6",
@@ -24,7 +24,9 @@
     "tailwindcss": "^2.0.2"
   },
   "dependencies": {
-    "autoprefixer": "^10.1.0",
-    "postcss": "^8.2.1"
+    "autoprefixer": "^10.3.4",
+    "browsersync": "^0.0.1-security",
+    "postcss": "^8.3.6",
+    "tailwind": "^4.0.0"
   }
 }

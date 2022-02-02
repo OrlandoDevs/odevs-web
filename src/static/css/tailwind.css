@@ -29,7 +29,7 @@ body pre[class*="language-"] {
 }
 
 .footer-link{
-  @apply no-underline text-black hover:text-white;
+  @apply no-underline text-white hover:text-tPalette4;
 }
 
 .sponsor-logos{
