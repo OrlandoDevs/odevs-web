@@ -3,8 +3,9 @@ backend:
   name: git-gateway
   branch: master
   ### enable below lines for github integration ###
-  # name: github
-  # repo: surjithctly/neat-starter
+  name: github
+  repo: jacquesfu/odevs-eleventy-starter
+  open_authoring: true
 media_folder: "src/static/img"
 public_folder: "/static/img"
 
