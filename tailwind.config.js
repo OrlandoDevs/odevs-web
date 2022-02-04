@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors')
+
 module.exports = {
-  purge: {
+  content: {
     mode: "all",
     content: ["./**/*.html"],
     options: {
@@ -16,11 +17,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        blueGray: colors.blueGray,
-        coolGray: colors.coolGray,
-        warmGray: colors.warmGray,
+        blueGray: colors.slate,
+        coolGray: colors.gray,
+        warmGray: colors.stone,
         cyan: colors.cyan,
-        trueGray: colors.trueGray,
+        trueGray: colors.neutral,
         violet: colors.violet,
         tPalette1: '#bfbfbf',
         tPalette2: '#0b3b59',
