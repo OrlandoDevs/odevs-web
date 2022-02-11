@@ -26,6 +26,7 @@
   "dependencies": {
     "autoprefixer": "^10.3.4",
     "browsersync": "^0.0.1-security",
+    "daisyui": "^1.25.4",
     "postcss": "^8.3.6",
     "tailwind": "^4.0.0"
   }
