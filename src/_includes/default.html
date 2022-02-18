@@ -16,9 +16,11 @@
       <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
     {% endif %}
   </head>
-  <body class="flex flex-col min-h-screen bg-tPalette5">
+  <body class="bg-base-300 flex flex-col min-h-screen">
     {% include "./partials/navbar.html" %}
-    {{ content | safe }}
+    <div class="container my-6 mx-auto">
+      {{ content | safe }}
+    </div>
     {% include "./partials/footer.html" %}
      <script src="/static/js/alpine.js"></script>
 
