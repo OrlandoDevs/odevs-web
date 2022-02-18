@@ -7,8 +7,8 @@ layout: blog
     {% set postslist = collections.post %}
 
     {% for post in postslist | reverse %}
-        <article class="bg-base-100 py-4 transition duration-500 ease-in-out my-8 border rounded-md border-tPalette5 shadow-sm transform hover:-translate-y-1 hover:scale-105 hover:shadow-xl">
-            <h2 class="justify-end text-right mx-5 py-4 font-bold text-3xl bg-clip-text text-transparent bg-gradient-to-br from-tPalette2 to-tPalette4">
+        <article class="bg-base-100 py-4 transition duration-500 ease-in-out my-8 border rounded-md border-base-200 shadow-sm transform hover:-translate-y-1 hover:scale-105 hover:shadow-xl">
+            <h2 class="justify-end text-right mx-5 py-4 font-bold text-3xl bg-clip-text text-transparent bg-gradient-to-br from-primary to-secondary">
                 <a href="{{ post.url | url }}">
                     {% if post.data.title %}
                         {{ post.data.title }}
@@ -32,7 +32,7 @@ layout: blog
             {% endif %}
 
             <p>
-                <a href="{{ post.url | url }}" class="mx-5 text-tPalette4 font-bold text-lg hover:text-blueGray-600">
+                <a href="{{ post.url | url }}" class="mx-5 text-secondary font-bold text-lg hover:text-blueGray-600">
                     Read more →
                 </a>
             </p>

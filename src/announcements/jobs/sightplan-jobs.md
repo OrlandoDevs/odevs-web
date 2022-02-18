@@ -21,7 +21,7 @@ With decades of industry experience, the SightPlan team has an unparalleled unde
 </ul>
 
  to apply simply<br>
- <button class="bg-tPalette2 text-white p-4 rounded-full hover:bg-tPalette3 m-8"><a href="https://www.sightplan.com/company/careers">
+ <button class="bg-primary text-white p-4 rounded-full hover:bg-primary-focus m-8"><a href="https://www.sightplan.com/company/careers">
 Click Here
 </a>
 </button>

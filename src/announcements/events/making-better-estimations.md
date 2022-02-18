@@ -19,7 +19,7 @@ Software engineers --- like surgeons before the 20th century --- often make deci
 <br/>
 <br/>
 Matt Dupree is a wannabe philosophy professor turned wannabe tech entrepreneur. He’s currently a software engineer at a YC-backed product analytics company called “Heap.” You can find out more about him 
-<a href="https://www.philosophicalhacker.com/" class="underline hover:text-tPalette4 text-tPalette3">here.</a>
+<a href="https://www.philosophicalhacker.com/" class="underline hover:text-secondary text-primary-focus">here.</a>
 
 <button href="https://www.eventbrite.com/e/odevs-june-virtual-meetup-tickets-159174769019
 " class="flex-col transition duration-500 transform flex items-center px-8 py-2 border rounded-full mt-8 hover:shadow-lg hover:translate-x-1 font-Poppins"><img src="/static/img/eventbrite-logo.png" class="w-12 h-12"/>Join Through EventBrite</button>
