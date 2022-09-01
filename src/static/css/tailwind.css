@@ -21,17 +21,17 @@
 }
 
 h1 {
-  @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
+  @apply text-4xl tracking-tighter text-center lg:text-7xl;
 }
 h2{
   @apply text-3xl tracking-normal font-bold;
 }
 
 h3 {
-  @apply text-2xl font-bold mb-3;
+  @apply text-2xl font-bold;
 }
 .body-link{
-  @apply underline text-tPalette4;
+  @apply underline text-secondary;
 }
 code{
   @apply bg-gray-300;
@@ -45,7 +45,7 @@ body pre[class*="language-"] {
 }
 
 .footer-link{
-  @apply no-underline text-white hover:text-tPalette4;
+  @apply no-underline text-white hover:text-secondary transition-all duration-200;
 }
 
 .sponsor-logos{

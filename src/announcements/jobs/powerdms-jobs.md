@@ -30,4 +30,4 @@ PowerDMS is an Orlando based SaaS company with a passion for helping organizatio
 </ul>
 
 To apply
-<button class="bg-tPalette2 text-white p-4 rounded-full hover:bg-tPalette3 m-8"><a href="https://www.powerdms.com/careers#current-openings">Click Here</a></button>
+<button class="bg-primary text-white p-4 rounded-full hover:bg-primary-focus m-8"><a href="https://www.powerdms.com/careers#current-openings">Click Here</a></button>
