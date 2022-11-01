@@ -1,10 +1,7 @@
 backend:
-  # Use netlify identity as backend
-  name: git-gateway
-  branch: master
-  ### enable below lines for github integration ###
   name: github
   repo: jacquesfu/odevs-eleventy-starter
+  branch: master
   open_authoring: true
 media_folder: "src/static/img"
 public_folder: "/static/img"
