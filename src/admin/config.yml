@@ -1,16 +1,14 @@
 backend:
-  # Use netlify identity as backend
-  name: git-gateway
+  name: github
+  repo: jacquesfu/odevs-eleventy-starter
   branch: master
-  ### enable below lines for github integration ###
-  # name: github
-  # repo: surjithctly/neat-starter
+  open_authoring: true
 media_folder: "src/static/img"
 public_folder: "/static/img"
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
-# publish_mode: editorial_workflow
+publish_mode: editorial_workflow
 collections:
   - label: "Blog"
     name: "blog"
@@ -73,10 +71,10 @@ collections:
     editor:
       preview: false
     fields:
-    -{ label: "JobTitle", name: "title", widget: "string" }
-    -{ label: "Company", name: "company", widget: "string"}
-    -{ label: "PublishDate", name: "date", widget: "datetime" }
-    -{ label: "Body", name: "body", widget: "markdown"}
+      - { label: "JobTitle", name: "title", widget: "string" }
+      - { label: "Company", name: "company", widget: "string"}
+      - { label: "PublishDate", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown"}
   - label: "Events"
     name: "Event Listings"
     folder: "src/announcements/events"
@@ -84,8 +82,8 @@ collections:
     editor:
       preview: false
     fields:
-    -{ label: "Title", name: "title", widget: "string"}
-    -{ label: "Description", name: "desc", widget: "string"}
-    -{ label: "PublishDate", name: "date", widget: "datetime"}
-    -{ label: "Logo", name: "logo", widget: "string"}
-    -{ label: "Body", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string"}
+      - { label: "Description", name: "desc", widget: "string"}
+      - { label: "PublishDate", name: "date", widget: "datetime"}
+      - { label: "Logo", name: "logo", widget: "string"}
+      - { label: "Body", name: "body", widget: "markdown"}
