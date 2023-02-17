@@ -61,3 +61,7 @@ body pre[class*="language-"] {
 .hide-scroll::-webkit-scrollbar{
   display: none;
 }
+
+.blog-link{
+  @apply inline-flex py-3 items-center font-Poppins no-underline text-3xl bg-secondary text-neutral-content
+}
