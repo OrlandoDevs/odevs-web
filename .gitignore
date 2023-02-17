@@ -7,3 +7,5 @@ _site/
 package-lock.json
 .env
 .history
+# Local Netlify folder
+.netlify
