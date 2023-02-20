@@ -74,8 +74,12 @@ body pre[class*="language-"] {
   .sponsor-grid{
     @apply grid grid-cols-3 grid-rows-2
   }
+
+ .center-width{
+    width: 500px;
+  }
   .sponsor-logos{
-    @apply border rounded-md border-gray-600 h-40 w-40
+    @apply border rounded-md border-gray-300 shadow-sm h-40 w-40 my-1
   }
 
   .sponsor-logo-images{

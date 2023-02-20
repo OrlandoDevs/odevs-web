@@ -3,15 +3,15 @@ sponsors:
 
     - name: Blue Wave
       link: https://www.bluewverp.com/
-      img: /static/img/bluewave-logo.png
+      img: /static/img/bluewave-logo.svg
       
     - name: Informulate
       link: https://www.informulate.com
-      img: /static/img/informulate-logo.png
+      img: /static/img/informulate-logo.svg
 
     - name: Stax
       link: https://www.staxpayments.com
-      img: /static/img/stax-logo.png
+      img: /static/img/stax-logo.svg
 
     - name: Envy Labs
       link: https://www.envylabs.com
@@ -19,8 +19,8 @@ sponsors:
 
     - name: Trova
       link: https://trova.io
-      img: /static/img/trova-logo.png
+      img: /static/img/trova-logo.svg
       
     - name: Patreon
       link: https://www.patreon.com
-      img: /static/img/patreon-creators-patreon.png
+      img: /static/img/patreon-creators-patreon.svg
