@@ -41,7 +41,7 @@ code{
 
 body :not(pre) > code[class*="language-"],
 body pre[class*="language-"] {
-  @apply bg-gray-800;
+  @apply bg-gray-800 w-full;
 }
 
 .footer-link{
@@ -61,3 +61,27 @@ body pre[class*="language-"] {
 .hide-scroll::-webkit-scrollbar{
   display: none;
 }
+
+.sponsor-link{
+  @apply border-2 border-black 
+}
+
+/* Custom CSS */
+/**
+  * create a custom square image button for the sponsor logos
+  * 
+  */
+  .sponsor-grid{
+    @apply grid grid-cols-3 grid-rows-2
+  }
+
+ .center-width{
+    width: 500px;
+  }
+  .sponsor-logos{
+    @apply border rounded-md border-gray-300 shadow-sm h-40 w-40 my-1
+  }
+
+  .sponsor-logo-images{
+    padding: auto;
+  }

@@ -1,4 +1,4 @@
-<div class="relative md:flex flex-1 lg:flex-cols-4 md:grid-col-4 px-2 py-2 lg:mx-0 overflow-auto justify-center items-center text-center mb-6">
+<div class="relative md:flex flex-1 lg:flex-cols-4 md:grid-col-4 px-2 py-2 lg:mx-0 overflow-auto justify-center items-center text-center mb-6 min-w-full">
 
     {% if quicklinks.links %}
 
@@ -16,9 +16,4 @@
 
 </div>
 
-<div class="md:flex md:flex-1">
-<a href="https://bluewaverp.com/" class="flex flex-col space-y-0"><img src="/static/img/bluewave-logo.png" class="sponsor-logos"><small class="text-center">Sponsor</small>
-</a>
-<a href="https://www.informulate.com/" class="flex flex-col space-y-0"><img src="/static/img/informulate-logo.png" class="sponsor-logos"><small class="text-center">Sponsor</small></a>
-<a href="https://fattmerchant.com" class="flex flex-col space-y-0"><img src="/static/img/fattmerchant-logo.svg" class="sponsor-logos fattmerchant-logo"><small class="text-center">Sponsor</small></a>
-</div>
+{%include "./sponsors.html" %}
