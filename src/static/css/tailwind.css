@@ -84,4 +84,9 @@ body pre[class*="language-"] {
 
   .sponsor-logo-images{
     padding: auto;
+
   }
+  
+.blog-link{
+  @apply inline-flex py-3 items-center font-Poppins no-underline text-3xl bg-secondary text-neutral-content
+}
