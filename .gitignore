@@ -6,6 +6,7 @@ _site/
 *git/
 package-lock.json
 .env
-.history
+.history/
+
 # Local Netlify folder
 .netlify

@@ -4,9 +4,7 @@ items:
     url: "/"
   - text: About
     url: "/about"
-  - text: Meetup
-    url: "/meetup"
-  - text: Blog
-    url: "/blog"
+  - text: Community
+    url: "https://my.orlandodevs.com"
   - text: Join Our Slack
     url: "/slack"
