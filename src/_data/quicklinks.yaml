@@ -1,9 +1,9 @@
 ---
 links:
  
-  - title: Join our Meetup
-    url: "/meetup"
-    logo: "/static/img/meetup-logo.png"
+  - title: Latest Events!
+    url: "https://www.eventbrite.com/o/orlando-devs-15266001174"
+    logo: "/static/img/eventbrite-logo.png"
        
   - title: Join Our Slack
     url: "/slack"

@@ -18,7 +18,7 @@
         </button>
 
         <!--Menu-->
-        <div class="lg:inline-flex md:justify-end justify-items-end lg:items-end lg:w-auto w-3/5 my-6" :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" @click.away="isOpen = false" x-show.transition="true">
+        <div class="lg:inline-flex md:justify-end justify-items-end lg:w-auto w-3/5 my-6" :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" @click.away="isOpen = false" x-show.transition="true">
             {% if navigation.items %}
 
                 <ul class="flex md:flex-row flex-shrink flex-col px-6 list-reset">

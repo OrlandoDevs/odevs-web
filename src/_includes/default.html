@@ -16,12 +16,11 @@
       <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
     {% endif %}
   </head>
-  <body class="bg-base-300 flex flex-col">
+  <body class="bg-base-300 flex flex-1 min-h-screen flex-col">
     {% include "./partials/navbar.html" %}
-    <div class="container my-6 mx-auto min-h-screen">
+    <div class="flex-grow my-6 mx-auto place-items-center">
       {{ content | safe }}
     </div>
-    {% include "./partials/footer.html" %}
      <script src="/static/js/alpine.js"></script>
 
     {% if path == "home" %}
@@ -29,6 +28,8 @@
       <!-- Needed only if you are using Netlify Identity feature -->
       <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     {% endif %}
-
   </body>
+  <footer>
+    {% include "./partials/footer.html" %}
+  </footer>
 </html>
