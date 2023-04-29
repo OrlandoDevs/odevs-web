@@ -1,0 +1,43 @@
+---
+directors:
+  - name: Brian Rinaldi
+    role: President
+    position: Developer Experience Engineer at LaunchDarkly
+  - name: Jacques Fu
+    role: Vice-President & Treasurer
+    position: Co-Founder of Staxx and Beam.gg, Author of "Time Hacks"
+    
+advisors:
+  - name: Andrew Kozlik
+    position: Head of Product at eMeals.com
+  - name: Austin Musice 
+    position:  Director of Application Development at Omicron Media, Inc.
+  - name: Andrew Kozlik 
+    position:  Mobile Solutions Engineer, Tech Lead at Wyndham Destinations
+  - name: David Khourshid 
+    position:  Founder at Stately.ai
+  - name: Dwayne Hemmings 
+    position:  JavaScript Developer Advocate at Vonage
+  - name: Jamarcus Williams
+    position: Senior Mobile Application Engineer at Joann Stores
+  - name: Timothy Ferrell 
+    position:  Engineering Manager at Okta
+  - name: Brian Shacklett 
+    position:  Principal Engineer at Slalom
+  - name: Caitlin Augustin 
+    position:  VP of Product and Programs at DataKind
+  - name: German Gamboa
+    position: Senior Engineer at OLO, Inc.
+  - name: Rajiv Menon
+    position: CEO, Informulate
+  - name: Jenny Truong
+    position: Operations and Developer Relations at Stately.ai
+  - name: Rex Cartanega
+    position: Lead Software Developer at Elevux
+  - name: Hassan Sequias
+    position: Lead Engineer at Xureal
+
+former:
+  - name: Cassandra Wilcox
+  - name: Jenell Pizarro
+  - name: Matt Burgess
