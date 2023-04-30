@@ -15,9 +15,11 @@ advisors:
   - name: Andrew Kozlik 
     position:  Mobile Solutions Engineer, Tech Lead at Wyndham Destinations
   - name: David Khourshid 
-    position:  Founder at Stately.ai
+    position:  Software Engineer at Microsoft, Pianist
   - name: Dwayne Hemmings 
-    position:  JavaScript Developer Advocate at Vonage
+    position:  LifeLong.dev | Radio show host
+  - name: Matt Burgess 
+    position:  Senior Software Engineer at Cloudera
   - name: Jamarcus Williams
     position: Senior Mobile Application Engineer at Joann Stores
   - name: Timothy Ferrell 
@@ -27,17 +29,19 @@ advisors:
   - name: Caitlin Augustin 
     position:  VP of Product and Programs at DataKind
   - name: German Gamboa
-    position: Senior Engineer at OLO, Inc.
+    position: Sr. Engineer at OLO, Inc.
   - name: Rajiv Menon
     position: CEO, Informulate
   - name: Jenny Truong
     position: Operations and Developer Relations at Stately.ai
   - name: Rex Cartanega
-    position: Lead Software Developer at Elevux
+    position: CTO & Partner at Xureal
   - name: Hassan Sequias
-    position: Lead Engineer at Xureal
+    position: CEO & Founder at Xureal
 
 former:
   - name: Cassandra Wilcox
   - name: Jenell Pizarro
   - name: Matt Burgess
+  - name: Jorge Hernandez
+
