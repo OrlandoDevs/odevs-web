@@ -16,7 +16,7 @@
       <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
     {% endif %}
   </head>
-  <body class="bg-base-300 flex flex-1 min-h-screen flex-col">
+  <body id="root" class="bg-base-300 flex flex-1 min-h-screen flex-col">
     {% include "./partials/navbar.html" %}
     <div class="flex-grow my-6 mx-auto place-items-center">
       {{ content | safe }}

@@ -48,10 +48,6 @@ body pre[class*="language-"] {
   @apply no-underline text-white hover:text-secondary transition-all duration-200;
 }
 
-.sponsor-logos{
-  @apply h-10 mx-16 px-6 inline-flex w-48
-}
-
 
 .hide-scroll {
   -ms-overflow-style: none; /*IE and Edge*/
@@ -72,14 +68,14 @@ body pre[class*="language-"] {
   * 
   */
   .sponsor-grid{
-    @apply grid grid-cols-3 grid-rows-2
+    @apply mx-auto grid md:grid-cols-3 md:grid-rows-2 grid-cols-2 grid-rows-3 gap-4
   }
 
  .center-width{
-    width: 500px;
+    max-width: 500px;
   }
   .sponsor-logos{
-    @apply border rounded-md border-gray-300 shadow-sm h-40 w-40 my-1
+    @apply border rounded-md border-gray-300 shadow-sm h-40 w-40 px-6 inline-flex mx-auto
   }
 
   .sponsor-logo-images{
