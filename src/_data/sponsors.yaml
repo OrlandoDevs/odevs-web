@@ -24,3 +24,11 @@ sponsors:
     - name: Patreon
       link: https://www.patreon.com
       img: /static/img/patreon-creators-patreon.svg
+
+    - name: Credo Conduit
+      link: https://www.credoconduit.com
+      img: /static/img/conduit-logo.svg
+    
+    - name: Civo
+      link: https://www.civo.com
+      img: /static/img/civo-logo.svg
