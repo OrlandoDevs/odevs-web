@@ -5,6 +5,7 @@ layout: about
 
 <!--body for the about section-->
 <div class="text-xl">
+    <div>
     <br>
     <hr>
     <!--The Odevs mission statement-->
@@ -41,6 +42,20 @@ layout: about
             </li>
         </ul>
     </div>
+    {% if groups.group %}
+        <div class="mt-4 justify-center align-center">
+            <br>  
+            <h3 class="justify-self-center text-center"> Orlando Devs Community Groups</h3>
+            <ul class="flex flex-row space-x-4 my-4 justify-center">  
+                {% for group in groups.group %}
+                    <li>
+                        <p class="font-bold">
+                            {{group.name}}
+                        </p>
+                    </li>
+                {% endfor %}
+            </div>
+          {% endif %}
     </div>
 
     <hr>   
@@ -84,6 +99,5 @@ layout: about
 <p class="pb-5">We hope that you will join us soon, be on the Orlando Devs Slack, Orlando Devs Meetup, or all the other software-related meetups happening in Orlando.
 
 Have a blast! 🚀</p>
-</div>
 </div>
 </div>
