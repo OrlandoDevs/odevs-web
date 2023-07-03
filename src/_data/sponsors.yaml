@@ -32,3 +32,7 @@ sponsors:
     - name: Civo
       link: https://www.civo.com
       img: /static/img/civo-logo.svg
+      
+    - name: Thumbprint
+      link: https://thumbprint.com/
+      img: /static/img/thumbprint-logo.svg
