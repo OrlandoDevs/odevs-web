@@ -5,36 +5,61 @@ layout: about
 
 <!--body for the about section-->
 <div class="text-xl">
-    <div class="flex flex-1 justify-items-center flex-wrap gap-8">
-        <div class="container md:w-2/3">
-            We are the Orlando Devs, a community of software developers in Orlando who are life-long learners and love
-            being around like-minded people all day.<br><br>
-            We do that by hanging out on the <a href="/slack" class="underline hover:text-primary-focus"> Orlando Devs
-                Slack channel</a> every day, and by going to multiple meetups throughout the month. We even have <a
-                href="https://www.eventbrite.com/o/orlando-devs-15266001174" class="underline hover:text-primary-focus">our own monthly meetup</a> where we cover a
-            wide array of topics that are related to software development.
-        </div>
-        <img src="/static/img/bg.jpg" class="justify-items-end  md:w-1/4 rounded-lg text-bl" />
-    </div>
+    <div>
     <br>
     <hr>
     <!--The Odevs mission statement-->
-    <div class="container w-3/4 my-10 space-y-3">
+    <div class="container w-3/4 mt-10 space-y-1">
         <div class="flex justify-center">
-        <strong>
+            <img src="/static/img/odev-logo-blue.png" class="inline-flex h-10 mx-3" />
+        <strong class="inline-flex">
             <h1 class="text-3xl">Our Mission</h1>
         </strong>
-        <br>
         </div>
-
-        <div class="flex justify-center text-center">
+        <br>
+            <br>
             <p>
-            Here at Orlando Devs, we strive to build a better community and enrich lives for people in the Orlando region. We do so making technology accessible through developer focused events, continuing education, and employment resources.
-        </p>
-        </div>        
+            Orlando Devs is an Orlando-area wide community focused on growing and supporting developers at all levels to build their
+            careers in Central Florida. Through the running of regular networking events, training sessions, hackathons, and
+            collaboration events, Orlando Devs works to support developers in skill development and community-building. As a member
+            of Innovate Orlando, the greater technology community of the Orlando area, Orlando Devs fosters collaboration between
+            technologists, entrepreneurs, enterprise businesses, academia, and more. With a keen focus on growing diversity in the
+            technology ecosystem, Orlando Devs supports programming that builds the talent pipeline for women and minorities in
+            technology.<br><br>
+            Orlando Devs gives back to the community through mentorship, hosted events, and volunteerism to grow the tech community
+            of Orlando. Orlando Devs is a 501(c)(3) non-profit organization.       
+            </p>     
     </div>
-    <hr>
-    <br>
+    <div class="mx-10 px-4 mt-4">
+        <ul class="flex flex-row space-x-4 my-4 justify-center">
+            <li>
+                <a href="/meetups" class="font-bold underline transform hover:-translate-y-1">
+                    View Our Events
+                </a>
+            </li>
+            <li>
+                <a href="/slack" class="font-bold underline transform hover:-translate-y-1">Join Our Slack Channel</a>
+            </li>
+        </ul>
+    </div>
+    {% if groups.group %}
+        <div class="mt-4 justify-center align-center">
+            <br>  
+            <h3 class="justify-self-center text-center"> Orlando Devs Community Groups</h3>
+            <ul class="flex flex-row space-x-4 my-4 justify-center">  
+                {% for group in groups.group %}
+                    <li>
+                        <p class="font-bold">
+                            {{group.name}}
+                        </p>
+                    </li>
+                {% endfor %}
+            </div>
+          {% endif %}
+    </div>
+
+    <hr>   
+<br>
     <!--The Odevs board-->
     <div class="mx-10 px-4 mt-10">
         {% if board.directors %}
@@ -74,6 +99,5 @@ layout: about
 <p class="pb-5">We hope that you will join us soon, be on the Orlando Devs Slack, Orlando Devs Meetup, or all the other software-related meetups happening in Orlando.
 
 Have a blast! 🚀</p>
-</div>
 </div>
 </div>
