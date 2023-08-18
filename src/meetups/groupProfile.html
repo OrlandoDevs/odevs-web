@@ -1,0 +1,6 @@
+<div class="bg-base-100 container border rounded-md shadow-sm my-4 mx-auto text-xl"></div>
+    <h1 class="bg-clip-text text-transparent bg-gradient-to-br from-primary to-secondary mb-6 p-8">{{group.name}}</h1>
+    <img src="{{ group.image_full }}" alt="{{ group.alt }}" class="hidden lg:block md:hidden mx-auto w-full" />
+    <img src="{{ group.image_md }}" alt="{{ group.alt }}" class="lg:hidden md:block mx-auto w-full" />
+    <p class="p-4 pt-6">{{ group.desc | replace('\n', '<br><br>') | safe }}</p>
+</div>

@@ -2,9 +2,16 @@
 items:
   - text: Home
     url: "/"
+    target: "_self"
   - text: About
     url: "/about"
-  - text: Community
+    target: "_self"
+  - text: Groups
+    url: "/meetups"
+    target: "_self"
+  - text: Blog
     url: "https://my.orlandodevs.com"
+    target: "_blank"
   - text: Join Our Slack
     url: "/slack"
+    target: "_self"

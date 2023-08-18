@@ -1,0 +1,14 @@
+---
+title: 
+layout: meetupgroup
+---
+
+
+    {% if groups.collection %}
+        {% set extractedValue = page.url | extractValueFromUrl %}
+        {% for group in groups.collection %}
+            {% if group.domain == extractedValue %}
+                {% include "./groupProfile.html" %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}

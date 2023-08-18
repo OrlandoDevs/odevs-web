@@ -25,6 +25,12 @@ module.exports = {
         trueGray: colors.neutral,
         violet: colors.violet,
       },
+      minHeight: {
+        '60vh': '60vh'
+      },
+      maxHeight: {
+        '60vh': '60vh'
+      }
     },
   },
   variants: {

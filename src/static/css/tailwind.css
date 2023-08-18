@@ -20,6 +20,15 @@
   --border-btn: 2px;          /* default border size for button */
 }
 
+@layer components {
+  .card {
+    background-color: theme('colors.white');
+    border-radius: theme('borderRadius.lg');
+    padding: theme('spacing.6');
+    box-shadow: theme('boxShadow.xl');
+  }
+}
+
 h1 {
   @apply text-4xl tracking-tighter text-center lg:text-7xl;
 }
@@ -68,12 +77,19 @@ body pre[class*="language-"] {
   * 
   */
   .sponsor-grid{
-    @apply mx-auto grid md:grid-cols-3 md:grid-rows-2 grid-cols-2 grid-rows-3 gap-4
+    @apply mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-4
   }
 
  .center-width{
-    max-width: 500px;
+    max-width: 700px;
   }
+
+  @media (max-width: 767px) { 
+    .center-width {
+      max-width: 350px;
+    } 
+  }
+
   .sponsor-logos{
     @apply border rounded-md border-gray-300 shadow-sm h-40 w-40 px-6 inline-flex mx-auto
   }

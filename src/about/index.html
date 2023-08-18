@@ -6,93 +6,76 @@ layout: about
 <!--body for the about section-->
 <div class="text-xl">
     <div>
-    <br>
-    <hr>
-    <!--The Odevs mission statement-->
-    <div class="container w-3/4 mt-10 space-y-1">
-        <div class="flex justify-center">
-            <img src="/static/img/odev-logo-blue.png" class="inline-flex h-10 mx-3" />
-        <strong class="inline-flex">
-            <h1 class="text-3xl">Our Mission</h1>
-        </strong>
-        </div>
-        <br>
-            <br>
-            <p>
-            Orlando Devs is an Orlando-area wide community focused on growing and supporting developers at all levels to build their
-            careers in Central Florida. Through the running of regular networking events, training sessions, hackathons, and
-            collaboration events, Orlando Devs works to support developers in skill development and community-building. As a member
-            of Innovate Orlando, the greater technology community of the Orlando area, Orlando Devs fosters collaboration between
-            technologists, entrepreneurs, enterprise businesses, academia, and more. With a keen focus on growing diversity in the
-            technology ecosystem, Orlando Devs supports programming that builds the talent pipeline for women and minorities in
-            technology.<br><br>
-            Orlando Devs gives back to the community through mentorship, hosted events, and volunteerism to grow the tech community
-            of Orlando. Orlando Devs is a 501(c)(3) non-profit organization.       
-            </p>     
-    </div>
-    <div class="mx-10 px-4 mt-4">
-        <ul class="flex flex-row space-x-4 my-4 justify-center">
-            <li>
-                <a href="/slack" class="font-bold underline transform hover:-translate-y-1">Join Our Slack Channel</a>
-            </li>
-        </ul>
-    </div>
-    {% if groups.group %}
-        <div class="mt-4 justify-center align-center">
-            <br>  
-            <h3 class="justify-self-center text-center"> Orlando Devs Community Groups</h3>
-            <ul class="flex flex-row space-x-4 my-4 justify-center">  
-                {% for group in groups.group %}
-                    <li>
-                        <p class="font-bold">
-                            {{group.name}}
-                        </p>
-                    </li>
-                {% endfor %}
-            </div>
-          {% endif %}
-    </div>
-
-    <hr>   
-    <br>
-    <!--The Odevs board-->
-    <div class="mx-10 px-4 mt-10">
-        {% if board.directors %}
-        <ul class="">
-            <h3>Orlando Devs Board of Directors</h3>
-            {% for director in board.directors %}
-            <li><b>{{director.name}}</b> {{director.role}} - {{director.position}}</li>
-            {% endfor %}
-        </ul>
-        <br>
-        {% endif %}
-        {% if board.advisors %}
-        <ul>
-            <h3>Orlando Devs Board of Advisors</h3>
-            {% for advisor in board.advisors %}
-            <li><b>{{advisor.name}}</b> {{advisor.position}}</li>
-            {% endfor %}
-            <br>
-        </ul>
-        {% endif %}
-    <div>
-        {%if board.former %}
-        <h3>Former Orlando Devs Board Members</h3>
-        <ul>
-            {% for member in board.former %}
-        <li><b>{{member.name}}</b>{% if member.role %},
-        {{member.role}}
-        {% endif %}
-        </li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-        </div>
-        <br>
         <hr>
-        <br>
-        <p class="pb-5">We hope that you will join us soon, be on the Orlando Devs Slack, Orlando Devs Meetup, or all the other software-related meetups happening in Orlando.
+        <!--The Odevs mission statement-->
+        <div class="container w-3/4 mt-10 space-y-1">
+            <div class="flex justify-center">
+                <img src="/static/img/odev-logo-blue.png" class="inline-flex h-10 mx-3" />
+            <strong class="inline-flex">
+                <h1 class="text-3xl">Our Mission</h1>
+            </strong>
+            </div>
+            <br>
+                <br>
+                <p>
+                Orlando Devs is an Orlando-area wide community focused on growing and supporting developers at all levels to build their
+                careers in Central Florida. Through the running of regular networking events, training sessions, hackathons, and
+                collaboration events, Orlando Devs works to support developers in skill development and community-building. As a member
+                of Innovate Orlando, the greater technology community of the Orlando area, Orlando Devs fosters collaboration between
+                technologists, entrepreneurs, enterprise businesses, academia, and more. With a keen focus on growing diversity in the
+                technology ecosystem, Orlando Devs supports programming that builds the talent pipeline for women and minorities in
+                technology.<br><br>
+                Orlando Devs gives back to the community through mentorship, hosted events, and volunteerism to grow the tech community
+                of Orlando. Orlando Devs is a 501(c)(3) non-profit organization.       
+                </p>     
+        </div>
+        <div class="mx-10 px-4 mt-4">
+            <ul class="flex flex-row space-x-4 my-4 justify-center">
+                <li>
+                    <a href="/slack" class="font-bold underline transform hover:-translate-y-1">Join Our Slack Channel</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mx-auto px-4 mt-10 w-3/4">
+            {% if board.directors %}
+            <ul class="">
+                <h3>Orlando Devs Board of Directors</h3>
+                {% for director in board.directors %}
+                <li><b>{{director.name}}</b> {{director.role}} - {{director.position}}</li>
+                {% endfor %}
+            </ul>
+            <br>
+            {% endif %}
+            {% if board.advisors %}
+            <ul>
+                <h3>Orlando Devs Board of Advisors</h3>
+                {% for advisor in board.advisors %}
+                <li><b>{{advisor.name}}</b> {{advisor.position}}</li>
+                {% endfor %}
+                <br>
+            </ul>
+            {% endif %}
+            <div>
+                {%if board.former %}
+                <h3>Former Orlando Devs Board Members</h3>
+                <ul>
+                    {% for member in board.former %}
+                <li><b>{{member.name}}</b>{% if member.role %},
+                {{member.role}}
+                {% endif %}
+                </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <br>
+            <hr>
+            <br>
+            <p class="pb-5">We hope that you will join us soon, be on the Orlando Devs Slack, Orlando Devs Meetup, or all the other software-related meetups happening in Orlando.
 
-        Have a blast! 🚀</p>
+            Have a blast! 🚀</p>
+        </div>
     </div>
+    <!--The Odevs board-->
+    
 </div>

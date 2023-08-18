@@ -1,0 +1,14 @@
+---
+title: 
+layout: meetupgroup
+---
+
+    {% if groups.collection %}
+        {% set extractedValue = page.url | extractValueFromUrl %}
+        {% for group in groups.collection %}
+            {% if group.domain == extractedValue %}
+            <h3 class="text-center">This group is currently looking for an organizer. If this interests you fill out the Volunteer Form.</h3>
+                {% include "./groupProfile.html" %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}

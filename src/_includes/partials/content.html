@@ -1,19 +1,21 @@
-<div class="relative md:flex flex-1 lg:flex-cols-4 md:grid-col-4 px-2 py-2 lg:mx-0 overflow-auto justify-center items-center text-center mb-6 min-w-full">
+<div class="max-w-[788px] mx-auto">
+    <div class="grid lg:grid-cols-4 md:grid-cols-1">
 
-    {% if quicklinks.links %}
-
-        {% for item in quicklinks.links %}
-       
-            <a href="{{item.url}}" target="_blank" class="justify-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md hover:scale-105 text-center md:p-6 md:border-2 rounded-md border-gray-200 hover:border-base-200 hover:bg-primary md:hover:text-base-200 mx-6 md:shadow-sm">
-                <img src="{{item.logo}}" class="h-12 mx-auto mb-3">
-                <h4><strong>{{item.title}}
-                    </strong></h4>
-                    <small>{{item.desc}}</small>
-            </a>
-        {% endfor %}
-
-    {% endif %}
-
+        {% if quicklinks.links %}
+    
+            {% for item in quicklinks.links %}
+           
+                <a href="{{item.url}}" target="_blank" class="justify-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md hover:scale-105 text-center md:p-6 md:border-2 rounded-md border-gray-200 hover:border-base-200 hover:bg-primary md:hover:text-base-200 mx-2 md:shadow-sm mb-6">
+                    <img src="{{item.logo}}" class="h-12 mx-auto mb-3">
+                    <h4><strong>{{item.title}}
+                        </strong></h4>
+                        <small>{{item.desc}}</small>
+                </a>
+            {% endfor %}
+    
+        {% endif %}
+    
+    </div>
 </div>
 
 {%include "./sponsors.html" %}

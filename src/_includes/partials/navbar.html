@@ -5,7 +5,7 @@
                             <img src="/static/img/footer-odev.png" class="w-12 h-12"/>
             <a href="/" class="text-lg transition duration-500 ease-in-out transform translate-x-2 hover:-translate-y-1 hover:scale-110 ">
             <strong class=" bg-clip-text text-transparent bg-gradient-to-t from-white to-gray-300">
-                Orlando</strong> <strong class="text-secondary">Devs</strong>
+                Orlando</strong>&#160;<strong class="text-secondary">Devs</strong>
                 </a>
         </div>
 
@@ -24,7 +24,7 @@
                 <ul class="flex md:flex-row flex-shrink flex-col px-6 list-reset">
                     {% for item in navigation.items %}
                         <li class="nav__item mx-3">
-                            <a @click="isOpen = false" class="transition duration-500 ease-in-out text-lg inline-flex text-gray-300 no-underline transform hover:-translate-y-1 hover:scale-110 hover:text-secondary px-8 pt-4" href="{{ item.url }}">
+                            <a @click="isOpen = false" class="transition duration-500 ease-in-out text-lg inline-flex text-gray-300 no-underline transform hover:-translate-y-1 hover:scale-110 hover:text-secondary px-8 pt-4" href="{{ item.url }}" target="{{ item.target }}">
                             {{ item.text }}
                             </a>
                         </li>

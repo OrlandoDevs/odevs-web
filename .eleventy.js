@@ -26,6 +26,13 @@ module.exports = function (eleventyConfig) {
     yaml.load(contents)
   );
 
+  // Extract domain from the page URL
+  eleventyConfig.addFilter("extractValueFromUrl", function (url) {
+    const urlParts = url.split("/");
+    const extractedValue = urlParts[2];
+    return extractedValue;
+  });
+
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
     "./src/admin/config.yml": "./admin/config.yml",

@@ -1,11 +1,90 @@
 ---
-group:
+collection:
   - name: Orlando Devs
-  - name: Orlando Innovation League
+    image_full: /static/img/fullsailarena2FullScreen.jpg
+    image_md: /static/img/fullsailarena2.jpg
+    alt: Orlando Devs event
+    desc: Welcome to Orlando Devs, the premier software developer community in Central Florida! As a leading group of passionate software developers, we foster a vibrant and inclusive environment for tech enthusiasts and professionals alike. Our community is committed to fostering growth, sharing knowledge, and networking among developers, making us the go-to hub for all things tech-related in the Orlando area.
+
+      At Orlando Devs, we organize a wide array of events, workshops, and meetups, ensuring that our members stay up-to-date with the latest trends, technologies, and best practices in the software development industry. Whether you're a seasoned programmer, a coding hobbyist, or just starting your journey, our community welcomes all skill levels, encouraging collaboration and camaraderie among like-minded individuals.
+
+      Orlando Devs is a valuable resource hub, offering comprehensive guides, tutorials, and articles on various programming languages, frameworks, and tools. Here we ensure that developers searching for tech communities in the region find their way to Orlando Devs.
+
+      Join Orlando Devs today to connect with a diverse group of developers, expand your knowledge, and forge meaningful connections that will propel your career to new heights. Be part of the ever-growing tech scene in Central Florida and unleash your full potential as a software developer!
+    domain: orlandodevs
+    url: /meetups/orlandodevs
   - name: OrlandoJS
+    image_full: /static/img/orlandojsFullScreen.jpg
+    image_md: /static/img/orlandojs.jpg
+    alt: OrlandoJS event
+    desc: Welcome to Orlando JS, the premier JavaScript developer community in Central Florida! As a leading group of passionate JavaScript enthusiasts, we pride ourselves on being the go-to hub for everything related to JavaScript development in the region. Our vibrant and inclusive community is dedicated to fostering growth, knowledge sharing, and networking among developers, making us the ultimate destination for tech enthusiasts and professionals alike.
+
+      At Orlando JS, we host a wide array of events, workshops, and meetups that cater to developers of all levels, from beginners to seasoned experts. Stay up-to-date with the latest trends and innovations in the JavaScript ecosystem, including popular frameworks like React, Vue.js, and Angular, as well as cutting-edge runtimes like Node.js. Our SEO-optimized website serves as a valuable resource hub, providing comprehensive guides, tutorials, and articles on various JavaScript topics, ensuring that developers searching for JavaScript communities in Central Florida find their way to Orlando JS.
+
+      Join our thriving JavaScript community today and immerse yourself in a supportive environment where collaboration and camaraderie thrive. Forge meaningful connections, gain insights from industry experts, and elevate your JavaScript skills to new heights. Whether you're an aspiring developer or a seasoned pro, Orlando JS has something to offer to all JavaScript enthusiasts. Come be a part of the ever-evolving JavaScript landscape in Central Florida!
+    domain: orlandojs
+    url: /meetups/orlandojs
   - name: Orlando PHP
-  - name: Codex
+    image_full: /static/img/orlandophpFull.jpg
+    image_md: /static/img/orlandophp.jpg
+    alt: Orlando PHP event
+    desc: Welcome to Orlando PHP, the PHP User Group Meetup and an integral part of the esteemed Orlando Devs Organization! Our community is dedicated to hosting a series of engaging and informative events, including in-person and virtual presentations, lectures, and socially-based gatherings. As a premier PHP developer group, our mission is to promote, educate, and elevate the PHP programming language and its related frameworks, including the highly popular Laravel and Symfony.
+
+      At Orlando PHP, we bring together a diverse group of PHP enthusiasts, from beginners to seasoned developers, fostering a welcoming environment for all skill levels. Our SEO-optimized website serves as a comprehensive resource hub, offering valuable insights, tutorials, and articles on PHP best practices, Laravel tips, Symfony tricks, and more. Whether you're looking to sharpen your PHP skills, explore the latest advancements in Laravel, or dive into the world of Symfony, our community has you covered.
+
+      Stay updated with the ever-evolving PHP landscape and immerse yourself in the vibrant tech scene of Central Florida. Network with like-minded individuals, collaborate on exciting projects, and gain valuable knowledge from industry experts. Join Orlando PHP today and be a part of a thriving community that is passionate about PHP and committed to advancing the realm of web development in Central Florida!
+    domain: orlandophp
+    url: /meetups/orlandophp
+  - name: Project CodeX
+    image_full: /static/img/projectcodexFull.jpg
+    image_md: /static/img/projectcodex.jpg
+    alt: Project Codex Logo
+    desc: Welcome to Project Codex, the leading software developer group dedicated to empowering junior developers and nurturing their skillsets while keeping them up-to-date with the latest technologies in the industry. Our community is committed to providing a supportive and inclusive environment for aspiring developers, fostering their growth and success.
+
+      Project Codex is designed to help junior developers enhance their coding abilities and gain hands-on experience. We aim to serve as a valuable knowledge base, providing tutorials, guides, and articles on various programming languages, frameworks, and tools, ensuring that junior developers searching for learning opportunities find their way to Project Codex.
+
+      Join our thriving developer community today and unlock the potential of your coding journey. Network with experienced professionals, collaborate on exciting projects, and embrace the opportunities to learn about new and emerging technologies. Let Project Codex be your guiding light as you navigate the world of software development, growing your skillset and achieving new heights in your career. Start your journey with us and discover the vast possibilities that await you!
+    domain: projectcodex
+    url: /meetups/projectcodex
   - name: Lady Devs
+    image_full: /static/img/ladydevsFull.jpg
+    image_md: /static/img/ladydevs.jpg
+    alt: Lady Devs Illustration
+    desc: Lady Devs is a vibrant and inclusive community nestled in the heart of Orlando, Florida, dedicated to fostering growth and collaboration among software developers, with a particular emphasis on supporting female talents. While the group celebrates the achievements of women in the field, its doors are open to all enthusiasts, embracing a diverse range of backgrounds and experiences. Lady Devs serves as a dynamic platform that facilitates knowledge-sharing, networking, and skill enhancement for software professionals across the spectrum.
+
+      At Lady Devs, innovation knows no gender bounds. The community brings together an eclectic mix of aspiring developers, seasoned experts, and technology enthusiasts who come together to inspire, empower, and learn from one another. Through a plethora of workshops, tech talks, hackathons, and collaborative projects, Lady Devs nurtures an environment where individuals can not only enhance their technical prowess but also cultivate valuable connections within the local software ecosystem. The group's commitment to inclusivity, diversity, and continuous learning reflects its vision of propelling Central Florida's software landscape forward, one line of code at a time.
+    domain: ladydevs
+    url: /meetups/ladydevs
+  - name: Orlando Python
+    image_full: /static/img/orlandopythonFull.jpg
+    image_md: /static/img/orlandopython.jpg
+    alt: Python Meetup
+    desc: Welcome to the Orlando Python User Group, the premier community of software developers dedicated to harnessing the power of the Python language for development. As a leading group in Central Florida, we are committed to promoting Python as a versatile and efficient programming language for web development, data analysis, machine learning, and more.
+
+      At the Orlando Python User Group, we host events, meetups, and workshops that cater to Python enthusiasts of all levels, from beginners to seasoned developers. Our passion is to discuss Python best practices, web frameworks like Django and Flask, data manipulation, and popular libraries like NumPy and Pandas.
+
+      Join our vibrant Python community today to connect with like-minded individuals, collaborate on exciting projects, and stay updated with the latest trends and innovations in the Python ecosystem. Whether you're a seasoned Pythonista or just starting your Python journey, the Orlando Python User Group welcomes all, providing a supportive environment to grow your Python skills and flourish as a developer in Central Florida. Come be a part of our thriving community and unlock the true potential of Python for your software development endeavors!
+    domain: orlandopython
+    url: /meetups/orlandopython
   - name: Frontend Devs
+    image_full: /static/img/frontendFull.jpg
+    image_md: /static/img/frontend.jpg
+    alt: Front End Devs Image
+    desc: Front End Orlando is a pioneering force in the Central Florida tech scene, specializing in cutting-edge front-end software development. Our passionate community brings together designers, developers, and tech enthusiasts, fostering a collaborative environment that thrives on innovation and creativity. As a premier hub for front-end expertise, we're dedicated to shaping the future of digital experiences in the region.
+
+      With a laser focus on front-end technologies, Front End Orlando offers a dynamic platform for individuals to immerse themselves in HTML, CSS, JavaScript, and responsive design. Our Central Florida-based events, workshops, and meetups provide an exclusive opportunity for professionals to stay up-to-date with the latest trends, build connections, and cultivate a robust skill set. Whether you're an emerging talent or a seasoned expert, our community welcomes you to join our journey of transforming the digital landscape.
+
+      At Front End Orlando, we're not just about code; we're about crafting user-centric interfaces, optimizing performance, and ensuring seamless user interactions. By championing accessibility, responsive design, and progressive web applications, we empower members to excel in a rapidly evolving technological ecosystem. Join us and be part of a movement that's propelling Central Florida's front-end innovation, networking, and expertise to unprecedented heights.
+    domain: frontenddevs
+    url: /meetups/frontenddevs
   - name: Open Orlando
-  - name: IOS
+    image_full: /static/img/openorlandoFull.jpg
+    image_md: /static/img/openorlando.jpg
+    alt: Open Orlando Image
+    desc: Open Orlando is a vibrant and dedicated software developer community in Central Florida, driven by a resolute commitment to crafting software projects that create tangible and positive social impact. Our group unites software engineers, developers, and tech enthusiasts under a common banner. As an influential force, we harness innovation and collaboration to build software solutions that address crucial challenges in areas like education, healthcare, sustainability, and more.
+
+      Our mission centers on catalyzing meaningful change by leveraging the power of coding expertise. Through hackathons, workshops, and collaborative initiatives, Open Orlando channels its energy into projects that align with our shared values of social responsibility and community empowerment. By combining technology and compassion, we empower our members to contribute to lasting, positive change that resonates far beyond lines of code. Whether you're an experienced developer or just starting your journey, Open Orlando provides a nurturing environment for those eager to make a difference through software innovation.
+
+      Join Open Orlando today to connect with like-minded individuals who are passionate about using their technical skills for social good. Be part of a collective effort that's rewriting the narrative of software development, one impactful project at a time. Together, we're transforming the Central Florida community and shaping a brighter future through the potent blend of technology and compassion.
+    domain: openorlando
+    url: /meetups/openorlando
