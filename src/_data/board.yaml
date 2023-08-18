@@ -3,8 +3,11 @@ directors:
   - name: Brian Rinaldi
     role: President
     position: Developer Experience Engineer at LaunchDarkly
+  - name: Caitlin Augustin 
+    role: Vice President
+    position:  VP of Product and Programs at DataKind
   - name: Jacques Fu
-    role: Vice-President & Treasurer
+    role: Treasurer
     position: Co-Founder of Stax and Beam.gg, Author of "Time Hacks"
     
 advisors:
@@ -19,13 +22,12 @@ advisors:
   - name: Matt Burgess 
     position:  Senior Software Engineer at Cloudera
   - name: Jamarcus Williams
-    position: Senior Mobile Application Engineer at Joann Stores
+    position: Flutter Engineer at Disney Parks
   - name: Timothy Ferrell 
     position:  Engineering Manager at Okta
   - name: Brian Shacklett 
     position:  Principal Consultant at Slalom
-  - name: Caitlin Augustin 
-    position:  VP of Product and Programs at DataKind
+ 
   - name: German Gamboa
     position: Senior Software Engineer at OLO inc
   - name: Rajiv Menon
