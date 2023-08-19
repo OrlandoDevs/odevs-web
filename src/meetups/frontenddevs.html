@@ -7,6 +7,12 @@ layout: meetupgroup
         {% set extractedValue = page.url | extractValueFromUrl %}
         {% for group in groups.collection %}
             {% if group.domain == extractedValue %}
+            <div class="text-right">
+                <a href="/meetups" class="btn bg-sky-900 text-xs mb-5 mx-3">
+                    <i class="material-icons">keyboard_arrow_left</i>
+                    Back to Groups
+                </a>
+            </div>
             <h3 class="text-center">This group is currently looking for an organizer. If this interests you fill out the Volunteer Form.</h3>
                 {% include "./groupProfile.html" %}
             {% endif %}

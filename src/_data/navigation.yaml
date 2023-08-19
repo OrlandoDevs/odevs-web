@@ -9,6 +9,9 @@ items:
   - text: Groups
     url: "/meetups"
     target: "_self"
+  - text: Forms
+    url: "/forms"
+    target: "_self"
   - text: Blog
     url: "https://my.orlandodevs.com"
     target: "_blank"

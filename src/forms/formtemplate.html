@@ -1,0 +1,17 @@
+<div class="max-w-[800px] mx-auto">
+    <div class="text-xl">
+        <div class="flex flex-col rounded-md gap-y-8  space-y-10 font-light">
+            <div class="p-8 text-xl">
+                <h3>{{form.name}}</h3>
+                <p>{{form.text1}}</p>
+                <h3 class="pt-6">{{form.help}}</h3>
+                <p>{{form.text2}}</p>
+            </div>
+            <div>
+                <iframe class="min-h-screen min-w-full overflow-hidden" src="{{form.iframeurl}}">
+                    Loading…
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>

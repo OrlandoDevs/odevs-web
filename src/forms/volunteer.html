@@ -1,0 +1,22 @@
+---
+title: 
+layout: forms
+---
+
+    {% if forms.collection %}
+        {% set extractedValue = page.url | extractValueFromUrl %}
+        {% for form in forms.collection %}
+            {% if form.domain == extractedValue %}
+                <div class="text-right">
+                    <a href="/forms" class="btn bg-sky-900 text-xs mb-5 mx-3">
+                        <i class="material-icons">keyboard_arrow_left</i>
+                        Back to Forms
+                    </a>
+                </div>
+
+                <h1 class="bg-clip-text text-transparent bg-gradient-to-br from-primary to-secondary mb-6">{{form.title}}</h1>
+                <hr />
+            {% include "./formtemplate.html" %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}

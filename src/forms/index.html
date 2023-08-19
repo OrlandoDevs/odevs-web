@@ -1,0 +1,36 @@
+---
+layout: forms
+---
+
+<!--body for the about section-->
+<div class="text-xl">
+    <!--The Odevs mission statement-->
+    <div class="container space-y-1 min-h-60vh max-w-[1200px]">
+        <div class="">
+            {% if forms.collection %}
+                {% for form in forms.collection %}
+                <div class="grid grid-cols-12 gap-4 p-4">
+                    <!-- Image column -->
+                    <div class="col-span-12 md:col-span-2 flex flex-col justify-center">
+                      <a href="{{form.url}}" class="block text-center">
+                        <img src="{{form.thumbnail}}" alt="{{forms.alt}}" class="w-[100px] mx-auto" title="Slack">
+                      </a>
+                    </div>
+                  
+                    <!-- Text column -->
+                    <div class="col-span-12 md:col-span-8 flex flex-col justify-center max-w-[800px] mx-auto">
+                      <p class="text-xl">{{form.jointext}}</p>
+                    </div>
+                  
+                    <!-- Button column -->
+                    <div class="col-span-12 md:col-span-2 flex flex-col justify-center justify-items-center">
+                      <a href="{{form.url}}" class="btn bg-sky-900 text-xs mb-5 mx-3">
+                        {{form.btntext}}
+                      </a>
+                    </div>
+                  </div>                  
+                {% endfor %}
+            {% endif %}
+        </div> 
+    </div>
+</div>

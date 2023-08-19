@@ -1,0 +1,38 @@
+---
+collection:
+  - name: Central Florida's Premiere Software Developer Community
+    help: How to get in?
+    text1: An open community and online chat for Software Developers with 1,000+ members. Who knew so many people were interested in writing code in Orlando, FL?
+    text2: Our Slack works via invite-only. To get an invitation simply fill out the following form and we'll get back to you promptly.
+    jointext: Join the vibrant Orlando Devs Slack community and connect with like-minded tech enthusiasts, developers, and professionals in the Central Florida area. Engage in discussions, share knowledge, and stay up-to-date with local tech events, job opportunities, and the latest industry trends.
+    title: Orlando Devs Slack
+    thumbnail: /static/img/slack-logo-icon.png
+    alt: Slack Community
+    btntext: Slack Form
+    domain: slack
+    url: /forms/slack
+    iframeurl: https://docs.google.com/forms/d/e/1FAIpQLScGE61vu8JV5C2BC5Wp9BsH_5od4yl9UG4NhofD1IJopBNAjw/viewform?embedded=true
+  - name: Volunteer
+    help: How can you help?
+    text1: Are you passionate about software development and looking for meaningful ways to give back to the tech community? Consider volunteering with Orlando Devs where you have the opportunity to contribute to the growth and success of this community while gaining valuable experience and connections in the tech world.
+    text2: "There are many opportunites to contribute in the following areas: Event Support (Organizers, Coordinators), Speaker Outreach, Logistic & Planning, Networking & Engagement, Tech Support & Projects. Fill out the form below to get started!"
+    jointext: Volunteer your expertise and passion for technology by joining the Orlando Devs community as a dedicated volunteer. Make a meaningful impact by contributing to events, workshops, and initiatives that nurture growth, knowledge-sharing, and collaboration among developers in Central Florida. 
+    title: Volunteer Form
+    thumbnail: /static/img/volunteer.png
+    alt: Volunteer
+    btntext: Volunteer Form
+    domain: volunteer
+    url: /forms/volunteer
+    iframeurl: https://docs.google.com/forms/d/e/1FAIpQLSctvUF1F3k0-Exw2igu4q9gznakMsrN7kDu0qHTM_aFd3xLrw/viewform?embedded=true
+  - name: Meetup Survey
+    help: How did we do?
+    text1: An open community and online chat for Software Developers with 1,000+ members. Who knew so many people were interested in writing code in Orlando, FL?
+    text2: Our Slack works via invite-only. To get an invitation simply fill out the following form and we'll get back to you promptly.
+    jointext: Share your valuable insights and experiences by providing feedback about your attendance at an Orlando Devs meetup. Your feedback plays a crucial role in enhancing the quality of our events, ensuring they align with your expectations and interests.
+    title: Meetup Survey
+    thumbnail: /static/img/questionairre.svg
+    alt: Meetup Survey
+    btntext: Survey Form
+    domain: survey
+    url: /forms/survey
+    iframeurl: https://docs.google.com/forms/d/e/1FAIpQLSf-RPX8A77VGnVBjBjKXDfRVj7X9YsjuSCEW3oQizDg8OzcYQ/viewform?embedded=true

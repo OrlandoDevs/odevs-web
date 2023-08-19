@@ -4,7 +4,6 @@ layout: meetups
 
 <!--body for the about section-->
 <div class="text-xl">
-    <div>
     <!--The Odevs mission statement-->
     <div class="container mt-10 space-y-1 bg-[url('/static/img/fullSailArena.jpg')] p-4 min-h-60vh">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -12,7 +11,7 @@ layout: meetups
             {% if groups.collection %}
                 {% for group in groups.collection %}
                     <div class="card border-2 border-solid border-sky-900">
-                        <a href="{{ group.url }}" class="btn m-6 bg-sky-900 text-xl">{{ group.name }}</a>
+                        <a href="{{ group.url }}" class="btn bg-sky-900 my-5 xl:text-xl lg:text-lg">{{ group.name }}</a>
                     </div>
                 {% endfor %}
             {% endif %}
