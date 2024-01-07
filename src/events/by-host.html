@@ -8,9 +8,7 @@ pagination:
 permalink: "/events/{{ events.host | slug }}/index.html"
 ---
 
-<h1>{{ events.host }}</h1>
-<!-- <p>Date and Time: {{ event.datetime }}</p> -->
-<!-- <p>Duration: {{ event.duration }}</p> -->
-<!-- <p>Price: ${{ event.priceInDollars }}</p> -->
-<!-- <p>Hosted by: {{ event.host }}</p> -->
 
+{% for event in events.events %}
+  {% include 'partials/event_card.html' %}
+{% endfor %}

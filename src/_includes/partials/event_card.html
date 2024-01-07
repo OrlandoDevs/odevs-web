@@ -1,0 +1,11 @@
+<div class="event-background">
+  <article class="event">
+    <h3 class="title"><a href="#">Lorem ipsum dolor sit amet--consectetur adipiscing elit.</a></h3>
+    <img src="{{ event.imageUrl | default("DefaultValue", true) }}" class="event-banner"/>
+    <div class="event-details">
+      <div class="datetime">🗓️ <time datetime="{{ event.datetime }}">{{ event.datetime }}</time></div>
+      <div class="location">📍 Miller's Ale House</div>
+      <div class="price">🎟️ {{ event.priceInDollars }}</div>
+    </div>
+  </article>
+</div>
