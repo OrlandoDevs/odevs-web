@@ -1,0 +1,25 @@
+---
+- host: Orlando DevOps
+  events:
+    - title: lorem ipsum
+      datetime: "2024-02-16T1900-0500"
+      duration: 1h
+      priceInDollars: 0
+
+    - title: ipsum ipsum
+      datetime: "2024-03-16T1900-0500"
+      duration: 1.5h
+      priceInDollars: 0
+
+
+- host: Orlando JS
+  events:
+    - title: ipsum lorem
+      datetime: "2024-02-14T1900-0500"
+      duration: 1.5h
+      priceInDollars: 0
+
+    - title: lorem lorem
+      datetime: "2024-03-14T1900-0500"
+      duration: 1h
+      priceInDollars: 0
