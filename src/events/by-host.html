@@ -2,9 +2,10 @@
 <!-- layout: events/by_host -->
 pagination:
   data: events
+  alias: events
   size: 1
   addAllPagesToCollections: true
-permalink: "/events/{{ event.host | slug }}/index.html"
+permalink: "/events/{{ events.host | slug }}/index.html"
 ---
 
 <h1>{{ events.host }}</h1>
