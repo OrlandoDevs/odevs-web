@@ -1,7 +1,11 @@
 const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
+
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginWebc      = require("@11ty/eleventy-plugin-webc");
+
 const htmlmin = require("html-minifier");
+
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -9,6 +13,13 @@ module.exports = function (eleventyConfig) {
 
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
+
+  // Enable WebC
+  eleventyConfig.addPlugin(pluginWebc, {
+    components: "_includes/webc/*.webc",
+  });
+
+
 
   // human readable date
   eleventyConfig.addFilter("readableDate", (dateObj) => {
