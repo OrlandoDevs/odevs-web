@@ -1,6 +1,12 @@
 ---
 orlando_devops:
   title: Orlando DevOps
+  banner_img: /static/img/default_event_banner.png
 
 orlando_js:
   title: Orlando JS
+  banner_img: /static/img/default_event_banner.png
+
+orlando_devs:
+  title: Orlando Developers
+  banner_img: /static/img/default_event_banner.png
