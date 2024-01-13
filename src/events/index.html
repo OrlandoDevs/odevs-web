@@ -58,79 +58,19 @@ layout: events
 
 
 <div id="events">
-  <div class="event-column">
-    <h2 class="host"><a href="orlando-devops/">Orlando DevOps</a></h2>
+  {% for eventGroup in events %}
+    <div class="event-column">
+      <h2 class="host">
+        <a href="{{ event_hosts[eventGroup.host].url | default("orlando-developers/") }}">
+          {{ event_hosts[eventGroup.host].title | default("Orlando Developers") }}
+        </a>
+      </h2>
 
-    <div class="event-background">
-      <article class="event">
-        <h3 class="title"><a href="#">Lorem ipsum dolor sit amet--consectetur adipiscing elit.</a></h3>
-        <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F664121729%2F313522967941%2F1%2Foriginal.20231228-142744?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C18%2C600%2C300&s=0a0b624f805967231733b8129ada5aad" class="event-banner"/>
-        <div class="event-details">
-          <div class="datetime">🗓️ <time datetime="2024-09-28 19:00">September 28</time></div>
-          <div class="location">📍 Miller's Ale House</div>
-          <div class="price">🎟️ Free</div>
-        </div>
-      </article>
+      {% for event in eventGroup.events %}
+        {% if loop.index <= 1 %}
+          {% include 'partials/event_card.html' %}
+        {% endif %}
+      {% endfor %}
     </div>
-  </div>
-
-  <div class="event-column">
-  <h2 class="host"><a href="orlando-js/">Orlando JS</a></h2>
-    <div class="event-background">
-      <article class="event">
-        <h3 class="title"><a href="#">Lorem Ipsum</a></h3>
-        <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F619560729%2F313522967941%2F1%2Foriginal.20231013-002705?h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=19cdf3f5fd0d2bdb86edafd54ba35e0b" class="event-banner"/>
-        <div class="event-details">
-          <div class="datetime">🗓️ <time datetime="2024-09-28 19:00">September 28</time></div>
-          <div class="location">📍 Some location</div>
-          <div class="price">🎟️ Free</div>
-        </div>
-      </article>
-    </div>
-  </div>
-
-  <div class="event-column">
-  <h2 class="host">Group3</h2>
-    <div class="event-background">
-      <article class="event">
-        <h3 class="title">Lorem Ipsum</h3>
-        <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F619560729%2F313522967941%2F1%2Foriginal.20231013-002705?h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=19cdf3f5fd0d2bdb86edafd54ba35e0b" class="event-banner"/>
-        <div class="event-details">
-          <div class="datetime">🗓️ <time datetime="2024-09-28 19:00">September 28</time></div>
-          <div class="location">📍 Some location</div>
-          <div class="price">🎟️ Free</div>
-        </div>
-      </article>
-    </div>
-  </div>
-
-  <div class="event-column">
-  <h2 class="host">Group4</h2>
-    <div class="event-background">
-      <article class="event">
-        <h3 class="title">Lorem Ipsum</h3>
-        <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F619560729%2F313522967941%2F1%2Foriginal.20231013-002705?h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=19cdf3f5fd0d2bdb86edafd54ba35e0b" class="event-banner"/>
-        <div class="event-details">
-          <div class="datetime">🗓️ <time datetime="2024-09-28 19:00">September 28</time></div>
-          <div class="location">📍 Some location</div>
-          <div class="price">🎟️ Free</div>
-        </div>
-      </article>
-    </div>
-  </div>
-
-  <div class="event-column">
-  <h2 class="host">Group5</h2>
-    <div class="event-background">
-      <article class="event">
-        <h3 class="title">Lorem Ipsum</h3>
-        <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F619560729%2F313522967941%2F1%2Foriginal.20231013-002705?h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=19cdf3f5fd0d2bdb86edafd54ba35e0b" class="event-banner"/>
-        <div class="event-details">
-          <div class="datetime">🗓️ <time datetime="2024-09-28 19:00">September 28</time></div>
-          <div class="location">📍 Some location</div>
-          <div class="price">🎟️ Free</div>
-        </div>
-      </article>
-    </div>
-  </div>
+  {% endfor %}
 </div>
