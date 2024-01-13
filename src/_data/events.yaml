@@ -15,6 +15,13 @@
       location: Some awesome spot!
       priceInDollars: 0
 
+    - title: ipsum ipsum
+      imageUrl: ""
+      datetime: "2024-03-16T1900-0500"
+      duration: 1.5h
+      location: Some awesome spot!
+      priceInDollars: 0
+
 
 - host: orlando_js
   events:
@@ -38,12 +45,6 @@
       imageUrl: ""
       datetime: "2024-02-14T1900-0500"
       duration: 1.5h
-      priceInDollars: 0
-
-    - title: lorem lorem
-      imageUrl: ""
-      datetime: "2024-03-14T1900-0500"
-      duration: 1h
       priceInDollars: 0
 
 

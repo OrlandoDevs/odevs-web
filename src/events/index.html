@@ -10,7 +10,7 @@ layout: events
   {% for eventGroup in events %}
     <div class="event-column">
       <h2 class="host">
-        <a href="{{ event_hosts[eventGroup.host].url | default("orlando-developers/") }}">
+        <a href="{{ eventGroup.host | slug }}">
           {{ event_hosts[eventGroup.host].title | default("Orlando Developers") }}
         </a>
       </h2>
