@@ -4,8 +4,8 @@
     <img src="{{ event.imageUrl | default("DefaultValue", true) }}" class="event-banner"/>
     <div class="event-details">
       <div class="datetime">🗓️ <time datetime="{{ event.datetime }}">{{ event.datetime }}</time></div>
-      <div class="location">📍 Miller's Ale House</div>
-      <div class="price">🎟️ {{ event.priceInDollars }}</div>
+      <div class="location">📍 {{ event.location }}</div>
+      <div class="price">🎟️ {{ event.priceInDollars | replace(0, "Free") }}</div>
     </div>
   </article>
 </div>
