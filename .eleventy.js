@@ -22,6 +22,52 @@ module.exports = function (eleventyConfig) {
 
 
   // human readable date
+  eleventyConfig.addFilter("fromIso", (string) => {
+    const dateTime = DateTime.fromISO(string, { zone: "utc" });
+    console.log("fromIso:", dateTime.toString()); // Debugging output
+    return dateTime;
+  });
+
+  eleventyConfig.addFilter("getMonth", (dateTime) => {
+    if (!DateTime.isDateTime(dateTime)) {
+      console.error("getMonth: Invalid input", dateTime);
+      return "Invalid Input";
+    }
+    return dateTime.toFormat("LLL");
+  });
+
+  eleventyConfig.addFilter("getLongMonth", (dateTime) => {
+    if (!DateTime.isDateTime(dateTime)) {
+      console.error("getMonth: Invalid input", dateTime);
+      return "Invalid Input";
+    }
+    return dateTime.toFormat("LLLL");
+  });
+
+  eleventyConfig.addFilter("getDay", (dateTime) => {
+    if (!DateTime.isDateTime(dateTime)) {
+      console.error("getDay: Invalid input", dateTime);
+      return "Invalid Input";
+    }
+    return dateTime.toFormat("dd");
+  });
+
+  eleventyConfig.addFilter("getYear", (dateTime) => {
+    if (!DateTime.isDateTime(dateTime)) {
+      console.error("getDay: Invalid input", dateTime);
+      return "Invalid Input";
+    }
+    return dateTime.toFormat("yyyy");
+  });
+
+  eleventyConfig.addFilter("getTime", (dateTime) => {
+    if (!DateTime.isDateTime(dateTime)) {
+      console.error("getDay: Invalid input", dateTime);
+      return "Invalid Input";
+    }
+    return dateTime.toFormat("HH:mm");
+  });
+
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
       "dd LLL yyyy"

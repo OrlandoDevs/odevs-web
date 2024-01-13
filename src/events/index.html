@@ -17,6 +17,7 @@ layout: events
 
       {% for event in eventGroup.events %}
         {% if loop.index <= 1 %}
+          {% set eventHost = eventGroup.host %}
           {% include 'partials/event_card.html' %}
         {% endif %}
       {% endfor %}
