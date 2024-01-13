@@ -2,13 +2,17 @@
 layout: events_by_host
 pagination:
   data: events
-  alias: events
+  alias: hostEvents
   size: 1
   addAllPagesToCollections: true
-permalink: "/events/{{ events.host | slug }}/index.html"
+permalink: "/events/{{ hostEvents.host | slug }}/index.html"
 ---
 
+<link rel="stylesheet" href="/static/css/events.css">
 
-{% for event in events.events %}
-  {% include 'partials/event_card.html' %}
-{% endfor %}
+<div id="events">
+  {% for event in hostEvents.events %}
+    {% include 'partials/event_card.html' %}
+  {% endfor %}
+</div>
+
