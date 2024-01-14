@@ -24,7 +24,6 @@ module.exports = function (eleventyConfig) {
   // human readable date
   eleventyConfig.addFilter("fromIso", (string) => {
     const dateTime = DateTime.fromISO(string, { zone: "utc" });
-    console.log("fromIso:", dateTime.toString()); // Debugging output
     return dateTime;
   });
 
