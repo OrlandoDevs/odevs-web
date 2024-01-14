@@ -1,3 +1,16 @@
+---
+layout: default
+pagination:
+  data: flat_events
+  alias: event
+  size: 1
+  addAllPagesToCollections: true
+permalink: "/events/{{ event.datetime }}/{{ event.title | slug }}/index.html"
+---
+
+<link rel="stylesheet" href="/static/css/events.css">
+
+
 <style>
   @charset "UTF-8";
 
@@ -92,6 +105,10 @@
 
 
 
+<div class="bg-base-300">
+
+  <div class="bg-base-100 container border rounded-md shadow-sm my-4 mx-auto px-6">
+    <div id="events">
 <div class="event-background">
   <article class="event">
     <img
@@ -119,7 +136,7 @@
       </div>
 
       <h3 class="title">
-        <a href="/events/{{event.datetime}}/{{event.title | slug}}">
+        <a href="#">
           {{ event.title }}
         </a>
       </h3>
@@ -160,4 +177,8 @@
       </div>
     </div>
   </article>
+</div>
+
+    </div>
+  </div>
 </div>

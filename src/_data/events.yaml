@@ -10,14 +10,14 @@
 
     - title: ipsum ipsum
       imageUrl: ""
-      datetime: "2024-03-16T1900-0500"
+      datetime: "2024-03-16T1901-0500"
       duration: 1.5h
       locationName: Some awesome spot!
       priceInDollars: 0
 
     - title: ipsum ipsum
       imageUrl: ""
-      datetime: "2024-03-16T1900-0500"
+      datetime: "2024-03-16T1902-0500"
       duration: 1.5h
       locationName: Some awesome spot!
       priceInDollars: 0
@@ -27,14 +27,14 @@
   events:
     - title: ipsum lorem
       imageUrl: ""
-      datetime: "2024-02-14T1900-0500"
+      datetime: "2024-02-14T1903-0500"
       duration: 1.5h
       locationName: Another awesome spot
       priceInDollars: 0
 
     - title: lorem lorem
       imageUrl: ""
-      datetime: "2024-03-14T1900-0500"
+      datetime: "2024-03-14T1904-0500"
       duration: 1h
       locationName: One more awesome spot
       priceInDollars: 0
@@ -43,7 +43,7 @@
   events:
     - title: Orlando Devs Holiday Party
       imageUrl: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F644614549%2F313522967941%2F1%2Foriginal.20231119-161153?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=151%2C0%2C3632%2C1816&s=e8936c3a59ba8fe3c1c442b5d08f63e7"
-      datetime: "2024-02-14T1900-0500"
+      datetime: "2024-02-14T1905-0500"
       duration: 1.5h
       locationName: CREDO Conduit
       locationUrl: ""
@@ -52,7 +52,7 @@
 
     - title: Orlando Devs Holiday Party
       imageUrl: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F561994959%2F930410036073%2F1%2Foriginal.20230725-195128?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1200%2C600&s=566c8ea2fde84eed55214002ded53c66"
-      datetime: "2024-02-14T1900-0500"
+      datetime: "2024-02-14T1906-0500"
       duration: 1.5h
       priceInDollars: 0
 
@@ -61,13 +61,13 @@
   events:
     - title: ipsum lorem
       imageUrl: ""
-      datetime: "2024-02-14T1900-0500"
+      datetime: "2024-02-14T1907-0500"
       duration: 1.5h
       priceInDollars: 0
 
     - title: lorem lorem
       imageUrl: ""
-      datetime: "2024-03-14T1900-0500"
+      datetime: "2024-03-14T1908-0500"
       duration: 1h
       priceInDollars: 0
 
@@ -75,12 +75,12 @@
   events:
     - title: ipsum lorem
       imageUrl: ""
-      datetime: "2024-02-14T1900-0500"
+      datetime: "2024-02-14T1909-0500"
       duration: 1.5h
       priceInDollars: 0
 
     - title: lorem lorem
       imageUrl: ""
-      datetime: "2024-03-14T1900-0500"
+      datetime: "2024-03-14T1910-0500"
       duration: 1h
       priceInDollars: 0
