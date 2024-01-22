@@ -13,6 +13,7 @@ function loadEventsData() {
       hostItem.events.forEach(event => {
         // Optionally, add host information to each event
         event.host = hostItem.host;
+        event.bannerImg = hostItem.banner_img;
         console.log(event);
         flatEvents.push(event);
       });

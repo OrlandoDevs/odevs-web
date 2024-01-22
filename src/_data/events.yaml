@@ -1,5 +1,6 @@
 ---
-- host: orlando_devops
+- host: Orlando DevOps
+  banner_img: /static/img/default_event_banner.png
   events:
     - title: DevOps Dinner 2024 - Alehouse in Colonial Plaza
       imageUrl: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F664121729%2F313522967941%2F1%2Foriginal.20231228-142744?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C18%2C600%2C300&s=0a0b624f805967231733b8129ada5aad"
@@ -23,7 +24,8 @@
       priceInDollars: 0
 
 
-- host: orlando_js
+- host: Orlando JS
+  banner_img: /static/img/default_event_banner.png
   events:
     - title: ipsum lorem
       imageUrl: ""
@@ -39,7 +41,8 @@
       locationName: One more awesome spot
       priceInDollars: 0
 
-- host: orlando_devs
+- host: Orlando Developers
+  banner_img: /static/img/default_event_banner.png
   events:
     - title: Orlando Devs Holiday Party
       imageUrl: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F644614549%2F313522967941%2F1%2Foriginal.20231119-161153?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=151%2C0%2C3632%2C1816&s=e8936c3a59ba8fe3c1c442b5d08f63e7"
@@ -47,7 +50,7 @@
       duration: 1.5h
       locationName: CREDO Conduit
       locationUrl: ""
-      locationAddress: 1001 North Orange Avenue Orlando, FL 32801
+      locationAddress: 1001 North Orange Avenue, Orlando, FL, 32801
       priceInDollars: 0
 
     - title: Orlando Devs Holiday Party

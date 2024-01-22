@@ -6,6 +6,8 @@ const pluginWebc      = require("@11ty/eleventy-plugin-webc");
 
 const htmlmin = require("html-minifier");
 
+const filters = require('./src/js/filters.js');
+
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -20,6 +22,7 @@ module.exports = function (eleventyConfig) {
   });
 
 
+  eleventyConfig.addAsyncFilter("geoApify", filters.geoApify)
 
   // human readable date
   eleventyConfig.addFilter("fromIso", (string) => {
