@@ -8,7 +8,15 @@ pagination:
 permalink: "/events/{{ event.datetime }}/{{ event.title | slug }}/index.html"
 ---
 
-<link rel="stylesheet" href="/static/css/events.css">
+<!-- <link rel="stylesheet" href="/static/css/events.css"> -->
+{% if event.locationAddress %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+{% endif %}
 
 
 <style>
@@ -25,80 +33,27 @@ permalink: "/events/{{ event.datetime }}/{{ event.title | slug }}/index.html"
   }
   */
 
-  .datestamp {
-    float: left;
-    width: 4rem;
-    margin-right: 1em;
-    margin-bottom: .5em;
-  }
-  .datestamp *:not(.sr-only) {
-    display: block;
-    font-size: 1rem;
-    line-height: 1rem;
-    text-align: center;
-  }
-  .datestamp .datestamp-year {
-    border-top: 1px solid #999;
-    padding-top: .25em;
-    color: #999;
-    font-weight: bold;
-  }
-  .datestamp .datestamp-month {
-    padding: .25em .5em;
-    background-color: #E71321;
-    color: #EEE;
-    font-weight: 500;
-  }
-  .datestamp .datestamp-month abbr {
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  .datestamp .datestamp-day {
-    color: #1f7bc1;
-    font-size: 3rem;
-    line-height: 1;
-  }
-  .datestamp.small {
-    width: 3rem;
-  }
-  .datestamp.small *:not(.sr-only) {
-    font-size: 0.875rem;
-  }
-  .datestamp.small .datestamp-day {
-    font-size: 2rem;
-    line-height: 1;
+  div#map {
+    height: 180px;
+    width: 30em;
   }
 
-  .event-details {
+  article.event {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+  }
+
+  div.event-summary {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    padding-left: 1em;
     padding-right: 1em;
   }
 
-  .date-summary .date-time,
-  .date-summary .date-location,
-  .event-details .date-time,
-  .event-details .date-location {
-    padding-left: 1.5rem;
-    position: relative;
-  }
-  .date-summary .date-time::before,
-  .date-summary .date-location::before,
-  .event-details .date-time::before,
-  .event-details .date-location::before {
-    color: rgba(0, 0, 0, 0.4);
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    left: 0;
-    position: absolute;
-    text-align: center;
-    width: 1rem;
-  }
-  .date-summary .date-time::before,
-  .event-details .date-time::before {
-    content: "";
-  }
-  .date-summary .date-location::before,
-  .event-details .date-location::before {
-    content: "";
+  div.event-details {
+    max-width: 50%;
   }
 
 </style>
@@ -107,77 +62,95 @@ permalink: "/events/{{ event.datetime }}/{{ event.title | slug }}/index.html"
 
 <div class="bg-base-300">
 
-  <div class="bg-base-100 container border rounded-md shadow-sm my-4 mx-auto px-6">
+  <div class="">
     <div id="events">
-<div class="event-background">
-  <article class="event">
-    <img
-        src="{{
-          event.imageUrl
-          | default(event_hosts[eventHost].banner_img, true)
-          | default("/static/img/default_event_banner.png", true)
-        }}"
-        class="event-banner"
-    />
+      <h1>{{ event.host }}</h1>
 
-    <div class="event-details">
-      <div class="datestamp">
-        <span class="datestamp-month">
-          <abbr title="{{ event.datetime | fromIso | getLongMonth }}">
-            {{ event.datetime | fromIso | getMonth }}
-          </abbr>
-        </span>
-        <span class="datestamp-day py-1">
-          {{ event.datetime | fromIso | getDay }}
-        </span><span class="sr-only">,</span>
-        <span class="datestamp-year">
-          {{ event.datetime | fromIso | getYear }}
-        </span>
-      </div>
+      <article class="event">
+        <div class="event-details">
+        <img
+            src="{{
+              event.imageUrl
+              | default(banner_img, true)
+              | default("/static/img/default_event_banner.png", true)
+            }}"
+            class="event-banner"
+        />
 
-      <h3 class="title">
-        <a href="#">
-          {{ event.title }}
-        </a>
-      </h3>
-
-      <p>
-        Sed blandit libero volutpat sed cras ornare arcu dui vivamus. Velit
-        <a href="#">sed ullamcorper</a> morbi tincidunt ornare massa eget
-        egestas purus.
-      </p>
-
-      <div style="margin-top: 1em;">
-      <div class="time">
         <div>
-          <div style="float: left; width: 1.5em;">⏰</div>
-          <div>
-            <time datetime="{{ event.datetime }}">
-              <div>{{ event.datetime | fromIso | getTime }}</div>
-            </time>
+          <h3 class="title">
+            <a href="#">
+              {{ event.title }}
+            </a>
+          </h3>
+
+          <p>
+            Sed blandit libero volutpat sed cras ornare arcu dui vivamus. Velit
+            <a href="#">sed ullamcorper</a> morbi tincidunt ornare massa eget
+            egestas purus.
+          </p>
+
+        </div>
+        </div>
+
+        <div class="event-summary">
+          <div class="datestamp">
+            <span class="datestamp-month">
+              <abbr title="{{ event.datetime | fromIso | getLongMonth }}">
+                {{ event.datetime | fromIso | getMonth }}
+              </abbr>
+            </span>
+            <span class="datestamp-day py-1">
+              {{ event.datetime | fromIso | getDay }}
+            </span><span class="sr-only">,</span>
+            <span class="datestamp-year">
+              {{ event.datetime | fromIso | getYear }}
+            </span>
+          </div>
+          <div style="margin-top: 1em;">
+          <div class="time">
+            <div>
+              <div style="float: left; width: 1.5em;">⏰</div>
+              <div>
+                <time datetime="{{ event.datetime }}">
+                  <div>{{ event.datetime | fromIso | getTime }}</div>
+                </time>
+              </div>
+            </div>
+          </div>
+
+          <div class="location">
+            {% if event.locationAddress %}
+              <div id="map"></div>
+              <script type="text/javascript">
+                const mapCoords = {{event.locationAddress | geoApify | safe }};
+                var map = L.map('map').setView(mapCoords, 13);
+                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                }).addTo(map);
+                L.marker(mapCoords).addTo(map);
+              </script>
+              <div>
+                <div style="float: left; width: 1.5em;">📍</div>
+                <div>
+                  <a href="{{ event.locationUrl }}"><span style="font-weight:700; color: #666666">{{ event.locationName }}</span></a> <br />
+                  {{ event.locationAddress }}
+                </div>
+              </div>
+            {% endif %}
+          </div>
+
+          <div class="price">
+            <div>
+              <div style="float: left; width: 1.5em;">🎟️</div>
+              <div> {{ event.priceInDollars | replace(0, "Free") }} </div>
+            </div>
+          </div>
           </div>
         </div>
-      </div>
-      <div class="location">
-        <div>
-          <div style="float: left; width: 1.5em;">📍</div>
-          <div>
-            <a href="{{ event.locationUrl }}"><span style="font-weight:700; color: #666666">{{ event.locationName }}</span></a> <br />
-            {{ event.locationAddress }}
-          </div>
-        </div>
-      </div>
 
-      <div class="price">
-        <div>
-          <div style="float: left; width: 1.5em;">🎟️</div>
-          <div> {{ event.priceInDollars | replace(0, "Free") }} </div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </article>
-</div>
+      </article>
 
     </div>
   </div>
