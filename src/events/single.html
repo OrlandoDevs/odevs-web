@@ -22,16 +22,16 @@ permalink: "/events/{{ event.datetime }}/{{ event.title | slug }}/index.html"
 <style>
   @charset "UTF-8";
 
-  /*
-  .date-card {
-    width: 25rem;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    position: relative;
-    flex-direction: row;
+  h1 {
+    padding-top: 1rem;
   }
-  */
+
+  img.event-banner {
+    margin-top: .5em;
+    margin-bottom: 1em;
+    border-radius: .25em;
+    box-shadow: 0px 1px .25em;
+  }
 
   div#map {
     height: 180px;
@@ -44,30 +44,44 @@ permalink: "/events/{{ event.datetime }}/{{ event.title | slug }}/index.html"
     justify-content: center;
   }
 
-  div.event-summary {
+  div.event-details {
     position: -webkit-sticky; /* Safari */
     position: sticky;
+    margin-top: 2.5rem;
     top: 0;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 2rem;
   }
 
-  div.event-details {
+  div.event-summary {
     max-width: 50%;
+  }
+
+  hr {
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
 </style>
 
 
 
-<div class="bg-base-300">
+<div class="bg-base-300" style="padding-top: 2rem; padding-bottom: 2rem;">
 
-  <div class="">
-    <div id="events">
-      <h1>{{ event.host }}</h1>
+  <div class="bg-base-100 container border rounded-md shadow-sm mx-auto px-6" style="padding-bottom: 2rem;">
 
-      <article class="event">
-        <div class="event-details">
+    <h1 class="bg-clip-text text-transparent bg-gradient-to-br from-primary to-secondary py-6">{{ event.host }}</h1>
+    <h2 style="text-align:center; font-weight:100;">Invites You to...</h2>
+
+    <hr>
+
+    <article class="event">
+      <div class="event-summary">
+        <h3 class="title">
+          <a href="#">
+            {{ event.title }}
+          </a>
+        </h3>
+
         <img
             src="{{
               event.imageUrl
@@ -77,50 +91,25 @@ permalink: "/events/{{ event.datetime }}/{{ event.title | slug }}/index.html"
             class="event-banner"
         />
 
+        <p>
+          Sed blandit libero volutpat sed cras ornare arcu dui vivamus. Velit
+          <a href="#">sed ullamcorper</a> morbi tincidunt ornare massa eget
+          egestas purus.
+        </p>
+
+      </div>
+
+      <div class="event-details">
         <div>
-          <h3 class="title">
-            <a href="#">
-              {{ event.title }}
-            </a>
-          </h3>
-
-          <p>
-            Sed blandit libero volutpat sed cras ornare arcu dui vivamus. Velit
-            <a href="#">sed ullamcorper</a> morbi tincidunt ornare massa eget
-            egestas purus.
-          </p>
-
-        </div>
-        </div>
-
-        <div class="event-summary">
-          <div class="datestamp">
-            <span class="datestamp-month">
-              <abbr title="{{ event.datetime | fromIso | getLongMonth }}">
-                {{ event.datetime | fromIso | getMonth }}
-              </abbr>
-            </span>
-            <span class="datestamp-day py-1">
-              {{ event.datetime | fromIso | getDay }}
-            </span><span class="sr-only">,</span>
-            <span class="datestamp-year">
-              {{ event.datetime | fromIso | getYear }}
-            </span>
-          </div>
-          <div style="margin-top: 1em;">
-          <div class="time">
-            <div>
-              <div style="float: left; width: 1.5em;">⏰</div>
-              <div>
-                <time datetime="{{ event.datetime }}">
-                  <div>{{ event.datetime | fromIso | getTime }}</div>
-                </time>
-              </div>
-            </div>
-          </div>
-
           <div class="location">
             {% if event.locationAddress %}
+              <div>
+                <!-- <div style="float: left; width: 1.5em;">📍</div> -->
+                <div>
+                  <a href="{{ event.locationUrl }}"><span style="font-weight:700; color: #666666">{{ event.locationName }}</span></a> <br />
+                  {{ event.locationAddress }}
+                </div>
+              </div>
               <div id="map"></div>
               <script type="text/javascript">
                 const mapCoords = {{event.locationAddress | geoApify | safe }};
@@ -131,14 +120,24 @@ permalink: "/events/{{ event.datetime }}/{{ event.title | slug }}/index.html"
                 }).addTo(map);
                 L.marker(mapCoords).addTo(map);
               </script>
-              <div>
-                <div style="float: left; width: 1.5em;">📍</div>
-                <div>
-                  <a href="{{ event.locationUrl }}"><span style="font-weight:700; color: #666666">{{ event.locationName }}</span></a> <br />
-                  {{ event.locationAddress }}
-                </div>
-              </div>
             {% endif %}
+          </div>
+
+          <div class="time">
+            <div>
+              <div style="float: left; width: 1.5em;">🗓️</div>
+              {{ event.datetime | fromIso | getLongMonth }}
+              {{ event.datetime | fromIso | getDay }},
+              {{ event.datetime | fromIso | getYear }}
+            </div>
+            <div>
+              <div style="float: left; width: 1.5em;">⏰</div>
+              <div>
+                <time datetime="{{ event.datetime }}">
+                  <div>{{ event.datetime | fromIso | getTime }}</div>
+                </time>
+              </div>
+            </div>
           </div>
 
           <div class="price">
@@ -147,11 +146,9 @@ permalink: "/events/{{ event.datetime }}/{{ event.title | slug }}/index.html"
               <div> {{ event.priceInDollars | replace(0, "Free") }} </div>
             </div>
           </div>
-          </div>
         </div>
+      </div>
 
-      </article>
-
-    </div>
+    </article>
   </div>
 </div>
