@@ -52,6 +52,8 @@
       locationUrl: ""
       locationAddress: 1001 North Orange Avenue, Orlando, FL, 32801
       priceInDollars: 0
+      description: |
+        Get ready to sleigh some code and jingle all the way to the Orlando Developers Holiday Party on Thursday, December 14th! Join us for a night of festive fun, food and networking. So, dust off your favorite coding tee (or don't, we're not judging) and join us for a night of holiday developer camaraderie. 🎅🎁
       tags:
         - "New Technology"
         - "Web Development"
