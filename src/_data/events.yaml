@@ -81,18 +81,7 @@
 
 
 - host: bar
-  events:
-    - title: ipsum lorem
-      imageUrl: ""
-      datetime: "2024-02-14T1907-0500"
-      duration: 1.5h
-      priceInDollars: 0
-
-    - title: lorem lorem
-      imageUrl: ""
-      datetime: "2024-03-14T1908-0500"
-      duration: 1h
-      priceInDollars: 0
+  events: []
 
 - host: baz
   events:
