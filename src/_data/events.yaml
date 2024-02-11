@@ -52,6 +52,24 @@
       locationUrl: ""
       locationAddress: 1001 North Orange Avenue, Orlando, FL, 32801
       priceInDollars: 0
+      tags:
+        - "New Technology"
+        - "Web Development"
+        - "Mobile Development"
+        - "Coders"
+        - "Web Technology"
+        - "United States Events"
+        - "Florida Events"
+        - "Things to do in Orlando, FL"
+        - "Orlando Parties"
+        - "Orlando Holiday Parties"
+        - "#party"
+        - "#event"
+        - "#programming"
+        - "#orlando"
+        - "#holiday"
+        - "#developers"
+        - "#orlandodevs"
 
     - title: Orlando Devs Holiday Party
       imageUrl: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F561994959%2F930410036073%2F1%2Foriginal.20230725-195128?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1200%2C600&s=566c8ea2fde84eed55214002ded53c66"

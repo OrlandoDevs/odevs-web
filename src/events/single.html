@@ -62,6 +62,22 @@ permalink: "/events/{{ event.datetime }}/{{ event.title | slug }}/index.html"
     margin-bottom: 1em;
   }
 
+  ul.event-tags {
+    margin-top: 1rem;
+    display:flex;
+    column-gap: .5em;
+    flex-wrap: wrap;
+  }
+
+  ul.event-tags li {
+    border: 1px solid #CCC;
+    background: #D1D6DB;
+    color: #3C5D71;
+    padding: 0 1em;
+    margin-top: 1em;
+    border-radius: 3px;
+  }
+
   @media (max-width: 780px) {
     div.event-summary {
       max-width: 100%;
@@ -115,6 +131,11 @@ permalink: "/events/{{ event.datetime }}/{{ event.title | slug }}/index.html"
           egestas purus.
         </p>
 
+        <ul class="event-tags">
+          {% for tag in event.tags %}
+            <li>{{tag}}</li>
+          {% endfor %}
+        </ul>
       </div>
 
       <div class="event-details">
