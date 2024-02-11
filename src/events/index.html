@@ -20,6 +20,10 @@ layout: events
           {% set eventHost = eventGroup.host %}
           {% include 'partials/event_card.html' %}
         {% endif %}
+      {% else %}
+        <p style="margin-top: 1rem; max-width: 25rem;">
+          No upcoming events for the group at the moment. Please check back soon!
+        </p>
       {% endfor %}
     </div>
   {% endfor %}

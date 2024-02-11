@@ -21,6 +21,10 @@ permalink: "/events/{{ hostEvents.host | slug }}/index.html"
       {% for event in hostEvents.events %}
         {% set eventHost = hostEvents.host %}
         {% include 'partials/event_card.html' %}
+      {% else %}
+        <p style="margin-top: 1rem; max-width: 25rem;">
+          No upcoming events for the group at the moment. Please check back soon!
+        </p>
       {% endfor %}
     </div>
   </div>
