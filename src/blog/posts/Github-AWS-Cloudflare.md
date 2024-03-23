@@ -64,7 +64,8 @@ It turns out that CloudFlare offers an API to purge its cache, so we started inv
 
 We soon learned that AWS Lambda is great solution for our cache invalidation problem, as it saves us the headache of setting up a new server. AWS Lambda is inexpensive, so it turned out to be a win-win solution for us.<br><br>
 
-### Here's how Lambda's billing works: 
+### Here's how Lambda's billing works
+
 every month, the first 1 million requests are free. If we go over the limit it will cost us 20 cents per each additional million requests. We don't think we will ever merge anything close to 1 million pull requests a month, so we're good!<br><br>
 
 **Here's how this process went:**
