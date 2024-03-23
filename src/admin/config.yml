@@ -92,13 +92,13 @@ collections:
           # summary: '{{fields.writer_no}}'
           fields: 
           - { label: "host", name: "host", widget: "string"}
-          - { label: "banner_img", name: "banner_img", widget: "string"}
+          - { label: "banner_img", required: false, name: "banner_img", widget: "string"}
           - { label: "events", name: "events", widget: "list", fields: [
             { label: "Title", name: "title", widget: "string"},
             { label: "imageUrl", required: false, name: "imageUrl", widget: "string"},
             { label: "datetime", name: "datetime", widget: "datetime"},
             { label: "duration", name: "duration", widget: "string"},
-            { label: "locationName", name: "locationName", widget: "string"},
+            { label: "locationName", required: false, name: "locationName", widget: "string"},
             { label: "priceInDollars", name: "priceInDollars", widget: "number"}]}
       # {label: Writer no, name: writer_no, widget: number}
   # - label: "Events"
