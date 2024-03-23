@@ -17,9 +17,6 @@ jobs:
     - name: List files in the repository
       run: ls -la
 
-    - name: Check the current user
-      run: echo "Running as user: $(whoami)"
-
     - name: Print the current date
       run: date
 
