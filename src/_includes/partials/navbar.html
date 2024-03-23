@@ -23,10 +23,10 @@
 
                 <ul class="flex md:flex-row flex-shrink flex-col px-6 list-reset">
                     {% for item in navigation.items %}
-                        {% if item.text == "About" %}
+                        {% if item.text == "Groups" %}
                             <li class="nav__item mx-3">
                                 <details class="dropdown">
-                                    <summary class="transition duration-500 ease-in-out text-lg inline-flex text-gray-300 no-underline transform hover:-translate-y-1 hover:scale-110 hover:text-secondary px-8 pt-4">
+                                    <summary class="cursor-pointer transition duration-500 ease-in-out text-lg inline-flex text-gray-300 no-underline transform hover:-translate-y-1 hover:scale-110 hover:text-secondary px-8 pt-4">
                                     
                                     {{ item.text }}
                                     
