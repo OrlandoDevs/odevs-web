@@ -82,8 +82,13 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string"}
-      - { label: "Description", name: "desc", widget: "string"}
+      - { label: "Event Title", name: "title", widget: "string"}
+      - { label: "Event type", name: "eventtype", widget: "string"}
+
+      - { label: "Event Description", name: "desc", widget: "string"}
+      # - { label: "Event Date", name: "date", widget: "datetime"}
+      - { label: "Location", name: "location", widget: "string"}
+      # - { label: "time", name: "time", widget: "string"} // add time field string for time range
       - { label: "PublishDate", name: "date", widget: "datetime"}
       - { label: "Logo", name: "logo", widget: "string"}
       - { label: "Body", name: "body", widget: "markdown"}

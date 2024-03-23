@@ -4,7 +4,7 @@ items:
     url: "/"
   - text: About
     url: "/about"
-  - text: Community
-    url: "https://my.orlandodevs.com"
+  - text: Communities
+    url: "/communities"
   - text: Join Our Slack
     url: "/slack"
