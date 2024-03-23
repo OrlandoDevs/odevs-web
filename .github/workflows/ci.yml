@@ -10,17 +10,5 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Display the working directory
-      run: pwd
-
-    - name: List files in the repository
-      run: ls -la
-
-    - name: Print the current date
-      run: date
-
-    - name: Check disk usage
-      run: df -h
-
-    - name: Display environment variables
-      run: printenv
+    - run: npm install -g markdownlint-cli
+    - run: markdownlint src
