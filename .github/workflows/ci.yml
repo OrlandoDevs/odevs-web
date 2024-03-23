@@ -28,7 +28,7 @@ jobs:
       uses: actions/checkout@v3
 
     - run: npm install --dev
-    - run: npm test:coverage
+    - run: npm run test:coverage
     - name: upload junit
       uses: actions/upload-artifact@v1
       with:
