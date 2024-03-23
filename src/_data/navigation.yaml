@@ -4,6 +4,7 @@ items:
     url: "/"
   - text: About
     url: "/about"
+  - text: Groups
   - text: Community
     url: "https://my.orlandodevs.com"
   - text: Events
