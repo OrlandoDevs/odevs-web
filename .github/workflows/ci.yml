@@ -7,7 +7,7 @@ on:
   #   - main # Push events on master branch
 
 jobs:
-  run-commands:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: Cancel Previous Runs
