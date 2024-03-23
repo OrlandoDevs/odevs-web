@@ -1,0 +1,30 @@
+name: Run Basic Commands
+
+on:
+  pull_request:
+    - main
+
+jobs:
+  run-commands:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Display the working directory
+      run: pwd
+
+    - name: List files in the repository
+      run: ls -la
+
+    - name: Check the current user
+      run: echo "Running as user: $(whoami)"
+
+    - name: Print the current date
+      run: date
+
+    - name: Check disk usage
+      run: df -h
+
+    - name: Display environment variables
+      run: printenv
