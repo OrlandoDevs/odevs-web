@@ -56,3 +56,16 @@ jobs:
     #   with:
     #     name: _site
     #     path: _site
+  pr-check:
+    if: always()
+    needs:
+      - yaml-lint
+      - build
+    runs-on: Ubuntu-latest
+    steps:
+      - name: Decide whether the needed jobs succeeded or failed
+        uses: re-actors/alls-green@main
+        with:
+          # allowed-failures: markdown-link-checker
+          allowed-skips:
+          jobs: ${{ toJSON(needs) }}
