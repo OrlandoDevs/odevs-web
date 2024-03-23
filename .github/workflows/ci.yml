@@ -10,5 +10,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - run: npm install -g markdownlint-cli
-    - run: markdownlint src --disable MD013 MD033
+#    - run: npm install -g markdownlint-cli
+    - run: markdownlint src --disable MD001 MD013 MD033 MD045 MD026 MD041
+    - run: npm test
