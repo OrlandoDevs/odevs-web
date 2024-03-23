@@ -1,11 +1,20 @@
 ---
 group:
   - name: Orlando Devs
+    url: /about
   - name: Orlando Innovation League
+    url: /groups/orlandoinnovation
   - name: OrlandoJS
+    url: /groups/orlandojs
   - name: Orlando PHP
+    url: /groups/orlandophp
   - name: Codex
+    url: /groups/codex
   - name: Lady Devs
+    url: /groups/ladydevs
   - name: Frontend Devs
+    url: /groups/frontenddevs
   - name: Open Orlando
+    url: /groups/openorlando
   - name: IOS
+    url: /groups/ios
