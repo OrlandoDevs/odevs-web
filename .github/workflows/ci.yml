@@ -7,6 +7,8 @@ on:
   #   - main # Push events on master branch
 
 jobs:
+  yaml-lint:
+    uses: ./.github/workflows/yaml-lint.yml
   build:
     runs-on: ubuntu-latest
     steps:
