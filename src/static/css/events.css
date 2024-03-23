@@ -1,0 +1,48 @@
+div#events {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: top;
+  justify-content: space-around;
+  padding-bottom: 2em;
+}
+
+div.event-column {
+  margin: 2em;
+}
+
+div.event-background {
+  background: #EEE;
+  border: 1px solid #CCC;
+  filter: drop-shadow(0px 2px 5px #999);
+  border-radius: 5px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-top: 1em;
+}
+
+article.event {
+  max-width: 400px;
+  display: block;
+}
+
+article.event h3 {
+  padding-left: 10pt;
+}
+
+article.event img {
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  margin-bottom: 1em;
+}
+
+div.event-details {
+  padding-left: 10pt;
+}
+
+img.event-banner {
+  max-width: 100%;
+}
+
+h2.host {
+  text-align: center;
+}
