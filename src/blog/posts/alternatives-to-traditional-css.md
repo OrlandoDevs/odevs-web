@@ -102,9 +102,9 @@ Flexbox also allows us to be a lot more flexible with how our grids work and let
 section {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column; /* Change */
+  flex-direction: column; /*Change */
   width: 100%;
-  height: 500px; /* Change. */
+  height: 500px; /* Change.*/
 }
 
 .card {
@@ -116,7 +116,7 @@ section {
   background-color: red;
 }
 
-/* No longer need different sized cards */
+/*No longer need different sized cards*/
 {% endhighlight %}
 
 {% highlight html %}
@@ -150,7 +150,7 @@ A Sass mixin is essentially a snippet of CSS you would see yourself using in mul
 
 {% highlight scss %}
 @mixin column-count($num) {
-  -webkit-column-count: $num; /* Chrome, Safari, Opera */
+  -webkit-column-count: $num; /*Chrome, Safari, Opera*/
   -moz-column-count: $num; /* Firefox */
   column-count: $num;
 }
