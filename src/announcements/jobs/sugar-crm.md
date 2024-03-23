@@ -1,4 +1,5 @@
 ---
+title: Sugar Job Posting
 company: Sugar CRM
 logo: /static/img/sugarcrm-logo-blk.svg
 desc: This company is always hiring. Apply Today!
