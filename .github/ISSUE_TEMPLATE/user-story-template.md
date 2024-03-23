@@ -11,7 +11,7 @@ assignees: ''
 
 ## User Story
 
-As a co-organizer of Orlando DevOps group, I would like to DO SOMETHING so that WE HAVE AN OUTCOME
+As a member of Orlando DevOps group, I would like to DO SOMETHING so that WE HAVE AN OUTCOME / Business Value
 
 ## Tasks
 
