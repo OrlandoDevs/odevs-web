@@ -10,3 +10,4 @@ _site/
 # Local Netlify folder
 .netlify
 junit.xml
+coverage
