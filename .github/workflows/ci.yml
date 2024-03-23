@@ -1,4 +1,4 @@
-name: Run Basic Commands
+name: Pull Request Pipeline
 
 on:
   pull_request:
