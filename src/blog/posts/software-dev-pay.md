@@ -37,7 +37,6 @@ Both 2017 and 2018 surveys show that female developers earn less than their male
 
 Here we see a significant increase in Hispanic developers over the 2017 year. We also see a slight rise in Black or African developers. This chart makes us optimistic about diversity amongst our Orlando Devs, but this is one area we would love to see continued growth in diversity.
 
-
 ![demographic by race](/static/img/responses-by-race.png)
 
 ## Satisfaction
@@ -60,7 +59,6 @@ We don't have commentary for the following charts and graphs, but we would love 
 
 Thanks again to everyone who contributed to the 2018 Orlando Developers Salary Survey. We are quite aware that there is lots of room to improve this survey in the future, and your feedback will help us make the data and insights we collect more relevant to everyone in our community. If you have questions about any of the data in this post, please let us know in a comment. If there is anything you’d like to see us change or add in the future, Let us know that as well! Thanks for supporting Orlando Devs!
 
-
 ---
 
 <div>
@@ -74,7 +72,7 @@ alt="twitter logo"
 class="h-3.5 w-3.5 inline-flex"/><a href ="https://twitter.com/cassandrawilcox" class = "hover:text-indigo-400">cassandrawilcox</a>
 <img src="/static/img/github.png"
 alt="github logo"
-class="h-8 w-8 inline-flex"/><a href ="https://github.com/csandra0504" class = "hover:text-indigo-400">csandra0504</a> 
+class="h-8 w-8 inline-flex"/><a href ="https://github.com/csandra0504" class = "hover:text-indigo-400">csandra0504</a>
 </small>
 </div>
 ---

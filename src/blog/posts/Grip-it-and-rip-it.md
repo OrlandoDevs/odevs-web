@@ -21,7 +21,7 @@ I mention this story not to tell you about golf, but it's more to tell you a par
 
 Yes, you read that correctly.  There is a subset of potential customers out there that have money to spend on software development, but don't have a clue as to what they want or how they want it.  Essentially, they are wanting you (as the expert) to take a handful of fecal matter (known as features), throw it against the wall (known as the end user), and see what sticks (which features their customers will actually use).  Sounds rather exciting if you ask me, but I digress.  It is very difficult to come up with a plan for these types of projects.  It's the equivalent to telling your waiter, "Surprise Me," while placing your order at a restaurant.
 
-The key is to gather enough information to get started on the project.  Get into the application's fundamental goal.  Once you have that, you can start prototyping the concept for your client.     
+The key is to gather enough information to get started on the project.  Get into the application's fundamental goal.  Once you have that, you can start prototyping the concept for your client.
 
 For example, a client requested an application that allows users to signin to a registration form via mobile devices.  Upon registering, the user's address information would populate a marker on an interactive map to be displayed on the convention floor.  The purpose was to display the location of interested customers for convention goers to see in real-time.  The client didn't know what it should look like, how the user would interact with the form, or how the map was to be displayed.
 
