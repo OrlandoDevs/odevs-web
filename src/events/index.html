@@ -7,14 +7,14 @@ layout: events
 <link rel="stylesheet" href="/static/css/events.css">
 
 <div id="events">
-  {% for eventGroup in events %}
+  {% for eventGroup in events.eventGroups %}
     <div class="event-column">
       <h2 class="host">
         <a href="{{ eventGroup.host | slug }}">
           {{ eventGroup.host }}
         </a>
       </h2>
-
+      <!-- TODO: remove loop.index <= 1 -->
       {% for event in eventGroup.events %}
         {% if loop.index <= 1 %}
           {% set eventHost = eventGroup.host %}
