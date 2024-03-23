@@ -1,0 +1,191 @@
+---
+layout: default
+pagination:
+  data: flat_events
+  alias: event
+  size: 1
+  addAllPagesToCollections: true
+permalink: "/events/{{ event.datetime }}/{{ event.title | slug }}/index.html"
+---
+
+<!-- <link rel="stylesheet" href="/static/css/events.css"> -->
+{% if event.locationAddress %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+{% endif %}
+
+
+<style>
+  @charset "UTF-8";
+
+  h1 {
+    padding-top: 1rem;
+  }
+
+  img.event-banner {
+    margin-top: .5em;
+    margin-bottom: 1em;
+    border-radius: .25em;
+    box-shadow: 0px 1px .25em;
+  }
+
+  div#map {
+    aspect-ratio: 16/9;
+    max-width: 100%;
+  }
+
+
+  article.event {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+  }
+
+  div.event-details {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    margin-top: 2.5rem;
+    top: 0;
+    padding-left: 2rem;
+  }
+
+  div.event-summary {
+    max-width: 60%;
+  }
+
+  hr {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  ul.event-tags {
+    margin-top: 1rem;
+    display:flex;
+    column-gap: .5em;
+    flex-wrap: wrap;
+  }
+
+  ul.event-tags li {
+    border: 1px solid #CCC;
+    background: #D1D6DB;
+    color: #3C5D71;
+    padding: 0 1em;
+    margin-top: 1em;
+    border-radius: 3px;
+  }
+
+  @media (max-width: 780px) {
+    div.event-summary {
+      max-width: 100%;
+    }
+
+    article.event {
+      margin-top: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    div.event-details {
+      postition: static;
+      padding-left: 0;
+    }
+  }
+</style>
+
+
+
+<div class="bg-base-300" style="padding-top: 2rem; padding-bottom: 2rem;">
+
+  <div class="bg-base-100 container border rounded-md shadow-sm mx-auto px-6" style="padding-bottom: 2rem;">
+
+    <h1 class="bg-clip-text text-transparent bg-gradient-to-br from-primary to-secondary py-6">{{ event.host }}</h1>
+    <h2 style="text-align:center; font-weight:100;">Invites You to...</h2>
+
+    <hr>
+
+    <article class="event">
+      <div class="event-summary">
+        <h3 class="title">
+          <a href="#">
+            {{ event.title }}
+          </a>
+        </h3>
+
+        <img
+            src="{{
+              event.imageUrl
+              | default(banner_img, true)
+              | default("/static/img/default_event_banner.png", true)
+            }}"
+            class="event-banner"
+        />
+
+        <p>
+          {{event.description}}
+        </p>
+
+        <ul class="event-tags">
+          {% for tag in event.tags %}
+            <li>{{tag}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="event-details">
+        <div>
+          <div class="location">
+            {% if event.locationAddress %}
+              <div>
+                <!-- <div style="float: left; width: 1.5em;">📍</div> -->
+                <div>
+                  <a href="{{ event.locationUrl }}"><span style="font-weight:700; color: #666666">{{ event.locationName }}</span></a> <br />
+                  {{ event.locationAddress }}
+                </div>
+              </div>
+              <div id="map"></div>
+              <script type="text/javascript">
+                const mapCoords = {{event.locationAddress | geoApify | safe }};
+                var map = L.map('map').setView(mapCoords, 13);
+                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                }).addTo(map);
+                L.marker(mapCoords).addTo(map);
+              </script>
+            {% endif %}
+          </div>
+
+          <div class="time">
+            <div>
+              <div style="float: left; width: 1.5em;">🗓️</div>
+              {{ event.datetime | fromIso | getLongMonth }}
+              {{ event.datetime | fromIso | getDay }},
+              {{ event.datetime | fromIso | getYear }}
+            </div>
+            <div>
+              <div style="float: left; width: 1.5em;">⏰</div>
+              <div>
+                <time datetime="{{ event.datetime }}">
+                  <div>{{ event.datetime | fromIso | getTime }}</div>
+                </time>
+              </div>
+            </div>
+          </div>
+
+          <div class="price">
+            <div>
+              <div style="float: left; width: 1.5em;">🎟️</div>
+              <div> {{ event.priceInDollars | replace(0, "Free") }} </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </article>
+  </div>
+</div>

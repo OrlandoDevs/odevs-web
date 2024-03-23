@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: jacquesfu/odevs-eleventy-starter
+  repo: snohio/odevs
   branch: master
   open_authoring: true
 media_folder: "src/static/img"

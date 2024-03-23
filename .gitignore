@@ -4,9 +4,9 @@ node_modules/
 .vscode/
 _site/
 *git/
-package-lock.json
 .env
 .history/
 
 # Local Netlify folder
 .netlify
+junit.xml
