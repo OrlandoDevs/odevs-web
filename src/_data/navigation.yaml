@@ -7,5 +7,7 @@ items:
   - text: Groups
   - text: Community
     url: "https://my.orlandodevs.com"
+  - text: Events
+    url: "/events"
   - text: Join Our Slack
     url: "/slack"

@@ -1,0 +1,31 @@
+---
+layout: default
+pagination:
+  data: events
+  alias: hostEvents
+  size: 1
+  addAllPagesToCollections: true
+permalink: "/events/{{ hostEvents.host | slug }}/index.html"
+---
+
+<link rel="stylesheet" href="/static/css/events.css">
+
+<div class="bg-base-300">
+
+  <div class="bg-base-100 container border rounded-md shadow-sm my-4 mx-auto px-6">
+    <h1 class="bg-clip-text text-transparent bg-gradient-to-br from-primary to-secondary mt-6 mb-6">
+      {{ hostEvents.host }}
+    </h1>
+
+    <div id="events">
+      {% for event in hostEvents.events %}
+        {% set eventHost = hostEvents.host %}
+        {% include 'partials/event_card.html' %}
+      {% else %}
+        <p style="margin-top: 1rem; max-width: 25rem;">
+          No upcoming events for the group at the moment. Please check back soon!
+        </p>
+      {% endfor %}
+    </div>
+  </div>
+</div>

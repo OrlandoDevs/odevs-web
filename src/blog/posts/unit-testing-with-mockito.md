@@ -17,6 +17,7 @@ Every developer knows that testing software can take a lot of time.  Being the b
 In this blog, we will go over how to write unit tests for Android using the latest tools and libraries.  In this example, I am leveraging [JUnit4](http://junit.org/) and [Mockito](http://mockito.org/).  
 
 ## What is Unit Testing?
+
 Tests the smallest functionality of a feature.  This is generally a function with a single responsibility.  Unit tests shouldn't be concerned with outside dependancies and if they exist in the code, they should be mocked or stubbed.  You generally test the public interface of your code which should call on any and all unaccessible implementation hidden within the class.
 
 The goal is to create a test that is relatively simple, easy to debug, fast to execute, and validates that your unit of functionality works within it's own encapsulation before it is used by another object.
@@ -24,9 +25,11 @@ The goal is to create a test that is relatively simple, easy to debug, fast to e
 ## Example : Buying a Drink
 
 ### Scenario
+
 We have a `Patron`, Matt, who enters a cafe and buys a cold, refreshing Nuka Cola.  To unit test the functionality of buying a drink, we will mock both the `Cafe` and `DrinkInterface` because the implementation of these objects are largely irrelevant to testing the `Patron` class.  
 
 #### Patron (abridged)
+
 {% highlight java %}
 public class Patron {
 
@@ -73,6 +76,7 @@ public interface DrinkInterface {
 {% endhighlight %}
 
 ### Setup
+
 We create Matt to test the `Patron` class.  
 `PatronHelper` is a child of the `Patron` class which helps reveal unaccesable properties for our tests.  
 We also create a mocked `Cafe` object.  It emulates the class without knowing about the implementation.
@@ -87,6 +91,7 @@ public void SetUp(){
 {% endhighlight %}
 
 ### Creating a mocked Drink
+
 {% highlight java %}  
 DrinkInterface getMockedDrink(String targetDrinkName, float cost) {
     //Creates the mocked object based on the class
@@ -111,7 +116,6 @@ When getName is called, it will return the value of targetDrinkName.
 when(nukaColaMock.getCost()).thenReturn(cost);
 when(nukaColaMock.getName()).thenReturn(targetDrinkName);
 {% endhighlight %}
-
 
 ### All Together Now
 
