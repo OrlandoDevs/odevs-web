@@ -8,11 +8,12 @@ eventGroups:
         duration: 2h
         locationName: FoxTail near UCF
         priceInDollars: 0
-      - title: ipsum ipsum3
-        imageUrl: ""
-        datetime: 2024-03-15T1901-0500
-        duration: 1.5h
-        locationName: Some awesome spot3!
+      - title: IaC Deep Dive - Workshop - Deploying your Infrastructure as Code with
+          Tofu
+        imageUrl: /static/img/opentofu.webp
+        datetime: 2024-05-22T22:30:00.000Z
+        duration: "2"
+        locationName: Credo Conduit
         priceInDollars: 0
   - host: Orlando JS
     banner_img: /static/img/default_event_banner.png
