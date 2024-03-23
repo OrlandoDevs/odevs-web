@@ -7,6 +7,7 @@ on:
   #   - main # Push events on master branch
 
 jobs:
+# https://github.com/chef/github-workflows/blob/main/.github/workflows/yaml-lint.yml
   yaml-lint:
     uses: ./.github/workflows/yaml-lint.yml
   build:
