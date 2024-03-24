@@ -1,0 +1,10 @@
+---
+layout: about
+pagination:
+    data: groups.group
+    size: 1
+    alias: group
+permalink: "groups/{{ group.name | slugify }}/"
+---
+<h2>{{group.name}}</h2>
+{{group.description or "No description provided"}}
