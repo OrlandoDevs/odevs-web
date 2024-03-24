@@ -5,6 +5,13 @@ pagination:
     size: 1
     alias: group
 permalink: "groups/{{ group.name | slugify }}/"
+eleventyComputed: 
+    # TODO: computed objects referencing paginated
+    # data is broken for nunjucks templates. 
+    # potential fix in https://github.com/11ty/eleventy/pull/3120
+    # so this is a placeholder
+    # title: {{group.name}}
+    title: ODevs Community 
 ---
 <h2>{{group.name}}</h2>
 {{group.description or "No description provided"}}
