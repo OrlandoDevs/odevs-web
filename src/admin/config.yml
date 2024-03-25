@@ -74,7 +74,7 @@ collections:
     fields:
       - { label: "JobTitle", name: "title", widget: "string" }
       - { label: "Company", name: "company", widget: "string"}
-      - { label: "PublishDate", name: "date", widget: "date" }
+      - { label: "PublishDate", name: "date", widget: "datetime", date_format: "YYYY-MM-DDTHH:mm", format: "YYYY-MM-DDTHH:mm", picker_utc: false }
       - { label: "Body", name: "body", widget: "markdown"}
   - label: "Event Editor"
     name: "Event Data Listing"
