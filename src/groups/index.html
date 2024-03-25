@@ -10,8 +10,13 @@ eleventyComputed:
     # data is broken for nunjucks templates. 
     # potential fix in https://github.com/11ty/eleventy/pull/3120
     # so this is a placeholder
-    # title: {{group.name}}
-    title: ODevs Community 
+    #title: {{group.name}}
+    title: Orlando Devs Community Group
 ---
-<h2>{{group.name}}</h2>
+<br><br><br>
+<center><h2>{{group.name}}</h2>
+<br><br>
 {{group.description or "No description provided"}}
+<br><br><br><br><br><br><br>
+<h3><a href="{{group.meetup_url}}" target="_blank">Meetup Link</a></h3></center>
+<br>
