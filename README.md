@@ -9,7 +9,7 @@ The Orlando Devs website is built on top of [https://www.netlify.com/Netlify](ht
 Once packages are installed run the Netlfiy dev stack:
 
 * `netlify dev`
-* `npx netlify-cms-proxy-server` to run the local cms
+* `npx decap-server` to run the local cms
 
 ---
 ## Local Demo
