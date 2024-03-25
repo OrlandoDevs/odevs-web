@@ -21,7 +21,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DDTHH:mm", format: "YYYY-MM-DDTHH:mm", picker_utc: false }
       - { label: "Body", name: "body", widget: "markdown" }
       - widget: select
         label: "tags"
@@ -74,7 +74,7 @@ collections:
     fields:
       - { label: "JobTitle", name: "title", widget: "string" }
       - { label: "Company", name: "company", widget: "string"}
-      - { label: "PublishDate", name: "date", widget: "datetime" }
+      - { label: "PublishDate", name: "date", widget: "date" }
       - { label: "Body", name: "body", widget: "markdown"}
   - label: "Event Editor"
     name: "Event Data Listing"
@@ -96,7 +96,7 @@ collections:
           - { label: "events", name: "events", widget: "list", fields: [
             { label: "Title", name: "title", widget: "string"},
             { label: "imageUrl", required: false, name: "imageUrl", widget: "image", choose_url: true, default: "/static/img/bg.jpg"},
-            { label: "datetime", name: "datetime", widget: "datetime"},
+            { label: "datetime", name: "datetime", widget: "datetime", date_format: "YYYY-MM-DDTHH:mm", format: "YYYY-MM-DDTHH:mm", picker_utc: false},
             { label: "duration", name: "duration", widget: "string"},
             { label: "locationName", required: false, name: "locationName", widget: "string"},
             { label: "priceInDollars", name: "priceInDollars", widget: "number"}]}
