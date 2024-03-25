@@ -4,4 +4,5 @@ export interface GroupsYaml {
 
 export interface Group {
     name: string;
+    description?: string;
 }
