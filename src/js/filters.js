@@ -21,7 +21,7 @@ async function geoEncode(addressString) {
       return feature.properties.rank.confidence >= 0.9
     })
     .filter((feature) => {
-      return feature.properties.postcode === result.query.parsed.postcode;
+      return feature.properties.postcode.toLowerCase() === result.query.parsed.postcode;
     })
 
     switch (matches.length) {
