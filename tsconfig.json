@@ -4,7 +4,7 @@
     "module": "CommonJS",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "importHelpers": true,
+    "importHelpers": false,
     "allowJs": true,
     "declaration": true,
     "outDir": "./lib",

@@ -11,3 +11,4 @@ _site/
 .netlify
 junit.xml
 coverage
+*ti.ts

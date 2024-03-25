@@ -14,6 +14,8 @@ module.exports = {
     testMatch: [
         "**/tests/**/*.spec.(ts|js)"
     ],
+    // turn off console.log
+    silent: true,
     runner: "jest-serial-runner",
     testEnvironment: "node",
     reporters: ["default", "jest-junit"],
