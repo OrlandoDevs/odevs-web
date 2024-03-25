@@ -21,7 +21,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DDTHH:mm", format: "YYYY-MM-DDTHH:mm", picker_utc: false }
+      - { label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DDTHHmm", format: "YYYY-MM-DDTHHmm", picker_utc: false }
       - { label: "Body", name: "body", widget: "markdown" }
       - widget: select
         label: "tags"
