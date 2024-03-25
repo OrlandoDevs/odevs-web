@@ -16,6 +16,10 @@ Once packages are installed run the Netlfiy dev stack:
 * http://localhost:8888/
 * netlify cms http://localhost:8888/admin - needs to proxy to be run
 
+## Run tests
+
+* `npm run test`
+* convert yaml to typescript using https://jsonformatter.org/yaml-to-typescript
 ---
 ## Live Demo
 

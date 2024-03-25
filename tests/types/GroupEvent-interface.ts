@@ -11,6 +11,10 @@ interface DevEvent {
     priceInDollars: number;
 }
 
+interface EventYaml {
+    eventGroups: GroupEvent[];
+}
+
 interface GroupEvent {
     host: string;
     banner_img?: string;
