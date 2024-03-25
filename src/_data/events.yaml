@@ -4,14 +4,14 @@ eventGroups:
     events:
       - title: Lean Beer DevOps - Foxtail near UCF
         imageUrl: /static/img/orlando-devops-april-lean-beer.webp
-        datetime: 2024-04-10T23:00:00.000Z
+        datetime: 2024-04-10T2300
         duration: 2h
         locationName: FoxTail near UCF
         priceInDollars: 0
       - title: IaC Deep Dive - Workshop - Deploying your Infrastructure as Code with
           Tofu
         imageUrl: /static/img/opentofu.webp
-        datetime: 2024-05-22T22:30:00.000Z
+        datetime: 2024-05-22T2230
         duration: "2"
         locationName: Credo Conduit
         priceInDollars: 0
