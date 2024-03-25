@@ -2,6 +2,7 @@
 group:
   - name: Orlando Devs
   - name: Orlando DevOps
+    description: Welcome to Orlando DevOps!
   - name: Orlando Innovation League
   - name: OrlandoJS
   - name: Orlando PHP

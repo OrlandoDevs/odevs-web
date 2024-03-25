@@ -5,7 +5,7 @@ layout: default
 <div class="bg-base-300">
 
 <div class="bg-base-100 container border rounded-md shadow-sm my-4 mx-auto px-6">
-    <h1 class="bg-clip-text text-transparent bg-gradient-to-br from-primary to-secondary mt-6 mb-6">{{title}}</h1>
+    <h1 class="bg-clip-text text-transparent bg-gradient-to-br from-primary to-secondary mt-6 mb-6">{{eleventyComputed.title or title}}</h1>
 
     {{ content | safe }}
 </div>
