@@ -6,9 +6,9 @@
     "css": "postcss src/static/css/tailwind.css --o _site/static/css/style.css --watch",
     "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production postcss src/static/css/tailwind.css --o _site/static/css/style.css",
     "browsersync": "browser-sync start --server \"_site\" --files \"_site\" --port 8080 --no-notify --no-open",
-    "test": "jest -c ./jest.config.js --forceExit --verbose -i --no-cache",
-    "test:coverage": "jest --forceExit --coverage --verbose",
-    "test:watch": "jest --watchAll",
+    "test": "npm run build-interfaces && jest -c ./jest.config.js --forceExit --verbose -i --no-cache",
+    "test:coverage": "npm run build-interfaces && jest --forceExit --coverage --verbose",
+    "test:watch": "npm run build-interfaces && jest --watchAll",
     "build-interfaces": "npx ts-interface-builder src/**/*interface.ts tests/**/*interface.ts"
   },
   "devDependencies": {
