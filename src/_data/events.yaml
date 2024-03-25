@@ -4,7 +4,7 @@ eventGroups:
   - host: Orlando DevOps
     banner_img: /static/img/default_event_banner.png
     events:
-      - title: DevOps Dinner 2024 - Alehouse in Colonial Plaza
+      - title2: DevOps Dinner 2024 - Alehouse in Colonial Plaza
         imageUrl: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F664121729%2F313522967941%2F1%2Foriginal.20231228-142744?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C18%2C600%2C300&s=0a0b624f805967231733b8129ada5aad"
         datetime: "2024-02-17T1900-0500"
         duration: 1h
