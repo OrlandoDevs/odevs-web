@@ -13,10 +13,12 @@ eleventyComputed:
     #title: {{group.name}}
     title: Orlando Devs Community Group
 ---
-<br><br><br>
-<center><h2>{{group.name}}</h2>
-<br><br>
-{{group.description or "No description provided"}}
-<br><br><br><br><br><br><br>
-<h3><a href="{{group.meetup_url}}" target="_blank">Meetup Link</a></h3></center>
-<br>
+<center class="my-1">
+    <h2 class="mb-3">{{group.name}}</h2>
+    {{group.description or "No description provided"}}
+    {% if group.meetup_url %}
+        <div class="my-3">
+            <h3><a href="{{group.meetup_url}}" target="_blank">Meetup Link</a></h3>
+        </div>
+    {% endif %}
+</center>
