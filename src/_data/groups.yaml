@@ -1,7 +1,13 @@
 ---
 group:
   - name: Orlando Devs
+    meetup_url: https://www.meetup.com/OrlandoDevs/
+    description: The Orlando Developers User Group is for developers of all skill levels in the 
+      Orlando area to come learn about improving yourself as a developer. We focus primarily on 
+      professional development and soft skills, but we will also be featuring technical talks and 
+      presentations on various different subjects that our community is interested in.
   - name: Orlando DevOps
+    meetup_url: https://www.meetup.com/orlando-devops/
     description: Welcome to Orlando DevOps!
   - name: Orlando Innovation League
   - name: OrlandoJS
