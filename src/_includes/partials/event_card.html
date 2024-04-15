@@ -112,7 +112,10 @@
         </span>
         <span class="datestamp-day py-1">
           {{ event.datetime | fromIso | getDay }}
-        </span><span class="sr-only">,</span>
+        </span>
+        <span class="sr-only">
+          {{ event.datetime | fromIso | getTime }}
+        </span>
         <span class="datestamp-year">
           {{ event.datetime | fromIso | getYear }}
         </span>

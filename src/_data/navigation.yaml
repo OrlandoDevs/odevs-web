@@ -5,8 +5,8 @@ items:
   - text: About
     url: "/about"
   - text: Groups
-  - text: Community
-    url: "https://my.orlandodevs.com"
+#  - text: Community
+#    url: "https://my.orlandodevs.com"
   - text: Events
     url: "/events"
   - text: Join Our Slack

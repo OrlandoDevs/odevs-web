@@ -45,6 +45,7 @@
   "dependencies": {
     "browsersync": "^0.0.1-security",
     "daisyui": "^1.25.4",
+    "eleventy": "^1.0.6",
     "netlify-cli": "^13.2.2",
     "postcss": "^8.3.6",
     "tailwind": "^4.0.0"

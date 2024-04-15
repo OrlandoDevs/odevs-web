@@ -1,6 +1,6 @@
-interface DevEvent {
+interface Event {
     title: string;
-    imageUrl: string;
+    imageUrl?: string | null;
     datetime: Date | string;
     duration: string;
     locationName?: string;
@@ -18,10 +18,10 @@ interface EventYaml {
 interface GroupEvent {
     host: string;
     banner_img?: string;
-    events?: DevEvent[];
+    events?: Event[];
 }
 
-interface GroupEventFlat extends DevEvent {
+interface GroupEventFlat extends Event {
     host: string;
     bannerImg?: string;
 }
