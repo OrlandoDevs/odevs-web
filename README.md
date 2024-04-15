@@ -114,3 +114,7 @@ Read more about:
 - [Grid](https://tailwindcss.com/docs/grid-template-columns)
 - [Box alignment](https://tailwindcss.com/docs/justify-content)
 - [Spacing](https://tailwindcss.com/docs/padding)
+
+## Community Groups
+
+Group information is populated in the `odevs/src/_data/groups.yaml` file. The standard fields are `name` and `description`. At a minimum, please include this data in a pull request to have your group's data populate in its community group page. Pages are automatically generated and served at `/groups/your-group-name/`. If you have a Meetup Link, be sure to include it under the `meetup_url` key. 
