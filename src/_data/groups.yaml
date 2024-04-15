@@ -8,7 +8,10 @@ group:
       presentations on various different subjects that our community is interested in.
   - name: Orlando DevOps
     meetup_url: https://www.meetup.com/orlando-devops/
-    description: Welcome to Orlando DevOps!
+    description: "This is a group for anyone interested in DevOps practices, including build automation, continuous deployment, Cloud enablement, load testing, software quality, infrastructure as code, developer collaboration, Agile software development practices, and more."
+    logo: 
+      src: "/static/img/groups/orlando-devops.jpg"
+      alt_text: "An infinity logo composed of 8 individual arrows. The left side arrows are dark blue and the right side are light blue. The left hole is filled with the Orlando Devs logo, an astronaut helmet with a shell prompt (>_) for a face. The right hole is filled with interlocking gears of various sizes. Roller coaster cars are going down the turn on the left side."
   - name: Orlando Innovation League
   - name: OrlandoJS
   - name: Orlando PHP

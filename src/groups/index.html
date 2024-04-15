@@ -14,6 +14,9 @@ eleventyComputed:
     title: Orlando Devs Community Group
 ---
 <center class="my-1">
+    {% if group.logo %}
+        <img src="{{group.logo.src}}" class="object-scale-down h-48 w-96" alt="{{group.logo.alt_text or 'No description.'}}"/>
+    {% endif %}
     <h2 class="mb-3">{{group.name}}</h2>
     {{group.description or "No description provided"}}
     {% if group.meetup_url %}
