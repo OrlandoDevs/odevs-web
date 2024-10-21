@@ -64,24 +64,20 @@ eventGroups:
         locationAddress: 528 W Livingston St, Orlando FL 32801
         locationUrl: https://www.google.com/maps/search/?api=1&query=28.547123%2C%20-81.38608
         priceInDollars: 5
-        description: >
-          Come join us for the 2024 Hackathon!
-          This is our 3nd annual Hackathon and of course, there will be prizes!
-          All skill levels are welcome.
-          Breakfast, lunch, and snacks are included in the ticket price
-  - host: Orlando Innovation League
-    banner_img: /static/img/default_event_banner.png
-    events: []
+        description: Come join us for the 2024 Hackathon!  This is our 3nd annual Hackathon and of course, there will be prizes!  All skill levels are welcome.  Breakfast, lunch, and snacks are included in the ticket price
   - host: Orlando DevOps
     banner_img: /static/img/default_event_banner.png
     events:
       - title: November Lean DevOps - Oviedo Brewing Company
-        imageUrl: /static/img/opentofu.webp
+        imageUrl: https://doorlandonorth.com/wp-content/uploads/2022/05/great-atmosphere-inside.jpg
         datetime: 2024-11-13T1900
         duration: "2"
         locationName: Oviedo Brewing Company
         priceInDollars: 0
-        Description: More to come
+        Description: We will follow the Lean Coffee / Kanban Coffee discussion method, so come prepared with some topics (or just listen in). We'll start discussing at voting on the topics by 7:15 and go until we run out of topics...or beer...
+  - host: Orlando Innovation League
+    banner_img: /static/img/default_event_banner.png
+    events: []
   - host: Orlando JS
     banner_img: /static/img/default_event_banner.png
     events: []
