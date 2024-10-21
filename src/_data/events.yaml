@@ -1,71 +1,84 @@
 eventGroups:
+  - host: Orlando DevOps
+    banner_img: /static/img/default_event_banner.png
+    events:
+      - title: Kubernetes hands-on - Deploy a web app on EKS
+        imageUrl: https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F850845209%2F291568965190%2F1%2Foriginal.20240916-000555?crop=focalpoint&fit=crop&w=940&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=07f9b8449d495c147197881eb485cd46
+        datetime: 2024-10-22T1800
+        duration: 2h
+        locationName: FoxTail near UCF
+        priceInDollars: 0
+        description: |
+          This will be a good introduction for anyone with minimal experience using Kubernetes or AWS.
+          Bharat will be helping us follow: https://docs.aws.amazon.com/eks/latest/userguide/quickstart.html
+          Prerequisites 
+          Bring your laptop and register for an AWS account.
+          o Preinstall kubectl.
+          o Preinstall aws api.
+          o Preinstall eksctl.
+          o Preinstall helm.
+          o Preinstall Docker Desktop, just in case you are having trouble with AWS (Mac, Linux, Windows).
+
+          We will be using EKS, Helm, and kubectl to set up a loadbalancer and a webapp on EKS to play 2048.
   - host: Orlando Developers
     banner_img: /static/img/default_event_banner.png
     events:
-      - locationName: CREDO Conduit
+      - title: Autumn ODevs at CREDO
+        locationName: CREDO Conduit
         priceInDollars: 0
         duration: 2h
-        imageUrl: https://secure.meetupstatic.com/photos/event/c/0/c/c/600_517009356.webp?w=384
-        title: March ODevs at CREDO
+        imageUrl: https://secure.meetupstatic.com/photos/event/8/f/4/600_520082292.webp?w=384
         tags:
           - Cloud Computing
           - Computer Programming
           - DevOps
           - Software QA and Testing
           - Software Engineering
-        locationUrl: ""
-        datetime: 2024-03-27T1900
+        locationUrl: "https://maps.app.goo.gl/quWnaF9LDLLcp4g48"
+        datetime: 2024-10-23T1900
         description: |
-          ## Join us for some great technical talks, some networking and lots of fun at our March meetup event at Credo Conduit.
-          
-          ### Talks and Speakers
-          
-          Get Insured – Responsibility of Testing in Code by Michael Bradvica
-          
-          Michael Bradvica is a senior software engineer at United Parks & Entertainment. He spent five years as a consultant for a series of professional services firms working with numerous industries. Michael enjoyed too many years in college at National University in San Diego. When he isn’t flying airplanes in the simulator, Michael contributes to his personal blog and maintains a few open source libraries for the dotnet platform.
-          
-          Introduction to Crossplane, a Terraform Alternative by Milan Landaverde
-          
-          Milan Landaverde is a Senior Cloud Platform Engineer at NVIDIA, focusing on developer platforms & cloud enablement. Over the past decade, he has contributed to open source projects in the Kubernetes, Rust & eBPF ecosystems and is on the core organizers team for the Orlando DevOps community group.
+          Details
+          Join us at The Conduit to talk some code, network with your fellow developers and eat some delicious food.
+
+          Talks and Speakers
+
+          What Makes an AI App Successful?
+          What makes some AI/LLM applications successful and others not? Join us to hear from Rajiv Menon - Founder of AIAR - the world's first full self-paced, AI-driven startup accelerator. Demo included!
+
+          About Rajiv
+          Rajiv Menon is an entrepreneur, speaker, and mentor. He is the Founder of Informulate a technical consultancy that uses Lean Startup and Agile methodologies to help clients build innovation capacity and execute high return initiatives. He has served in a variety of technical and management roles in organizations from Fortune 500 companies to pre-funding startups that span the spectrum of scale, technology, and types of teams.
+
+          How to tell if it IS the network!
+          Practical troubleshooting for public facing web applications. We'll go through how to validate DNS, CDN, and Reverse Proxies then determine where the break is via a live demo. Attendants should leave with some useful shell commands and good understanding of the systems that front many public facing services.
+
+          About Rob Schneider
+          Rob is a Senior Software Engineer working on the Edge Traffic team at GitHub! He's been in the Network/Cloud/SRE space for over 10 years now with exposure from everything to physical switches all the way to high performant reverse proxies.
         locationAddress: 1001 North Orange Avenue, Orlando, FL, 32801
-  - host: Orlando Innovation League
+  - host: Orlando Developers
     banner_img: /static/img/default_event_banner.png
     events:
-      - locationName: Bush Auditorium
-        priceInDollars: 96
-        duration: 53h
-        imageUrl: 
-        title: Do real-world innovation at TechStars Startup Weekend Orlando!
-        tags:
-          - SWORL
-          - Winter Park Business Classes
-          - Startup Weekend
-        locationUrl: "https://www.eventbrite.com/e/do-real-world-innovation-at-techstars-startup-weekend-orlando-tickets-867684376327"
-        datetime: 2024-04-05T1730
-        description: > 
-          Want to be an entrepreneur or innovator? Really? Do you want it enough to devote a weekend to it?
-          Then THIS is the event for you! Learn how to think, work, and build like a startup over 54 thrilling hours.
-          Techstars Startup Weekend is an exciting and immersive foray into the world of startups; if you've never been a part of it, the time is NOW.
-          Over an action-packed three days, you’ll meet the very best mentors, investors, co-founders, and sponsors to show you how to get more done faster -- and, maybe even start that business. Past attendees have won global competitions, raised millions of dollars, and created jobs right here in Orlando. So stop talking and start doing surrounded by an incredibly smart and motivated group of people.
-        locationAddress: 1000 Holt Ave, Winter Park, FL 32789
+      - title: Orlando Devs Hackathon
+        datetime: 2024-11-02T0900
+        duration: 10h
+        locationName: UCF Downtown
+        locationAddress: 528 W Livingston St, Orlando FL 32801
+        locationUrl: https://www.google.com/maps/search/?api=1&query=28.547123%2C%20-81.38608
+        priceInDollars: 5
+        description: Come join us for the 2024 Hackathon!  This is our 3nd annual Hackathon and of course, there will be prizes!  All skill levels are welcome.  Breakfast, lunch, and snacks are included in the ticket price
   - host: Orlando DevOps
     banner_img: /static/img/default_event_banner.png
     events:
-      - title: Lean Beer DevOps - Foxtail near UCF
-        imageUrl: /static/img/orlando-devops-april-lean-beer.webp
-        datetime: 2024-04-10T1900
-        duration: 2h
-        locationName: FoxTail near UCF
-        priceInDollars: 0
-      - title: IaC Deep Dive - Workshop - Deploying your Infrastructure as Code with
-          Tofu
-        imageUrl: /static/img/opentofu.webp
-        datetime: 2024-05-22T2230
+      - title: November Lean DevOps - Oviedo Brewing Company
+        imageUrl: https://doorlandonorth.com/wp-content/uploads/2022/05/great-atmosphere-inside.jpg
+        datetime: 2024-11-13T1900
         duration: "2"
-        locationName: Credo Conduit
+        locationName: Oviedo Brewing Company
         priceInDollars: 0
+        Description: We will follow the Lean Coffee / Kanban Coffee discussion method, so come prepared with some topics (or just listen in). We'll start discussing at voting on the topics by 7:15 and go until we run out of topics...or beer...
+  - host: Orlando Innovation League
+    banner_img: /static/img/default_event_banner.png
+    events: []
   - host: Orlando JS
     banner_img: /static/img/default_event_banner.png
     events: []
-  - host: bar
-    events: []
+
