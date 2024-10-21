@@ -1,0 +1,71 @@
+eventGroups:
+  - host: Orlando Developers
+    banner_img: /static/img/default_event_banner.png
+    events:
+      - locationName: CREDO Conduit
+        priceInDollars: 0
+        duration: 2h
+        imageUrl: https://secure.meetupstatic.com/photos/event/c/0/c/c/600_517009356.webp?w=384
+        title: March ODevs at CREDO
+        tags:
+          - Cloud Computing
+          - Computer Programming
+          - DevOps
+          - Software QA and Testing
+          - Software Engineering
+        locationUrl: ""
+        datetime: 2024-03-27T1900
+        description: |
+          ## Join us for some great technical talks, some networking and lots of fun at our March meetup event at Credo Conduit.
+          
+          ### Talks and Speakers
+          
+          Get Insured – Responsibility of Testing in Code by Michael Bradvica
+          
+          Michael Bradvica is a senior software engineer at United Parks & Entertainment. He spent five years as a consultant for a series of professional services firms working with numerous industries. Michael enjoyed too many years in college at National University in San Diego. When he isn’t flying airplanes in the simulator, Michael contributes to his personal blog and maintains a few open source libraries for the dotnet platform.
+          
+          Introduction to Crossplane, a Terraform Alternative by Milan Landaverde
+          
+          Milan Landaverde is a Senior Cloud Platform Engineer at NVIDIA, focusing on developer platforms & cloud enablement. Over the past decade, he has contributed to open source projects in the Kubernetes, Rust & eBPF ecosystems and is on the core organizers team for the Orlando DevOps community group.
+        locationAddress: 1001 North Orange Avenue, Orlando, FL, 32801
+  - host: Orlando Innovation League
+    banner_img: /static/img/default_event_banner.png
+    events:
+      - locationName: Bush Auditorium
+        priceInDollars: 96
+        duration: 53h
+        imageUrl: 
+        title: Do real-world innovation at TechStars Startup Weekend Orlando!
+        tags:
+          - SWORL
+          - Winter Park Business Classes
+          - Startup Weekend
+        locationUrl: "https://www.eventbrite.com/e/do-real-world-innovation-at-techstars-startup-weekend-orlando-tickets-867684376327"
+        datetime: 2024-04-05T1730
+        description: > 
+          Want to be an entrepreneur or innovator? Really? Do you want it enough to devote a weekend to it?
+          Then THIS is the event for you! Learn how to think, work, and build like a startup over 54 thrilling hours.
+          Techstars Startup Weekend is an exciting and immersive foray into the world of startups; if you've never been a part of it, the time is NOW.
+          Over an action-packed three days, you’ll meet the very best mentors, investors, co-founders, and sponsors to show you how to get more done faster -- and, maybe even start that business. Past attendees have won global competitions, raised millions of dollars, and created jobs right here in Orlando. So stop talking and start doing surrounded by an incredibly smart and motivated group of people.
+        locationAddress: 1000 Holt Ave, Winter Park, FL 32789
+  - host: Orlando DevOps
+    banner_img: /static/img/default_event_banner.png
+    events:
+      - title: Lean Beer DevOps - Foxtail near UCF
+        imageUrl: /static/img/orlando-devops-april-lean-beer.webp
+        datetime: 2024-04-10T1900
+        duration: 2h
+        locationName: FoxTail near UCF
+        priceInDollars: 0
+      - title: IaC Deep Dive - Workshop - Deploying your Infrastructure as Code with
+          Tofu
+        imageUrl: /static/img/opentofu.webp
+        datetime: 2024-05-22T2230
+        duration: "2"
+        locationName: Credo Conduit
+        priceInDollars: 0
+  - host: Orlando JS
+    banner_img: /static/img/default_event_banner.png
+    events: []
+  - host: bar
+    events: []

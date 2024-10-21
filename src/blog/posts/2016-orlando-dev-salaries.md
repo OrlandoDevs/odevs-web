@@ -137,7 +137,6 @@ Similarly to a graph above, this graph does not take experience into considerati
 
 <img src="/static/img/survey-question-8.png" class="img-small img-center" alt="How long developers worked for in their companies in Orlando" />
 
-
 **Question 9:** At your current pay, how much do you expect to earn in 2016?
 
 <img src="/static/img/survey-question-9.png" class="img-large img-center" alt="How much developers get paid in Orlando" />

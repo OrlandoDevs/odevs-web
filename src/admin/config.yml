@@ -1,10 +1,11 @@
 backend:
   name: github
-  repo: jacquesfu/odevs-eleventy-starter
+  repo: snohio/odevs
   branch: master
   open_authoring: true
 media_folder: "src/static/img"
 public_folder: "/static/img"
+# documentation: https://decapcms.org/docs/configuration-options/#collections
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
@@ -20,7 +21,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DDTHHmm", format: "YYYY-MM-DDTHHmm", picker_utc: false }
       - { label: "Body", name: "body", widget: "markdown" }
       - widget: select
         label: "tags"
@@ -73,17 +74,42 @@ collections:
     fields:
       - { label: "JobTitle", name: "title", widget: "string" }
       - { label: "Company", name: "company", widget: "string"}
-      - { label: "PublishDate", name: "date", widget: "datetime" }
+      - { label: "PublishDate", name: "date", widget: "datetime", date_format: "YYYY-MM-DDTHH:mm", format: "YYYY-MM-DDTHH:mm", picker_utc: false }
       - { label: "Body", name: "body", widget: "markdown"}
-  - label: "Events"
-    name: "Event Listings"
-    folder: "src/announcements/events"
+  - label: "Event Editor"
+    name: "Event Data Listing"
     create: true
     editor:
       preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string"}
-      - { label: "Description", name: "desc", widget: "string"}
-      - { label: "PublishDate", name: "date", widget: "datetime"}
-      - { label: "Logo", name: "logo", widget: "string"}
-      - { label: "Body", name: "body", widget: "markdown"}
+    files: 
+    - label: "Event Groups"
+      name: "items"
+      file: "src/_data/events.yaml"
+      fields:
+        - label: events
+          name: eventGroups
+          widget: list
+          # summary: '{{fields.writer_no}}'
+          fields: 
+          - { label: "host", name: "host", widget: "string"}
+          - { label: "banner_img", required: false, name: "banner_img", widget: "image", choose_url: true, default: "/static/img/bg.jpg"}
+          - { label: "events", name: "events", widget: "list", fields: [
+            { label: "Title", name: "title", widget: "string"},
+            { label: "imageUrl", required: false, name: "imageUrl", widget: "image", choose_url: true, default: "/static/img/bg.jpg"},
+            { label: "datetime", name: "datetime", widget: "datetime", date_format: "YYYY-MM-DDTHH:mm", format: "YYYY-MM-DDTHH:mm", picker_utc: false},
+            { label: "duration", name: "duration", widget: "string"},
+            { label: "locationName", required: false, name: "locationName", widget: "string"},
+            { label: "priceInDollars", name: "priceInDollars", widget: "number"}]}
+      # {label: Writer no, name: writer_no, widget: number}
+  # - label: "Events"
+  #   name: "Event Listings"
+  #   folder: "src/announcements/events"
+  #   create: true
+  #   editor:
+  #     preview: false
+  #   fields:
+  #     - { label: "Title", name: "title", widget: "string"}
+  #     - { label: "Description", name: "desc", widget: "string"}
+  #     - { label: "PublishDate", name: "date", widget: "datetime"}
+  #     - { label: "Logo", name: "logo", widget: "string"}
+  #     - { label: "Body", name: "body", widget: "markdown"}

@@ -1,0 +1,71 @@
+name: Pull Request Pipeline
+
+on:
+  pull_request:
+  # push:
+  #   branches:
+  #   - main # Push events on master branch
+
+jobs:
+# https://github.com/chef/github-workflows/blob/main/.github/workflows/yaml-lint.yml
+  yaml-lint:
+    uses: ./.github/workflows/yaml-lint.yml
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Cancel Previous Runs
+      uses: styfle/cancel-workflow-action@0.6.0
+      with:
+        access_token: ${{ github.token }}
+    - uses: actions/checkout@v1
+    - name: Read .nvmrc
+      run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
+      id: nvm
+    - uses: actions/setup-node@v1
+      with:
+        node-version: "${{ steps.nvm.outputs.NVMRC }}"
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - run: npm install --dev
+    - run: npm run test:coverage
+    - name: upload junit
+      uses: actions/upload-artifact@v1
+      with:
+        name: junit
+        path: junit.xml
+    - uses: ashley-taylor/junit-report-annotations-action@1.3
+      if: always()
+      with:
+        access-token: ${{ secrets.GITHUB_TOKEN }}
+        path: junit.xml
+    - name: upload code coverage
+      uses: actions/upload-artifact@v1
+      with:
+        name: Report-CodeCoverage
+        path: coverage
+
+    - run: npm install -g markdownlint-cli
+    - run: markdownlint src --disable MD001 MD013 MD033 MD045 MD026 MD041
+    - run: npm run build
+    - name: build _site
+      run: |
+          npm run build
+    # - name: upload _site
+    #   uses: actions/upload-artifact@v1
+    #   with:
+    #     name: _site
+    #     path: _site
+  pr-check:
+    if: always()
+    needs:
+      - yaml-lint
+      - build
+    runs-on: Ubuntu-latest
+    steps:
+      - name: Decide whether the needed jobs succeeded or failed
+        uses: re-actors/alls-green@main
+        with:
+          # allowed-failures: markdown-link-checker
+          allowed-skips:
+          jobs: ${{ toJSON(needs) }}

@@ -8,8 +8,18 @@ The Orlando Devs website is built on top of [https://www.netlify.com/Netlify](ht
 
 Once packages are installed run the Netlfiy dev stack:
 
-`netlify dev`
+* `netlify dev`
+* `npx decap-server` to run the local cms
 
+---
+## Local Demo
+* http://localhost:8888/
+* netlify cms http://localhost:8888/admin - needs to proxy to be run
+
+## Run tests
+
+* `npm run test`
+* convert yaml to typescript using https://jsonformatter.org/yaml-to-typescript
 ---
 ## Live Demo
 
@@ -104,3 +114,7 @@ Read more about:
 - [Grid](https://tailwindcss.com/docs/grid-template-columns)
 - [Box alignment](https://tailwindcss.com/docs/justify-content)
 - [Spacing](https://tailwindcss.com/docs/padding)
+
+## Community Groups
+
+Group information is populated in the `odevs/src/_data/groups.yaml` file. The standard fields are `name` and `description`. At a minimum, please include this data in a pull request to have your group's data populate in its community group page. Pages are automatically generated and served at `/groups/your-group-name/`. If you have a Meetup Link, be sure to include it under the `meetup_url` key. 

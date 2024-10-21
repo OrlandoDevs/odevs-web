@@ -1,0 +1,164 @@
+<style>
+  @charset "UTF-8";
+
+  /*
+  .date-card {
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    flex-direction: row;
+  }
+  */
+
+  .datestamp {
+    float: left;
+    width: 4rem;
+    margin-right: 1em;
+    margin-bottom: .5em;
+  }
+  .datestamp *:not(.sr-only) {
+    display: block;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+  }
+  .datestamp .datestamp-year {
+    border-top: 1px solid #999;
+    padding-top: .25em;
+    color: #999;
+    font-weight: bold;
+  }
+  .datestamp .datestamp-month {
+    padding: .25em .5em;
+    background-color: #E71321;
+    color: #EEE;
+    font-weight: 500;
+  }
+  .datestamp .datestamp-month abbr {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .datestamp .datestamp-day {
+    color: #1f7bc1;
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .datestamp.small {
+    width: 3rem;
+  }
+  .datestamp.small *:not(.sr-only) {
+    font-size: 0.875rem;
+  }
+  .datestamp.small .datestamp-day {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .event-details {
+    padding-right: 1em;
+  }
+
+  .date-summary .date-time,
+  .date-summary .date-location,
+  .event-details .date-time,
+  .event-details .date-location {
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  .date-summary .date-time::before,
+  .date-summary .date-location::before,
+  .event-details .date-time::before,
+  .event-details .date-location::before {
+    color: rgba(0, 0, 0, 0.4);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 1rem;
+  }
+  .date-summary .date-time::before,
+  .event-details .date-time::before {
+    content: "";
+  }
+  .date-summary .date-location::before,
+  .event-details .date-location::before {
+    content: "";
+  }
+
+</style>
+
+
+
+<div class="event-background">
+  <article class="event">
+    <img
+        src="{{
+          event.imageUrl
+          | default(event_hosts[eventHost].banner_img, true)
+          | default("/static/img/default_event_banner.png", true)
+        }}"
+        class="event-banner"
+    />
+
+    <div class="event-details">
+      <div class="datestamp">
+        <span class="datestamp-month">
+          <abbr title="{{ event.datetime | fromIso | getLongMonth }}">
+            {{ event.datetime | fromIso | getMonth }}
+          </abbr>
+        </span>
+        <span class="datestamp-day py-1">
+          {{ event.datetime | fromIso | getDay }}
+        </span>
+        <span class="sr-only">
+          {{ event.datetime | fromIso | getTime }}
+        </span>
+        <span class="datestamp-year">
+          {{ event.datetime | fromIso | getYear }}
+        </span>
+      </div>
+
+      <h3 class="title">
+        <a href="/events/{{event.datetime}}/{{event.title | slug}}">
+          {{ event.title }}
+        </a>
+      </h3>
+
+      <p>
+        {{ event.description }}
+      </p>
+
+      <div style="margin-top: 1em;">
+      <div class="time">
+        <div>
+          <div style="float: left; width: 1.5em;">⏰</div>
+          <div>
+            <time datetime="{{ event.datetime }}">
+              <div>{{ event.datetime | fromIso | getTime }}</div>
+            </time>
+          </div>
+        </div>
+      </div>
+      <div class="location">
+        <div>
+          <div style="float: left; width: 1.5em;">📍</div>
+          <div>
+            <a href="{{ event.locationUrl }}"><span style="font-weight:700; color: #666666">{{ event.locationName }}</span></a> <br />
+            {{ event.locationAddress }}
+          </div>
+        </div>
+      </div>
+
+      <div class="price">
+        <div>
+          <div style="float: left; width: 1.5em;">🎟️</div>
+          <div> {{ event.priceInDollars | replace(0, "Free") }} </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </article>
+</div>

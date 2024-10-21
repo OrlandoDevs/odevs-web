@@ -17,7 +17,6 @@ BlueWave is a team of technology, marketing, & sales recruiters focused on growi
 <li><a href="https://jobs.bluewaverp.com/jb/Solutions-Consultant-Jobs-in-Orlando-FL/6075365" class="hover:text-secondary underline font-medium">Solutions Consultant</a><br/><br/></li>
 </ul>
 
-
 <div class="flex justify-items-right items-right ">
 <button class="bg-primary text-white p-4 rounded-full hover:bg-primary-focus m-8"><a>Visit to see more</a></button>
 </div>

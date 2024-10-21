@@ -18,16 +18,36 @@
         </button>
 
         <!--Menu-->
-        <div class="lg:inline-flex md:justify-end justify-items-end lg:w-auto w-3/5 my-6"  :class="isOpen ? '': 'hidden'  ">
+        <div class="lg:inline-flex md:justify-end justify-items-end lg:w-auto my-6"  :class="isOpen ? '': 'hidden'  ">
             {% if navigation.items %}
 
                 <ul class="flex md:flex-row flex-shrink flex-col px-6 list-reset">
                     {% for item in navigation.items %}
-                        <li class="nav__item mx-3">
-                            <a @click="isOpen = false" class="transition duration-500 ease-in-out text-lg inline-flex text-gray-300 no-underline transform hover:-translate-y-1 hover:scale-110 hover:text-secondary px-8 pt-4" href="{{ item.url }}">
-                            {{ item.text }}
-                            </a>
-                        </li>
+                        {% if item.text == "Groups" %}
+                            <li class="nav__item mx-3">
+                                <details class="dropdown">
+                                    <summary class="cursor-pointer transition duration-500 ease-in-out text-lg inline-flex text-gray-300 no-underline transform hover:-translate-y-1 hover:scale-110 hover:text-secondary px-8 pt-4">
+                                    
+                                    {{ item.text }}
+                                    
+                                    </summary>
+                                    <ul tabindex="0" class="absolute z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                    
+                                        {% for community in groups.group %}
+                                        <li><a href="/groups/{{ community.name | slugify }}/">{{ community.name }}</a></li>
+                                        {% endfor %}
+
+                                    </ul>
+                                </details>
+                                
+                            </li>
+                        {% else %}
+                            <li class="nav__item mx-3">
+                                <a @click="isOpen = false" class="transition duration-500 ease-in-out text-lg inline-flex text-gray-300 no-underline transform hover:-translate-y-1 hover:scale-110 hover:text-secondary px-8 pt-4" href="{{ item.url }}">
+                                {{ item.text }}
+                                </a>
+                            </li>
+                        {% endif %}
                     {% endfor %}
                 </ul>
 
