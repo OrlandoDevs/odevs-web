@@ -1,4 +1,25 @@
 eventGroups:
+  - host: Orlando DevOps
+    banner_img: /static/img/default_event_banner.png
+    events:
+      - title: Kubernetes hands-on - Deploy a web app on EKS
+        imageUrl: https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F850845209%2F291568965190%2F1%2Foriginal.20240916-000555?crop=focalpoint&fit=crop&w=940&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=07f9b8449d495c147197881eb485cd46
+        datetime: 2024-10-22T1800
+        duration: 2h
+        locationName: FoxTail near UCF
+        priceInDollars: 0
+        description: |
+          This will be a good introduction for anyone with minimal experience using Kubernetes or AWS.
+          Bharat will be helping us follow: https://docs.aws.amazon.com/eks/latest/userguide/quickstart.html
+          Prerequisites 
+          Bring your laptop and register for an AWS account.
+          o Preinstall kubectl.
+          o Preinstall aws api.
+          o Preinstall eksctl.
+          o Preinstall helm.
+          o Preinstall Docker Desktop, just in case you are having trouble with AWS (Mac, Linux, Windows).
+
+          We will be using EKS, Helm, and kubectl to set up a loadbalancer and a webapp on EKS to play 2048.
   - host: Orlando Developers
     banner_img: /static/img/default_event_banner.png
     events:
@@ -33,6 +54,9 @@ eventGroups:
           About Rob Schneider
           Rob is a Senior Software Engineer working on the Edge Traffic team at GitHub! He's been in the Network/Cloud/SRE space for over 10 years now with exposure from everything to physical switches all the way to high performant reverse proxies.
         locationAddress: 1001 North Orange Avenue, Orlando, FL, 32801
+  - host: Orlando Developers
+    banner_img: /static/img/default_event_banner.png
+    events:
       - title: Orlando Devs Hackathon
         datetime: 2024-11-02T0900
         duration: 10h
@@ -40,40 +64,18 @@ eventGroups:
         locationAddress: 528 W Livingston St, Orlando FL 32801
         locationUrl: https://www.google.com/maps/search/?api=1&query=28.547123%2C%20-81.38608
         priceInDollars: 5
-        description: |
-          Come join us for the 2024 Hackathon!<br>
-          This is our 3nd annual Hackathon and of course, there will be prizes!<br>
-          All skill levels are welcome.<br>
-          Breakfast, lunch, and snacks are included in the ticket price<br>
+        description: >
+          Come join us for the 2024 Hackathon!
+          This is our 3nd annual Hackathon and of course, there will be prizes!
+          All skill levels are welcome.
+          Breakfast, lunch, and snacks are included in the ticket price
   - host: Orlando Innovation League
     banner_img: /static/img/default_event_banner.png
     events: []
   - host: Orlando DevOps
     banner_img: /static/img/default_event_banner.png
     events:
-      - title: Kubernetes hands-on - Deploy a web app on EKS
-        imageUrl: https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F850845209%2F291568965190%2F1%2Foriginal.20240916-000555?crop=focalpoint&fit=crop&w=940&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=07f9b8449d495c147197881eb485cd46
-        datetime: 2024-10-22T1800
-        duration: 2h
-        locationName: FoxTail near UCF
-        priceInDollars: 0
-        description: |
-          This will be a good introduction for anyone with minimal experience using Kubernetes or AWS.<br>
-
-          Bharat will be helping us follow: https://docs.aws.amazon.com/eks/latest/userguide/quickstart.html<br>
-          
-          Prerequisites:<br>
-
-          Bring your laptop and register for an AWS account.<br>
-          Preinstall kubectl.<br>
-          Preinstall aws api.<br>
-          Preinstall eksctl.<br>
-          Preinstall helm.<br>
-          Preinstall Docker Desktop, just in case you are having trouble with AWS (Mac, Linux, Windows).<br>
-
-          We will be using EKS, Helm, and kubectl to set up a loadbalancer and a webapp on EKS to play 2048.<br>
       - title: November Lean DevOps - Oviedo Brewing Company
-          Tofu
         imageUrl: /static/img/opentofu.webp
         datetime: 2024-11-13T1900
         duration: "2"
