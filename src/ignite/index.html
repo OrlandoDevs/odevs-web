@@ -1,0 +1,308 @@
+---
+layout: default
+---
+
+<script>
+  let data = {
+    sessions: [],
+    speakers: []
+  };
+  
+  async function fetchWithCache() {
+    console.log('Starting fetchWithCache...');
+    const cacheKey = 'odevs-sessionize-data';
+    const cache = await caches.open('odevs-speakers-cache');
+    const apiUrl = 'https://sessionize.com/api/v2/o1yncrjf/view/All';
+    
+    try {
+      console.log('Checking cache...');
+      // Try to get from cache first
+      const cachedResponse = await cache.match(cacheKey);
+      
+      if (cachedResponse) {
+        console.log('Cached response found');
+        const cachedData = await cachedResponse.json();
+        
+        // Check if cached data is less than 24 hours old
+        if (cachedData.timestamp && 
+            (Date.now() - cachedData.timestamp) < 24 * 60 * 60 * 1000) {
+          console.log(`Cached data is ${Math.round((Date.now() - cachedData.timestamp) / (1000 * 60 * 60))} hours old`);
+          console.log('Using cached data');
+          return cachedData;
+        } else {
+          console.log('Cached data is too old, fetching fresh data');
+        }
+      } else {
+        console.log('No cached data found');
+      }
+      
+      // Fetch fresh data
+      console.log('Fetching fresh data from API');
+      const response = await fetch(apiUrl);
+      const fetchedData = await response.json();
+      
+      // Add timestamp to the data
+      fetchedData.timestamp = Date.now();
+      
+      // Create a new response to cache
+      console.log('Preparing to cache new data');
+      const cacheResponse = new Response(JSON.stringify(fetchedData), {
+        headers: {
+          'Content-Type': 'application/json',
+          'Cache-Control': 'max-age=86400' // 24 hours
+        }
+      });
+      
+      // Store in cache
+      await cache.put(cacheKey, cacheResponse);
+      console.log('New data cached successfully');
+      
+      return fetchedData;
+    } catch (error) {
+      console.error('Error in fetchWithCache:', error);
+      
+      // Fallback to cached data if available
+      const cachedResponse = await cache.match(cacheKey);
+      if (cachedResponse) {
+        console.log('Falling back to cached data');
+        return cachedResponse.json();
+      }
+      
+      throw error;
+    }
+  }
+
+  // Global debug functions
+  window.debugSessionizeCache = async function() {
+    const cache = await caches.open('odevs-speakers-cache');
+    const cachedResponse = await cache.match('odevs-sessionize-data');
+    
+    if (cachedResponse) {
+      const cachedData = await cachedResponse.json();
+      console.log('Cached Data:', cachedData);
+      console.log('Cache Age:', 
+        cachedData.timestamp 
+          ? `${Math.round((Date.now() - cachedData.timestamp) / (1000 * 60 * 60))} hours old`
+          : 'No timestamp'
+      );
+    } else {
+      console.log('No cached data found');
+    }
+  };
+
+  window.clearSessionizeCache = async function() {
+    await caches.delete('odevs-speakers-cache');
+    console.log('Cache cleared');
+  };
+
+  function formatTime(dateString) {
+    return new Date(dateString).toLocaleTimeString('en-US', {
+      hour: 'numeric',
+      minute: '2-digit'
+    });
+  }
+
+  function createSpeakerElement(speaker, session) {
+    const li = document.createElement('li');
+    li.className = 'flex flex-col gap-10 pt-12 sm:flex-row border-b pb-12 last:border-b-0';
+    
+    li.innerHTML = `
+      <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover shadow-md" 
+           src="${speaker.profilePicture}" 
+           alt="${speaker.fullName}">
+      <div class="max-w-xl flex-auto">
+        <h3 class="text-lg font-semibold tracking-tight text-gray-900">${speaker.fullName}</h3>
+        <p class="text-base text-gray-600 italic">${speaker.tagLine}</p>
+        <div class="mt-4 p-4 bg-gray-50 rounded-lg border-l-4 border-odevs-accent">
+          <h4 class="font-semibold text-odevs-accent text-xl">${session.title}</h4>
+          <div class="flex items-center gap-2 text-sm text-gray-600 mt-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+            </svg>
+            <span>${formatTime(session.startsAt)} - ${formatTime(session.endsAt)}</span>
+          </div>
+        </div>
+        <p class="mt-6 text-base text-gray-600 leading-relaxed">${session.description}</p>
+        <p class="mt-4 text-sm text-gray-500 italic">${speaker.bio}</p>
+      </div>
+    `;
+    return li;
+  }
+
+  // Initial page load
+  fetchWithCache()
+    .then(apiData => {
+      console.log('Data successfully retrieved');
+      data = apiData;
+      // Sort sessions by start time
+      const sortedSessions = data.sessions.sort((a, b) => 
+        new Date(a.startsAt) - new Date(b.startsAt)
+      );
+    
+      const speakersList = document.getElementById('speakersList');
+      speakersList.innerHTML = ''; // Clear existing content
+      
+      sortedSessions.forEach(session => {
+        const speakerId = session.speakers[0];
+        const speaker = data.speakers.find(s => s.id === speakerId);
+        if (speaker) {
+          const speakerElement = createSpeakerElement(speaker, session);
+          speakersList.appendChild(speakerElement);
+        }
+      });
+    })
+    .catch(error => {
+      console.error('Error processing data:', error);
+      document.getElementById('speakersList').innerHTML = 
+        '<li class="text-red-500">Unable to load speakers. Please try again later.</li>';
+    });
+</script>
+
+
+      <!-- Hero Section -->
+      <div class="relative isolate">
+        <div class="overflow-hidden">
+          <div class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-20 lg:px-8 lg:pt-20">
+            <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
+              <div class="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
+                <h1 class="text-pretty text-5xl font-semibold tracking-tight text-odevs-primary sm:text-7xl">Ignite the Holidays with ODevs!</h1>
+                <p class="mt-8 text-pretty text-lg font-medium text--500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
+                  Join us for a tech-tastic celebration of code, community, and holiday cheer at the Zymarium Meadery. Our annual Ignite the Holidays event brings together Orlando's most passionate developers for an evening of lightning-fast talks, networking, and festive fun!
+                </p>
+      <!--  Date and Time Section -->
+          <div class="mt-6 bg-odevs-accent/10 rounded-xl p-4 inline-block">
+            <div class="flex items-center space-x-4">
+              <div class="bg-odevs-accent text-white rounded-full p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="black">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-odevs-primary">Wednesday, December 18, 2024</p>
+                <p class="text-sm text-gray-600">7:00 PM - 10:00 PM</p>
+              </div>
+              <div class="bg-odevs-accent text-white rounded-full p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="black">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-odevs-primary">Zymarium Meadery</p>
+                <p class="text-sm text-gray-600">Orlando, FL</p>
+              </div>
+            </div>
+          </div>
+                <div class="mt-10 flex items-center gap-x-6">
+                  <a href="https://www.eventbrite.com/e/odevs-ignite-the-holidays-party-tickets-1089955278579" class="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-odevs-secondary transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-md">Get Tickets</a>
+                  <a href="https://sessionize.com/odevs-ignite-the-holidays" class="text-sm/6 font-semibold text-black hover:text-odevs-accent transition-all duration-300 ease-in-out hover:translate-x-1">Become a Speaker<span aria-hidden="true" class="inline-block transition-transform duration-300 ease-in-out group-hover:translate-x-1">→</span></a>
+                </div>
+              </div>
+              <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
+                <div class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
+                  <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+                  </div>
+                </div>
+                <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
+                  <div class="relative">
+                    <img src="/static/img/christmas-vibe-odev.jpeg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+                  </div>
+                  <div class="relative">
+                      <img src="/static/img/DevOps-Days-Image.jpg"  alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+                  </div>
+                </div>
+                <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
+                  <!-- <div class="relative">
+                      <img src="/static/img/christmas-vibe-odev.jpeg"  alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+                  </div> -->
+                  <!-- <div class="relative">
+                      <img src="/static/img/christmas-vibe-odev.jpeg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Ignite Talk Details Section Section -->
+    <div class="bg-gray-50">
+        <div class="mx-auto max-w-7xl py-24 sm:px-2 sm:py-32 lg:px-4">
+          <div class="mx-auto max-w-2xl px-4 lg:max-w-none">
+            <div class="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
+              <div>
+                <h2 class="text-4xl font-bold tracking-tight text-gray-900">Unleash Your Ideas in 5 Minutes</h2>
+                <p class="mt-4 text-gray-500">Ignite talks are your chance to share your passion, insight, or vision with the world - all in a fast-paced, 5-minute format. Our stage is your platform to spark new conversations and ignite change.</p>
+              </div>
+              <img src="/static/img/ignite-talk-felipe-talk-with-slides.jpg" alt="Ignite talk stage" class="aspect-[3/2] w-full rounded-lg bg-gray-100 object-cover">
+            </div>
+            <div class="mt-16 grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
+              <div class="sm:flex lg:block">
+                <div class="sm:shrink-0">
+                    <img width="64" height="64" src="/static/img/ignite-talk-stopwatch.png" alt="">
+                </div>
+                <div class="mt-4 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
+                  <h3 class="text-sm font-medium text-gray-900">Strict 5-Minute Time Limit</h3>
+                  <p class="mt-2 text-sm text-gray-500">The clock is ticking! Each Ignite speaker gets exactly 20 slides that automatically advance every 15 seconds. This format challenges you to distill your message down to the most essential points.</p>
+                </div>
+              </div>
+              <div class="sm:flex lg:block">
+                <div class="sm:shrink-0">
+                    <img width="64" height="64" src="/static/img/ignite-talk-presentation.png" alt="">
+
+                </div>
+                <div class="mt-4 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
+                  <h3 class="text-sm font-medium text-gray-900">Visual Storytelling              </h3>
+                  <p class="mt-2 text-sm text-gray-500">Dazzle the audience with your most captivating visuals. Ignite talks are all about impactful imagery that supports your narrative - leave the text-heavy slides at home.              </p>
+                </div>
+              </div>
+              <div class="sm:flex lg:block">
+                <div class="sm:shrink-0">
+                    <img width="64" height="64"src="/static/img/ignite-talk-perspective.png" alt="">
+                </div>
+                <div class="mt-4 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
+                  <h3 class="text-sm font-medium text-gray-900">Diverse Perspectives
+                  </h3>
+                  <p class="mt-2 text-sm text-gray-500">From tech innovations to personal journeys, Ignite talks cover an eclectic range of topics. Every voice has the power to enlighten, so come share your unique story.              </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <!-- CTA Section -->
+  <div class="bg-primary w-full">
+    <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">Ready to Ignite? </h2>
+        <p class="mx-auto mt-6 max-w-xl text-pretty text-lg/8 text-indigo-200">Apply now to secure your spot on our stage and bring your bold ideas to life. We're looking for up to 10 speakers ready to:      </p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <a href="https://sessionize.com/odevs-ignite-the-holidays" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-odevs-primary shadow-sm hover:bg-gray-100 hover:text-odevs-secondary transition-all duration-300 ease-in-out hover:scale-105">Submit Your Talk</a>
+          <a href="https://www.eventbrite.com/e/odevs-ignite-the-holidays-party-tickets-1089955278579" class="font-semibold text-white hover:text-gray-200 transition-all duration-300 ease-in-out hover:translate-x-1">Get Tickets <span aria-hidden="true" class="inline-block transition-transform duration-300 ease-in-out group-hover:translate-x-1">→</span></a>
+       </div>
+      </div>
+    </div>
+  </div>
+              <!-- Speakers  Section-->
+              <div class="bg-white py-24 md:py-32">
+                <div class="mx-auto grid max-w-7xl grid-cols-1 gap-20 px-6 lg:px-8 xl:grid-cols-5">
+                    <div class="max-w-2xl xl:col-span-2">
+                        <h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Our Speaker Lineup</h2>
+                        <p class="mt-6 text-lg leading-8 text-gray-600">Join us for an evening of lightning talks from Orlando's tech community.</p>
+                    </div>
+                    <ul role="list" class="-mt-12 space-y-12 divide-y divide-gray-200 xl:col-span-3" id="speakersList">
+                        <!-- Speakers will be inserted here by JavaScript -->
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+        
+        
